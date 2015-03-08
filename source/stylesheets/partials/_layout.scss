@@ -1,3 +1,11 @@
+html {
+	background-color: $base-page-background;
+}
+
+header{
+	 background-color: $base-nav-background;
+}
+
 #main {
     @include outer-container;
 }

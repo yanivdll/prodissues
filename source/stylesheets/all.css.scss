@@ -6,3 +6,17 @@
 @import "partials/layout";
 @import "partials/nav";
 @import "partials/footer";
+
+/*@font-face {
+    font-family: 'ColaborateThinRegular';
+    src: url('/fonts/ColabThi.otf');
+    src: url('/fonts/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ColabThi-webfont.woff') format('woff'),
+         url('/fonts/ColabThi-webfont.ttf') format('truetype'),
+         url('/fonts/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@include font-face(ColabThi, '/fonts/ColabThi-webfont', normal, regular);
+@include font-face(GandhiSerif, '/fonts/GandhiSerif-Regular-webfont', normal, regular);

@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <%= stylesheet_link_tag "all" %>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' 
+  rel='stylesheet' type='text/css'>-->
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <title>ProdIssues<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
-    <div id="main" role="main">
     <%= partial "partials/nav" %>
-    <%= yield %>
+    <div id="main" role="main">
+      <%= yield %>
+    </div>
     <%= partial "partials/footer" %>
-</div>
   </body>
 </html>
