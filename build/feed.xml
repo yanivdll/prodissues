@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2015-03-08T17:26:00-04:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>this-is-another-article</title>
+    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-another-article.html"/>
+    <id>http://blog.url.com/2015/03/this-is-another-article.html</id>
+    <published>2015-03-08T17:26:00-04:00</published>
+    <updated>2015-03-08T22:11:35-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h1 id="hey-again"&gt;Hey again&lt;/h1&gt;
+
+&lt;h1 id="general---no-links-in-documentation"&gt;General - no links in documentation&lt;/h1&gt;
+
+&lt;p&gt;Models:&lt;/p&gt;
+
+
+
+&lt;h3 id="document"&gt;Document:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;publishDate&lt;/code&gt; - should be &lt;code&gt;timePublished&lt;/code&gt; (based on open graph)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="recommendationdocuments"&gt;Recommendation/Documents&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;explanation&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Viewability api -&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Collection
+- &lt;code&gt;total&lt;/code&gt; - change to &lt;code&gt;totalItems&lt;/code&gt;\&lt;code&gt;numberOfItems&lt;/code&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>this-is-a-test-article</title>
+    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-a-test-article.html"/>
+    <id>http://blog.url.com/2015/03/this-is-a-test-article.html</id>
+    <published>2015-03-08T17:25:00-04:00</published>
+    <updated>2015-03-08T22:16:52-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Hey &lt;em&gt;Eli&lt;/em&gt;\Naomi,&lt;/p&gt;
+
+&lt;p&gt;Last time we've talked we left off we&lt;/p&gt;
+
+
+
+&lt;p&gt;left off with a vague idea of what we're building at Sphere and how we can leverage your service.&lt;/p&gt;
+
+&lt;p&gt;Since then the team went through an extensive research and designed what I think will become the first version of the sphere platform. With the fruits of this work starting to emerge, I have a clearer idea how and where we can collaborate.&lt;/p&gt;
+
+&lt;p&gt;Please take a look at the following document and let me know how you'd like to proceed:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sphere-api/v1/blob/master/product-spec/api_spec_wip.md"&gt;Sphere API V1 - product spec&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://developers.sphere.com/docs/"&gt;Sphere API interactive documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Look forward to hearing from you soon.&lt;/p&gt;
+
+&lt;p&gt;Thanks. Yaniv&lt;/p&gt;
+
+</content>
+  </entry>
+</feed>
