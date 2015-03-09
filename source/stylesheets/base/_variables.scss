@@ -1,9 +1,15 @@
+// Debug
+$visual-grid: true;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.05;
+
 // Typography
 $base-font-family: GandhiSerif;
-$heading-font-family: $base-font-family;
+$heading-font-family: $base-font-family;//ColabThi;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 22px;
 
 // Line height
 $base-line-height: 1.5;
@@ -14,10 +20,11 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+$base-padding: 4em;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
+$blue: #3B6F9F;
+$dark-gray: #333333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $reddish: #B40001;

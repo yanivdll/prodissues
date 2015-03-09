@@ -2,36 +2,54 @@ html {
 	background-color: $base-page-background;
 }
 
-header{
-	 background-color: $base-nav-background;
+body {
+  @include outer-container;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //font: inherit;
+  //font-size: 100%;
+  //vertical-align: baseline;
 }
 
-#main {
-    @include outer-container;
-}
+section {
+  @include outer-container;
 
-ol {
-  font-size: 1em;
-  font-weight: 500;
-
-  li {
-    margin: .5em 0;
-
-    span {
-      display: inline-block;
-
-      &:before {
-        content: '/';
-        margin: 0 .3em;
-      }
-    }
+  aside { 
+    @include span-columns(3);
+    padding-left: $base-padding;
   }
-}
 
-.large-column {
-  @include span-columns(8 of 12);
-}
+  article { 
+    @include span-columns(9);
+    padding-left: $base-padding;  }
+  }
 
-.small-column {
-  @include span-columns(4 of 12);
-}
+  .large-column {
+    @include span-columns(9);
+    padding-left: $base-padding;
+  }
+
+  .med-column {
+    @include span-columns(3);
+    padding-right: $base-padding;
+  }
+
+
+// ol {
+//   font-size: 1em;
+//   font-weight: 500;
+
+//   li {
+//     margin: .5em 0;
+
+//     span {
+//       display: inline-block;
+
+//       &:before {
+//         content: '/';
+//         margin: 0 .3em;
+//       }
+//     }
+//   }
+// }

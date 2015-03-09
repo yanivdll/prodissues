@@ -1,8 +1,9 @@
 footer {
-  //border-top: 1px solid $base-border-color;
-  margin: 2em 0;
-  padding-top: 2em;
-  background: #554f4b url(http://nanoc.ws/assets/images/background-dark.png);
-    background-position: top left,bottom left;
-  background-repeat: repeat-x;
+	@include outer-container;
+  border-top: 1px solid $base-border-color;
+  //margin: 2em 0;
+  //padding-top: 2em;
+  //background: $dark-gray //#F1F1F1 url(http://nanoc.ws/assets/images/background-dark.png);
+  //background-position: top left,bottom left;
+  //background-repeat: repeat-y;
 }

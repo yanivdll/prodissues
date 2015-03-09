@@ -5,3 +5,25 @@ tags:
 ---
 
 # Hey again
+
+# General - no links in documentation
+
+Models:
+
+<!--more-->
+
+### Document:
+
+- `publishDate` - should be `timePublished` (based on open graph)
+
+
+### Recommendation/Documents
+
+- `explanation`
+- Viewability api - 
+-               
+
+
+Collection
+- `total` - change to `totalItems`\\`numberOfItems`
+

@@ -12,6 +12,7 @@ gem "rack-contrib"
 gem "bitters"
 gem "bourbon"
 gem "neat"
+gem "kramdown"
 
 group :development do
 	gem "middleman-livereload", "~> 3.3.0"

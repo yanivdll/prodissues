@@ -1,0 +1,14 @@
+header {
+  //@include outer-container;
+  border-bottom: 1px solid $base-border-color;
+  background-color: $dark-gray;
+  .blog-title {
+    font-size: 2em;
+    font-weight: 700;
+    letterspacing: 4px;
+    text-transform: uppercase;
+    //color: yellow;
+    //text-shadow: -2px 0 $light-brown, 0 2px $light-brown, 2px 0 $light-brown, 0 -2px $light-brown;
+
+  }
+}
