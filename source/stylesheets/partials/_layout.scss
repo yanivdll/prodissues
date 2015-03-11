@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+}
+
 html {
-	background-color: $base-page-background;
+  @include outer-container;
+  background-color: $base-page-background;
+  font-size: $base-font-size;
 }
 
 body {
-  @include outer-container;
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,28 +17,34 @@ body {
   //vertical-align: baseline;
 }
 
-section {
+html, body{
+  height: 100%;
+}
+
+.wrap {
   @include outer-container;
 
-  aside { 
-    @include span-columns(3);
-    padding-left: $base-padding;
-  }
+  //
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
 
-  article { 
-    @include span-columns(9);
-    padding-left: $base-padding;  }
-  }
+.wrap:after {
+  content: "";
+  display: block;
+  height: 142px; 
+}
 
-  .large-column {
-    @include span-columns(9);
-    padding-left: $base-padding;
-  }
+.content {
+  @include span-columns(8);
+  padding-left: $base-padding;
+}
 
-  .med-column {
-    @include span-columns(3);
-    padding-right: $base-padding;
-  }
+.sidebar {
+  @include span-columns(4);
+  padding-right: $base-padding;
+}
 
 
 // ol {

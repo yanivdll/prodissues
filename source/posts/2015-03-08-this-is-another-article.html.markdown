@@ -1,5 +1,5 @@
 ---
-title: this-is-another-article
+title: Another exmample for a post
 date: 2015-03-08 21:26 UTC
 tags:
 ---

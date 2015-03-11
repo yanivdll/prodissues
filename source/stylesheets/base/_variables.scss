@@ -1,8 +1,8 @@
 // Debug
-$visual-grid: true;
-$visual-grid-color: red;
-$visual-grid-index: front;
-$visual-grid-opacity: 0.05;
+// $visual-grid: true;
+// $visual-grid-color: red;
+// $visual-grid-index: front;
+// $visual-grid-opacity: 0.05;
 
 // Typography
 $base-font-family: GandhiSerif;
@@ -40,8 +40,8 @@ $base-nav-background: $dark-gray;
 $base-page-background: $light-brown;
 
 // Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $reddish;
+$base-border: 1px dotted $base-border-color;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

@@ -1,5 +1,5 @@
 ---
-title: this-is-a-test-article
+title: This is an example for a post
 date: 2015-03-08 21:25 UTC
 tags: email, test
 ---

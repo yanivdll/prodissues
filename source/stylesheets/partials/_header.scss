@@ -1,13 +1,18 @@
 header {
-  //@include outer-container;
+  @include outer-container;
+  border-top: 2px solid $reddish;
   border-bottom: 1px solid $base-border-color;
-  background-color: $dark-gray;
+  //background-color: $dark-gray;
+  height: 208px;
+  width: auto;
+  background: $dark-gray url('http://nanoc.ws/assets/images/background-dark.png') repeat;
+  
   .blog-title {
     font-size: 2em;
-    font-weight: 700;
-    letterspacing: 4px;
+    font-weight: 800;
+    letterspacing: 5px;
     text-transform: uppercase;
-    //color: yellow;
+    color: $light-gray;
     //text-shadow: -2px 0 $light-brown, 0 2px $light-brown, 2px 0 $light-brown, 0 -2px $light-brown;
 
   }
