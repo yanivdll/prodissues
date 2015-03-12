@@ -21,29 +21,46 @@ html, body{
   height: 100%;
 }
 
-.wrap {
+section {
   @include outer-container;
+  width: 90%;
 
   //
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -142px; 
+
 }
 
-.wrap:after {
+section:after {
   content: "";
   display: block;
   height: 142px; 
 }
 
-.content {
-  @include span-columns(8);
-  padding-left: $base-padding;
+article {
+  //padding-left: $base-padding;
+  margin-top: $base-margin;
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+  @include media($desktop) {
+    @include span-columns(8);
+  }
 }
 
-.sidebar {
-  @include span-columns(4);
-  padding-right: $base-padding;
+aside {
+  //padding-right: $base-padding;
+  margin-top: $base-margin;
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+
 }
 
 

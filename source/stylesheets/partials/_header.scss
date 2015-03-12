@@ -1,19 +1,64 @@
-header {
+// header {
+//   @include outer-container;
+//   //padding-top: 100px;
+//   // border-top: 2px solid $reddish;
+//   // border-bottom: 1px solid $base-border-color;
+//   //background-color: $dark-gray;
+//   height: 5px;
+//   // width: auto;
+//   //background: $dark-gray url('http://nanoc.ws/assets/images/background-dark.png') repeat;
+//   background-color: $black;
+//   border-radius: 0.2em;
+//   padding-top: 0.5em;
+//   padding-bottom: 0.5em;
+//   position: relative;
+//   margin-top: 4em;
+
+//   .blog-title {
+//     //margin-top: 2em;
+//     font-size: 1.5em;
+//     font-weight: 800;
+//     letterspacing: 5px;
+//     margin-left: 2em;
+//     text-transform: uppercase;
+//     color: $light-gray;
+//     //text-shadow: -2px 0 $light-brown, 0 2px $light-brown, 2px 0 $light-brown, 0 -2px $light-brown;
+
+//   }
+// }
+
+header h1 {
   @include outer-container;
-  border-top: 2px solid $reddish;
-  border-bottom: 1px solid $base-border-color;
-  //background-color: $dark-gray;
-  height: 208px;
-  width: auto;
   background: $dark-gray url('http://nanoc.ws/assets/images/background-dark.png') repeat;
+  border-bottom:  3px solid $reddish;
+  border-radius: $base-border-radius;
+  display: block;
+
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 2em;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 40px;
+  text-align: center;
   
-  .blog-title {
-    font-size: 2em;
-    font-weight: 800;
+
+  .blog-title{
+    // padding-left: $base-padding;
+    text-align: left;
     letterspacing: 5px;
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
     text-transform: uppercase;
+    font-weight: 800;
     color: $light-gray;
-    //text-shadow: -2px 0 $light-brown, 0 2px $light-brown, 2px 0 $light-brown, 0 -2px $light-brown;
+    font-size: 1.5em;
+    
+
 
   }
+
 }

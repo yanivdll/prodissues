@@ -8,17 +8,15 @@
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 </head>
 <body>
-
-  <section class="wrap">
+  <section>
     <%= partial "partials/header" %>
-    <article class="content">
+    <article>
       <%= yield %>
     </article>
-    <aside class="sidebar">
-      <h5>Recent Posts</h5>
-    </aside>
-  </section>
-
-  <%= partial "partials/footer" %>
+    <aside>
+     <%= partial "partials/sidebar" %>
+   </aside>
+ </section>
+ <%= partial "partials/footer" %>
 </body>
 </html>
