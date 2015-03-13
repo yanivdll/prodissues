@@ -31,8 +31,8 @@
 
 header {
   @include outer-container;
-  background: $dark-gray url('http://nanoc.ws/assets/images/background-dark.png') repeat;
-  border-bottom:  3px solid $reddish;
+  background: $base-nav-background url('http://nanoc.ws/assets/images/background-dark.png') repeat;
+  border-bottom:  3px solid $base-border-color;
   // border-radius: $base-border-radius;
   display: block;
 
@@ -41,9 +41,9 @@ header {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-top: 2em;
-  padding-bottom: 40px;
-  padding-top: 40px;
+  // margin-top: 2em;
+  padding-bottom: $base-padding;
+  padding-top: $base-padding;
   text-align: center;
 
 
@@ -53,10 +53,10 @@ header {
     text-decoration: none;
     vertical-align: middle;
     letterspacing: 5px;
-    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    // text-shadow: rgb(255, 255, 255) 0px 1px 0px;
     text-transform: lowercase;
     font-weight: 800;
-    color: $light-gray;
+    color: $base-title-color;
     font-size: 1.5em;
     
 

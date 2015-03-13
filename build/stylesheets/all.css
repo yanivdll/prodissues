@@ -1,186 +1,275 @@
-/* line 1, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+/* line 20, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em; }
+  /* line 23, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  /* line 28, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
+  dl dd {
+    margin: 0; }
+
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
   -moz-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
-  color: #333333;
+  color: #2D3E4F;
   font-family: GandhiSerif;
-  font-size: 22px;
+  font-size: 1.375em;
   line-height: 1.5; }
 
-/* line 10, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 10, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h1 {
+  font-size: 1.8em; }
+  /* line 13, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+  h1 a {
+    color: #2D3E4F; }
+    /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+    h1 a:hover {
+      color: #2D3E4F; }
+
+/* line 21, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 1.5em; }
+
+/* line 25, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 1.2em; }
+
+/* line 29, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
+  font-family: GandhiSerif;
+  color: #2D3E4F;
   margin: 0 0 0.75em; }
 
-/* line 22, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 41, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 p {
   margin: 0 0 0.75em; }
 
-/* line 26, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 45, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 a {
-  color: #B40001;
+  color: #2F81B7;
   text-decoration: none;
   transition: color 0.1s linear; }
-  /* line 31, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+  /* line 50, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   a:active, a:focus, a:hover {
-    color: #B40001;
+    color: #2F81B7;
     text-decoration: none;
-    border-bottom: 1px dotted #a41e22; }
-  /* line 39, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+    border-bottom: 1px dotted #E54D42; }
+  /* line 58, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 45, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 hr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px dotted #2F81B7;
   border-left: none;
   border-right: none;
   border-top: none;
   margin: 1.5em 0; }
 
-/* line 53, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/base/_typography.scss */
+/* line 72, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 img,
 picture {
   margin: 0;
   max-width: 100%; }
 
+/* line 78, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+a.tag {
+  font-weight: bolder;
+  margin-left: 0.4em;
+  margin-right: 0.4em; }
+  /* line 82, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+  a.tag:hover {
+    text-decoration: none; }
+
 /* Bitters needs to be imported before Neat */
-/* line 4, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 9, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-/* line 12, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_visual-grid.scss */
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-  background-image: -moz-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-  background-image: -ms-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-  background-image: -o-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-  background-image: linear-gradient(to left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0.05;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: 9999; }
-  @media screen and (min-width: 40em) {
-    /* line 12, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_visual-grid.scss */
-    body:before {
-      background-image: -webkit-linear-gradient(left, transparent 0, red 0, red 19.43277%, transparent 19.43277%, transparent 26.85574%, red 26.85574%, red 46.28851%, transparent 46.28851%, transparent 53.71149%, red 53.71149%, red 73.14426%, transparent 73.14426%, transparent 80.56723%, red 80.56723%, red 100%, transparent 100%);
-      background-image: -moz-linear-gradient(left, transparent 0, red 0, red 19.43277%, transparent 19.43277%, transparent 26.85574%, red 26.85574%, red 46.28851%, transparent 46.28851%, transparent 53.71149%, red 53.71149%, red 73.14426%, transparent 73.14426%, transparent 80.56723%, red 80.56723%, red 100%, transparent 100%);
-      background-image: -ms-linear-gradient(left, transparent 0, red 0, red 19.43277%, transparent 19.43277%, transparent 26.85574%, red 26.85574%, red 46.28851%, transparent 46.28851%, transparent 53.71149%, red 53.71149%, red 73.14426%, transparent 73.14426%, transparent 80.56723%, red 80.56723%, red 100%, transparent 100%);
-      background-image: -o-linear-gradient(left, transparent 0, red 0, red 19.43277%, transparent 19.43277%, transparent 26.85574%, red 26.85574%, red 46.28851%, transparent 46.28851%, transparent 53.71149%, red 53.71149%, red 73.14426%, transparent 73.14426%, transparent 80.56723%, red 80.56723%, red 100%, transparent 100%);
-      background-image: linear-gradient(to left, transparent 0, red 0, red 19.43277%, transparent 19.43277%, transparent 26.85574%, red 26.85574%, red 46.28851%, transparent 46.28851%, transparent 53.71149%, red 53.71149%, red 73.14426%, transparent 73.14426%, transparent 80.56723%, red 80.56723%, red 100%, transparent 100%); } }
-  @media screen and (min-width: 53.75em) {
-    /* line 12, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_visual-grid.scss */
-    body:before {
-      background-image: -webkit-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-      background-image: -moz-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-      background-image: -ms-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-      background-image: -o-linear-gradient(left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%);
-      background-image: linear-gradient(to left, transparent 0, red 0, red 6.17215%, transparent 6.17215%, transparent 8.5298%, red 8.5298%, red 14.70196%, transparent 14.70196%, transparent 17.05961%, red 17.05961%, red 23.23176%, transparent 23.23176%, transparent 25.58941%, red 25.58941%, red 31.76157%, transparent 31.76157%, transparent 34.11922%, red 34.11922%, red 40.29137%, transparent 40.29137%, transparent 42.64902%, red 42.64902%, red 48.82117%, transparent 48.82117%, transparent 51.17883%, red 51.17883%, red 57.35098%, transparent 57.35098%, transparent 59.70863%, red 59.70863%, red 65.88078%, transparent 65.88078%, transparent 68.23843%, red 68.23843%, red 74.41059%, transparent 74.41059%, transparent 76.76824%, red 76.76824%, red 82.94039%, transparent 82.94039%, transparent 85.29804%, red 85.29804%, red 91.4702%, transparent 91.4702%, transparent 93.82785%, red 93.82785%, red 100.0%, transparent 100.0%); } }
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+* {
+  margin: 0; }
 
-/* line 1, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 5, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 html {
-  background-color: #F1F0EB; }
-
-/* line 5, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
-body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin: 0;
-  padding: 0;
-  border: 0; }
-  /* line 20, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
-  body::after {
+  background-color: #ECF0F1; }
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  html::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 320px) {
+    /* line 5, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    html {
+      font-size: 2em; } }
+  @media screen and (min-width: 65.625em) {
+    /* line 5, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    html {
+      font-size: 1.375em; } }
 
-/* line 15, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 18, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* line 26, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+html, body {
+  height: 100%; }
+
+/* line 30, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 section {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
-  /* line 20, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  align-content: center;
+  min-height: 100%;
+  margin-bottom: -142px; }
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
   section::after {
     clear: both;
     content: "";
     display: table; }
-  /* line 18, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
-  section aside {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    padding-left: 4em; }
-    /* line 87, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
-    section aside:last-child {
-      margin-right: 0; }
-  /* line 23, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
-  section article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-    padding-left: 4em; }
-    /* line 87, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
-    section article:last-child {
-      margin-right: 0; }
 
-/* line 28, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
-.large-column {
-  float: left;
+/* line 46, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+section:after {
+  content: "";
   display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  padding-left: 4em; }
-  /* line 87, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
-  .large-column:last-child {
-    margin-right: 0; }
+  height: 142px; }
 
-/* line 33, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_layout.scss */
-.med-column {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  padding-right: 4em; }
-  /* line 87, /usr/local/rvm/gems/ruby-1.9.3-p392/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
-  .med-column:last-child {
-    margin-right: 0; }
+/* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+aside {
+  padding-top: 1em; }
+  @media screen and (min-width: 320px) {
+    /* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    aside {
+      float: left;
+      display: block;
+      margin-right: 8.71718%;
+      width: 100%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      aside:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 65.625em) {
+    /* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    aside {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 31.50258%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      aside:last-child {
+        margin-right: 0; } }
 
-/* line 1, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_header.scss */
+/* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+article {
+  padding-top: 1em; }
+  @media screen and (min-width: 320px) {
+    /* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    article {
+      float: left;
+      display: block;
+      margin-right: 8.71718%;
+      width: 100%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      article:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 65.625em) {
+    /* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    article {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 65.75129%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      article:last-child {
+        margin-right: 0; } }
+  /* line 71, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  article li.post-summary {
+    border-bottom: 1px dotted #2F81B7;
+    margin-bottom: 2em; }
+
+/* line 32, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
 header {
-  border-bottom: 1px solid #ddd;
-  background-color: #333333; }
-  /* line 5, /Users/Yaniv/rails_projects/prodissues/source/stylesheets/partials/_header.scss */
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #2D3E4F url("http://nanoc.ws/assets/images/background-dark.png") repeat;
+  border-bottom: 3px solid #E54D42;
+  display: block;
+  line-height: 30px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-align: center; }
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 50, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
   header .blog-title {
-    font-size: 2em;
-    font-weight: 700;
-    letterspacing: 4px;
-    text-transform: uppercase; }
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    letterspacing: 5px;
+    text-transform: lowercase;
+    font-weight: 800;
+    color: #ECF0F1;
+    font-size: 1.5em; }
+
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_footer.scss */
+footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #E54D42;
+  margin: 2em 0;
+  background: #2D3E4F;
+  height: 100px; }
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_footer.scss */
+  footer p {
+    font-size: 0.7em;
+    color: #ECF0F1;
+    vertical-align: baseline;
+    margin-bottom: 0px;
+    padding-top: 60px;
+    text-align: center; }
 
 @font-face {
   font-family: ColabThi;

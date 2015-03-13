@@ -1,10 +1,19 @@
 footer {
 	@include outer-container;
-	border-top: 1px solid $base-border-color;
+	border-top: 3px solid $base-border-color;
 	margin: 2em 0;
 	 //padding-top: 2em;
-	 background: $dark-gray url(http://nanoc.ws/assets/images/background-dark.png);
+	 background: $base-nav-background;// url(http://nanoc.ws/assets/images/background-dark.png);
 	 //background-position: top left,bottom left;
 	 //background-repeat: repeat-y;
-	 height: 142px; 
+	 height: 100px; 
+
+	 p{
+	 	font-size: 0.7em;
+	 	color: $base-title-color;
+	 	vertical-align: baseline;
+	 	margin-bottom: 0px;
+	 	padding-top: 60px;
+	 	text-align: center;
+	 }
 	}
