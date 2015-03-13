@@ -1,0 +1,16 @@
+@include media($mobile){
+	body{
+		background: $reddish;
+	}
+	section {
+		@include span-columns(4);
+
+		aside {
+			@include span-columns(4);
+		}
+
+		article {
+			@include span-columns(4);
+		}
+	}
+}

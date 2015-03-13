@@ -6,6 +6,7 @@
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";
+@import "partials/mobile";
 
 @include font-face(ColabThi, '/fonts/ColabThi-webfont', normal, regular);
 @include font-face(GandhiSerif, '/fonts/GandhiSerif-Regular-webfont', normal, regular);

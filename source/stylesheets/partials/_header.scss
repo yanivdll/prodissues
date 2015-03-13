@@ -28,7 +28,7 @@
 // }
 
 header h1 {
-  @include outer-container;
+  //@include outer-container;
   background: $dark-gray url('http://nanoc.ws/assets/images/background-dark.png') repeat;
   border-bottom:  3px solid $reddish;
   border-radius: $base-border-radius;
@@ -52,7 +52,7 @@ header h1 {
     text-align: left;
     letterspacing: 5px;
     text-shadow: rgb(255, 255, 255) 0px 1px 0px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: 800;
     color: $light-gray;
     font-size: 1.5em;

@@ -12,9 +12,6 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  //font: inherit;
-  //font-size: 100%;
-  //vertical-align: baseline;
 }
 
 html, body{
@@ -23,13 +20,14 @@ html, body{
 
 section {
   @include outer-container;
-  width: 90%;
-
-  //
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px; 
-
+  
+  aside {
+    @include span-columns(4);
+  }
+  
+  article {
+    @include span-columns(8);
+  }
 }
 
 section:after {
@@ -38,30 +36,7 @@ section:after {
   height: 142px; 
 }
 
-article {
-  //padding-left: $base-padding;
-  margin-top: $base-margin;
 
-  @include media($mobile) {
-    @include span-columns(4);
-  }
-  @include media($desktop) {
-    @include span-columns(8);
-  }
-}
-
-aside {
-  //padding-right: $base-padding;
-  margin-top: $base-margin;
-
-  @include media($mobile) {
-    @include span-columns(4);
-  }
-  @include media($desktop) {
-    @include span-columns(4);
-  }
-
-}
 
 
 // ol {
