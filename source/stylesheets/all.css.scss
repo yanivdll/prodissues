@@ -3,10 +3,13 @@
 @import "bourbon";
 @import "base/base";   /* Bitters needs to be imported before Neat */
 @import "neat";
+
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";
-@import "partials/mobile";
+// @import "partials/mobile";
+// @import "partials/tablet";
+// @import "partials/largedesktop";
 
 @include font-face(ColabThi, '/fonts/ColabThi-webfont', normal, regular);
 @include font-face(GandhiSerif, '/fonts/GandhiSerif-Regular-webfont', normal, regular);

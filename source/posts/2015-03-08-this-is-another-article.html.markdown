@@ -1,12 +1,10 @@
 ---
-title: Another exmample for a post
+title: Another Exmample for Blog Post
 date: 2015-03-08 21:26 UTC
-tags:
+tags: test, post
 ---
 
-# Hey again
-
-# General - no links in documentation
+## General - no links in documentation
 
 Models:
 

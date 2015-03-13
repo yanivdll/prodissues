@@ -1,58 +1,93 @@
-* {
-  margin: 0;
-}
+  * {
+    margin: 0;
+  }
 
-html {
-  @include outer-container;
-  background-color: $base-page-background;
-  font-size: $base-font-size;
-}
+  html {
+    @include outer-container;
+    background-color: $base-page-background;
+    @include media($mobile){
+      font-size: 2em;
+    }
+    @include media($desktop){
+      font-size: $base-font-size;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+    // font-size: $base-font-size;
+  }
 
-html, body{
-  height: 100%;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
 
-section {
-  @include outer-container;
-  
+
+  }
+
+  html, body{
+    height: 100%;
+  }
+
+  section {
+    @include outer-container;
+    padding-left: $base-padding;
+    padding-right: $base-padding;
+    align-content: center;
+    min-height: 100%;
+    margin-bottom: -142px; 
+    // width: 90%;
+
+    @include media($mobile) {
+    }
+    @include media($desktop) {
+    }
+
+  }
+
+  section:after {
+    content: "";
+    display: block;
+    height: 142px; 
+  }
+
   aside {
-    @include span-columns(4);
+    padding-top: $base-padding;
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    @include media($desktop) {
+      @include span-columns(4);
+    }
   }
-  
+
   article {
-    @include span-columns(8);
+    padding-top: $base-padding;
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    @include media($desktop) {
+      @include span-columns(8);
+    }
+
+    li.post-summary{
+      border-bottom: $base-border;
+      margin-top: 2em;
+    }
   }
-}
 
-section:after {
-  content: "";
-  display: block;
-  height: 142px; 
-}
+  // ol {
+  //   font-size: 1em;
+  //   font-weight: 500;
 
+  //   li {
+  //     margin: .5em 0;
 
+  //     span {
+  //       display: inline-block;
 
-
-// ol {
-//   font-size: 1em;
-//   font-weight: 500;
-
-//   li {
-//     margin: .5em 0;
-
-//     span {
-//       display: inline-block;
-
-//       &:before {
-//         content: '/';
-//         margin: 0 .3em;
-//       }
-//     }
-//   }
-// }
+  //       &:before {
+  //         content: '/';
+  //         margin: 0 .3em;
+  //       }
+  //     }
+  //   }
+  // }

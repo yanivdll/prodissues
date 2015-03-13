@@ -1,7 +1,7 @@
 ---
-title: this is a new article
+title: Another Example for Blog Post
 date: 2015-03-12 01:38 UTC
-tags:
+tags: test, post
 ---
 
 **The problem:**

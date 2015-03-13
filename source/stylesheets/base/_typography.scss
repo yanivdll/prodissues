@@ -7,6 +7,25 @@ body {
   line-height: $base-line-height;
 }
 
+h1{
+  font-size: 1.8em;
+
+  a{
+    color: $base-font-color;
+    &:hover{
+      color: $base-font-color;
+    }
+  }
+}
+
+h2{
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 1.2em;
+}
+
 h1,
 h2,
 h3,
@@ -14,7 +33,6 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -54,4 +72,14 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+a.tag{
+  font-weight: bolder;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  &:hover{
+    text-decoration: none;
+    border-bottom: $base-border;
+  }
 }

@@ -1,10 +1,8 @@
 ---
-title: this is a new article 2
+title: Blog Post #2
 date: 2015-03-12 01:38 UTC
-tags:
+tags: test, post
 ---
-
-# 1^st^ Post
 
 ## The writing process
 
