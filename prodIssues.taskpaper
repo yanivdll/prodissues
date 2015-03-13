@@ -1,3 +1,7 @@
 SASS:
-  ☐ Add border line between articles to <li> in homepage
+  ✔ Add border line between articles to <li> in homepage @done (15-03-13 17:51)
+  ☐ add google analytic code
+  ☐ register url with heroku
+  ☐ Fix workaround in the footer text (stick to bottom nicely)
+  ☐ Fix work arround in the post.erb - currently there is an if statment before the wrap. Need to find better solution.
   ☐ 
