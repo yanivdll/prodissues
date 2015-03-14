@@ -9,6 +9,7 @@ body {
 
 h1{
   font-size: 1.8em;
+  // margin-bottom:0.2em;
 
   a{
     color: $base-header-color;
@@ -26,16 +27,22 @@ h2{
   font-size: 1.2em;
 }
 
+h3{
+  color: $color-2;
+  font-weight: 800;
+  margin: 0 0 $small-spacing;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  color: $base-header-color;
+  font-family: $base-heading-font-family;
+  // color: $base-header-color;
   // line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  // margin: 0 0 $small-spacing;
 }
 
 p {
@@ -62,7 +69,7 @@ a {
 }
 
 hr {
-  border-bottom: $base-border;
+  border-bottom: $base-break-border;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -76,7 +83,7 @@ picture {
 }
 
 a.tag{
-  font-weight: bolder;
+  font-weight: 600;
   margin-left: 0.4em;
   margin-right: 0.4em;
   &:hover{

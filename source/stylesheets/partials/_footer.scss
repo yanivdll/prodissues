@@ -1,6 +1,6 @@
 footer {
 	@include outer-container;
-	border-top: 3px solid $base-border-color;
+	border-top: $base-titles-border;
 	margin: 2em 0;
 	 //padding-top: 2em;
 	 background: $base-nav-background;// url(http://nanoc.ws/assets/images/background-dark.png);

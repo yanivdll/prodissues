@@ -1,3 +1,4 @@
+
 // //Debug
 // $visual-grid: true;
 // $visual-grid-color: red;
@@ -5,11 +6,11 @@
 // $visual-grid-opacity: 0.05;
 
 // Typography
-$base-font-family: GandhiSerif;
-$heading-font-family: $base-font-family;//ColabThi;
+$base-font-family: GandhiSerif; //PTSerif;
+$base-heading-font-family: PTSansNarrow;//$base-font-family;//ColabThi;
 
 // Font Sizes
-$base-font-size: em(22);
+$base-font-size: 1em;
 
 // Line height
 $base-line-height: 1.5;
@@ -23,33 +24,22 @@ $base-z-index: 0;
 $base-padding: 1em;
 $base-margin: 1em;
 
-// Colors
-// Flat UI scheme (adobe)
-$madison: #2D3E4F; //dark blue
-$curious-blue: #2F81B7; //medium blue
-$celestial-blue: #3A99D8; //light blue
-$carmin-pink: #E54D42; //light crimson
-$athens-gray:#ECF0F1; //light gray
-$black: #333333;
-
-$chrome-white: #ECF0DA; //lemony white, variation of athens gray
-
 
 // Font Colors
-$base-background-color: $athens-gray;
-$base-header-color: $madison;
-$base-font-color: $madison;
-$base-action-color: $curious-blue;
-$base-title-color: $athens-gray;
+$base-background-color: $color-5;
+$base-header-color: $color-1;
+$base-font-color: $color-1;
+$base-action-color: $color-4;
+$base-title-color: $color-5;
 
 //Background Colors
-$base-nav-background: $madison;
-$base-page-background: $athens-gray;
+$base-nav-background: $color-1;
+$base-page-background: $color-5;
 
 // Border
-$base-border-color: $carmin-pink;
-$base-action-border: 1px dotted $base-border-color;
-$base-border: 1px dotted $base-action-color;
+$base-titles-border: 3px solid $color-4;
+$base-action-border: 1px dotted $color-4;
+$base-break-border: 1px dotted $color-1;
 
 
 // Forms
