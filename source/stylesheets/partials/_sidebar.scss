@@ -1,0 +1,30 @@
+
+.sidebar{
+  text-align: center;
+  font-size: 1.2em;
+  font-family: $base-heading-font-family;
+  color: $base-header-color;
+  display: inline;
+  text-align: center;
+    // display: block;
+    // margin-left: $base-padding;
+    margin-right: $base-padding;
+
+    @include media($tablet){
+      display: block;
+      text-align: right;
+      a{
+        &:hover{
+            border-bottom: none;
+        }
+    }
+
+}
+
+}
+
+
+a.sidebar::after{
+   content: " /";
+   color: $color-3;
+}

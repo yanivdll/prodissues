@@ -1,19 +1,20 @@
 footer {
 	@include outer-container;
-	border-top: $base-titles-border;
+	// border-top: $base-titles-border;
 	margin: 2em 0;
 	 //padding-top: 2em;
-	 background: $base-nav-background;// url(http://nanoc.ws/assets/images/background-dark.png);
+	 // background: $base-nav-background;// url(http://nanoc.ws/assets/images/background-dark.png);
 	 //background-position: top left,bottom left;
 	 //background-repeat: repeat-y;
 	 height: 100px; 
 
 	 p{
-	 	font-size: 0.7em;
+	 	font-size: 0.5em;
 	 	color: $base-title-color;
 	 	vertical-align: baseline;
 	 	margin-bottom: 0px;
 	 	padding-top: 60px;
+	 	padding-left: $base-padding;
 	 	text-align: center;
 	 }
 	}

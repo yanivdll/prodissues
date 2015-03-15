@@ -31,8 +31,8 @@
 
 header {
   @include outer-container;
-  background: $base-nav-background url('http://nanoc.ws/assets/images/background-dark.png') repeat;
-  border-bottom:  $base-titles-border;
+  // background: $base-nav-background url('http://nanoc.ws/assets/images/background-dark.png') repeat;
+  // border-bottom:  1px dotted $color-3;//$base-titles-border;
   // border-radius: $base-border-radius;
   display: block;
 
@@ -42,24 +42,32 @@ header {
   margin-left: 0px;
   margin-right: 0px;
   // margin-top: 2em;
-  padding-bottom: $base-padding;
-  padding-top: $base-padding;
-  text-align: center;
+  padding-bottom: 2*$base-padding;
+  padding-top: 2*$base-padding;
+  padding-left: $base-padding;
+  padding-right: $base-padding;
+  // text-align: center;
+  width: 100%;
 
 
   .blog-title {
-    // padding-left: $base-padding;
+
     text-align: left;
     text-decoration: none;
     vertical-align: middle;
     letterspacing: 5px;
     // text-shadow: rgb(255, 255, 255) 0px 1px 0px;
     text-transform: lowercase;
-    font-family: $base-heading-font-family;
+    font-family: $base-title-font-family;
     // font-weight: 800;
     color: $base-title-color;
-    font-size: 2.5em;
+    // border-bottom: $base-action-border;
+    // border-top: $base-action-border;
+    font-size: 3em;
     
+    @include media($tablet){
+      font-size: 4em;
+    }
 
 
   }

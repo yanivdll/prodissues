@@ -7,10 +7,11 @@
 
 // Typography
 $base-font-family: GandhiSerif; //PTSerif;
+$base-title-font-family: PTSansNarrowBold;
 $base-heading-font-family: PTSansNarrow;//$base-font-family;//ColabThi;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 1.2em;
 
 // Line height
 $base-line-height: 1.5;
@@ -26,11 +27,12 @@ $base-margin: 1em;
 
 
 // Font Colors
-$base-background-color: $color-5;
-$base-header-color: $color-1;
-$base-font-color: $color-1;
+$base-title-color: $color-1;
+$base-header-color: $color-2;
 $base-action-color: $color-4;
-$base-title-color: $color-5;
+$base-font-color: $color-1;
+$base-background-color: $color-5;
+
 
 //Background Colors
 $base-nav-background: $color-1;
