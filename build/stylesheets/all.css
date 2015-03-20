@@ -6,11 +6,11 @@ ol {
   padding: 0; }
 /* line 20, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
 dl {
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.725em; }
   /* line 23, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
   dl dt {
     font-weight: bold;
-    margin-top: 0.75em; }
+    margin-top: 0.725em; }
   /* line 28, /Users/ygilad/dev/prodissues/source/stylesheets/base/_lists.scss */
   dl dd {
     margin: 0; }
@@ -21,80 +21,144 @@ body {
   -moz-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
-  color: #2D3E4F;
-  font-family: GandhiSerif;
-  font-size: 1.375em;
-  line-height: 1.5; }
+  -webkit-font-smoothing: antialiased;
+  color: black;
+  font-family: PTSandsRegular;
+  font-size: 1.05em;
+  line-height: 1.45; }
 
 /* line 10, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 h1 {
   font-size: 1.8em; }
   /* line 13, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   h1 a {
-    color: #2D3E4F; }
+    color: black; }
     /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
     h1 a:hover {
-      color: #2D3E4F; }
+      color: #A22027;
+      border-bottom: none; }
 
-/* line 21, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 23, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 h2 {
-  font-size: 1.5em; }
+  font-size: 1.6em; }
 
-/* line 25, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
-h2 {
-  font-size: 1.2em; }
+/* line 27, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h3 {
+  color: #3D709D;
+  font-size: 1.4em;
+  font-weight: 800;
+  margin: 0 0 0.725em; }
 
-/* line 29, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 34, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h4 {
+  color: #3D709D;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0 0 0.725em; }
+
+/* line 41, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+h5 {
+  color: #3D709D;
+  font-size: 1.1em;
+  font-weight: 800;
+  margin: 0 0 0.725em; }
+
+/* line 48, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: GandhiSerif;
-  color: #2D3E4F;
-  margin: 0 0 0.75em; }
+  font-family: PTSansNarrow;
+  line-height: 1.2; }
 
-/* line 41, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 60, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 p {
-  margin: 0 0 0.75em; }
+  margin: 0 0 0.725em; }
 
-/* line 45, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 a {
-  color: #2F81B7;
+  color: #A22027;
   text-decoration: none;
   transition: color 0.1s linear; }
-  /* line 50, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+  /* line 69, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   a:active, a:focus, a:hover {
-    color: #2F81B7;
+    color: #A22027;
     text-decoration: none;
-    border-bottom: 1px dotted #E54D42; }
-  /* line 58, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+    border-bottom: 1px dotted #A22027; }
+  /* line 77, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 83, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 hr {
-  border-bottom: 1px dotted #2F81B7;
+  border-bottom: 1px dotted black;
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: 1.5em 0; }
+  margin: 1.45em 0; }
 
-/* line 72, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 91, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 img,
 picture {
   margin: 0;
   max-width: 100%; }
 
-/* line 78, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+/* line 97, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
 a.tag {
-  font-weight: bolder;
+  font-weight: 600;
   margin-left: 0.4em;
   margin-right: 0.4em; }
-  /* line 82, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
+  /* line 101, /Users/ygilad/dev/prodissues/source/stylesheets/base/_typography.scss */
   a.tag:hover {
     text-decoration: none; }
+
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+sup a {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 0.6em;
+  color: #777777;
+  background-color: #EEEEEE;
+  border-radius: 50%;
+  padding: 0.2em 0.5em 0.2em;
+  text-decoration: none; }
+  /* line 13, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+  sup a:hover {
+    color: #FFFDFD;
+    background-color: #A22027; }
+
+/* line 19, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+a.reversefootnote {
+  position: relative;
+  top: -0.2em;
+  left: 0;
+  font-weight: bold;
+  font-size: 0.6em;
+  color: #777777;
+  background-color: #EEEEEE;
+  border-radius: 0.4em;
+  padding: 0.2em 0.4em 0;
+  text-decoration: none; }
+  /* line 31, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+  a.reversefootnote:hover {
+    color: #FFFDFD;
+    background-color: #A22027; }
+
+/* line 38, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+blockquote {
+  margin: 1em 0;
+  background-color: #eee;
+  border-left: 0.7em solid #A22027;
+  border-radius: 0.3em;
+  padding: 1em 1.5em 0.5em 1.5em; }
+
+/* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+.footnotes li {
+  list-style-type: decimal; }
 
 /* Bitters needs to be imported before Neat */
 /* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
@@ -118,32 +182,38 @@ html {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ECF0F1; }
+  background-color: #FFFDFD;
+  font-size: 1.05em; }
   /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
   html::after {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (min-width: 320px) {
-    /* line 5, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
-    html {
-      font-size: 2em; } }
-  @media screen and (min-width: 65.625em) {
-    /* line 5, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
-    html {
-      font-size: 1.375em; } }
 
-/* line 18, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 body {
   margin: 0;
   padding: 0;
   border: 0; }
+  @media screen and (min-width: 48em) {
+    /* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    body {
+      font-size: 1.3rem;
+      -webkit-font-smoothing: normal; } }
+  @media screen and (min-width: 52.5em) {
+    /* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    body {
+      font-size: 1.4em; } }
+  @media screen and (min-width: 81.25em) {
+    /* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    body {
+      font-size: 1.5em; } }
 
-/* line 26, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 27, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 html, body {
   height: 100%; }
 
-/* line 30, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 31, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 section {
   max-width: 100%;
   margin-left: auto;
@@ -152,48 +222,61 @@ section {
   padding-right: 1em;
   align-content: center;
   min-height: 100%;
-  margin-bottom: -142px; }
+  margin-bottom: -100px;
+  width: 100%; }
   /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
   section::after {
     clear: both;
     content: "";
     display: table; }
 
-/* line 46, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 41, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 section:after {
   content: "";
   display: block;
-  height: 142px; }
+  height: 100px; }
 
-/* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 aside {
-  padding-top: 1em; }
-  @media screen and (min-width: 320px) {
-    /* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  padding-top: 1em;
+  text-align: right; }
+  @media screen and (min-width: 20em) {
+    /* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
     aside {
       float: left;
       display: block;
       margin-right: 8.71718%;
-      width: 100%; }
+      width: 100%;
+      text-align: left; }
       /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       aside:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 65.625em) {
-    /* line 52, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  @media screen and (min-width: 48em) {
+    /* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    aside {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 21.86759%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      aside:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 52.5em) {
+    /* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
     aside {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 31.50258%; }
+      width: 22.9404%; }
       /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       aside:last-child {
         margin-right: 0; } }
 
-/* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+/* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
 article {
   padding-top: 1em; }
-  @media screen and (min-width: 320px) {
-    /* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  @media screen and (min-width: 20em) {
+    /* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
     article {
       float: left;
       display: block;
@@ -202,8 +285,18 @@ article {
       /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 65.625em) {
-    /* line 62, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  @media screen and (min-width: 48em) {
+    /* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    article {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 73.95586%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      article:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 52.5em) {
+    /* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
     article {
       float: left;
       display: block;
@@ -212,18 +305,26 @@ article {
       /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
-  /* line 71, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+  @media screen and (min-width: 81.25em) {
+    /* line 64, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
+    article {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      article:last-child {
+        margin-right: 0; } }
+  /* line 79, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
   article li.post-summary {
-    border-bottom: 1px dotted #2F81B7;
+    border-bottom: 1px dotted black;
     margin-bottom: 2em; }
 
-/* line 32, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
 header {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #2D3E4F url("http://nanoc.ws/assets/images/background-dark.png") repeat;
-  border-bottom: 3px solid #E54D42;
   display: block;
   line-height: 30px;
   margin-bottom: 0px;
@@ -231,31 +332,38 @@ header {
   margin-right: 0px;
   padding-bottom: 1em;
   padding-top: 1em;
-  text-align: center; }
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%; }
   /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
   header::after {
     clear: both;
     content: "";
     display: table; }
-  /* line 50, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+  /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
   header .blog-title {
     text-align: left;
     text-decoration: none;
     vertical-align: middle;
     letterspacing: 5px;
     text-transform: lowercase;
-    font-weight: 800;
-    color: #ECF0F1;
-    font-size: 1.5em; }
+    font-family: PTSansNarrowBold;
+    color: black;
+    font-size: 3em; }
+    /* line 26, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+    header .blog-title a:hover {
+      border-bottom: none; }
+    @media screen and (min-width: 48em) {
+      /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+      header .blog-title {
+        font-size: 4em; } }
 
 /* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_footer.scss */
 footer {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-top: 3px solid #E54D42;
   margin: 2em 0;
-  background: #2D3E4F;
   height: 100px; }
   /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
   footer::after {
@@ -264,20 +372,56 @@ footer {
     display: table; }
   /* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_footer.scss */
   footer p {
-    font-size: 0.7em;
-    color: #ECF0F1;
+    font-size: 0.5em;
+    color: black;
     vertical-align: baseline;
     margin-bottom: 0px;
     padding-top: 60px;
+    padding-left: 1em;
     text-align: center; }
 
+/* line 2, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+p.sidebar {
+  display: inline; }
+  /* line 4, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+  p.sidebar a.sidebar {
+    text-align: center;
+    font-size: 1.4em;
+    font-family: PTSansNarrow;
+    color: #3D709D;
+    display: inline;
+    text-align: center; }
+    @media screen and (min-width: 48em) {
+      /* line 4, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+      p.sidebar a.sidebar {
+        font-size: 1.2em;
+        display: block;
+        text-align: right;
+        padding-right: 1em; }
+        /* line 20, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+        p.sidebar a.sidebar a {
+          display: block; }
+          /* line 22, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+          p.sidebar a.sidebar a:hover {
+            border-bottom: none;
+            text-decoration: none; } }
+  /* line 32, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+  p.sidebar a.sidebar::after {
+    content: " /";
+    color: #A22027; }
+
 @font-face {
-  font-family: ColabThi;
-  font-style: regular;
+  font-family: PTSansNarrow;
+  font-style: normal;
   font-weight: normal;
-  src: url("/fonts/ColabThi-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ColabThi-webfont.woff2") format("woff2"), url("/fonts/ColabThi-webfont.woff") format("woff"), url("/fonts/ColabThi-webfont.ttf") format("truetype"), url("/fonts/ColabThi-webfont.svg#ColabThi") format("svg"); }
+  src: url("/fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.woff2") format("woff2"), url("/fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.woff") format("woff"), url("/fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.ttf") format("truetype"), url("/fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.svg#PTSansNarrow") format("svg"); }
 @font-face {
-  font-family: GandhiSerif;
-  font-style: regular;
+  font-family: PTSansNarrowBold;
+  font-style: normal;
   font-weight: normal;
-  src: url("/fonts/GandhiSerif-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/GandhiSerif-Regular-webfont.woff2") format("woff2"), url("/fonts/GandhiSerif-Regular-webfont.woff") format("woff"), url("/fonts/GandhiSerif-Regular-webfont.ttf") format("truetype"), url("/fonts/GandhiSerif-Regular-webfont.svg#GandhiSerif") format("svg"); }
+  src: url("/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff2") format("woff2"), url("/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff") format("woff"), url("/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.ttf") format("truetype"), url("/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.svg#PTSansNarrowBold") format("svg"); }
+@font-face {
+  font-family: PTSandsRegular;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/ptsans_regular_macroman/PTS55F-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsans_regular_macroman/PTS55F-webfont.woff2") format("woff2"), url("/fonts/ptsans_regular_macroman/PTS55F-webfont.woff") format("woff"), url("/fonts/ptsans_regular_macroman/PTS55F-webfont.ttf") format("truetype"), url("/fonts/ptsans_regular_macroman/PTS55F-webfont.svg#PTSandsRegular") format("svg"); }
