@@ -6,7 +6,7 @@
 // $visual-grid-opacity: 0.05;
 
 // Typography
-$base-font-family: GandhiSerif; //PTSerif;
+$base-font-family: PTSandsRegular;// GandhiSerif; //PTSerif;
 $base-title-font-family: PTSansNarrowBold;
 $base-heading-font-family: PTSansNarrow;//$base-font-family;//ColabThi;
 
@@ -14,7 +14,7 @@ $base-heading-font-family: PTSansNarrow;//$base-font-family;//ColabThi;
 $base-font-size: 1.05em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.45;
 $heading-line-height: 1.2;
 
 // Other Sizes
@@ -28,10 +28,16 @@ $base-margin: 1em;
 
 // Font Colors
 $base-title-color: $color-1;
-$base-header-color: $color-2;
-$base-action-color: $color-4;
+$base-header-color: $color-1;
+$base-nav-color: $color-2;
 $base-font-color: $color-1;
+$base-action-color: $color-4;
 $base-background-color: $color-5;
+
+//Footnotes Collors
+$base-ref-color: $color-6;
+$base-ref-background-color: $color-7;
+$base-ref-action-color: $color-4;
 
 
 //Background Colors

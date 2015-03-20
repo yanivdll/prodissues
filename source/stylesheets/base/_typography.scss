@@ -1,6 +1,6 @@
 body {
   @include font-feature-settings("kern", "liga", "pnum");
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -10,7 +10,6 @@ body {
 h1{
   font-size: 1.8em;
   // margin-bottom:0.2em;
-
   a{
     color: $base-header-color;
     &:hover{
@@ -22,15 +21,26 @@ h1{
 }
 
 h2{
-  font-size: 1.5em;
-}
-
-h2{
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 
 h3{
   color: $color-2;
+  font-size: 1.4em;
+  font-weight: 800;
+  margin: 0 0 $small-spacing;
+}
+
+h4{
+  color: $color-2;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0 0 $small-spacing;
+}
+
+h5{
+  color: $color-2;
+  font-size: 1.1em;
   font-weight: 800;
   margin: 0 0 $small-spacing;
 }
@@ -43,7 +53,7 @@ h5,
 h6 {
   font-family: $base-heading-font-family;
   // color: $base-header-color;
-  // line-height: $heading-line-height;
+  line-height: $heading-line-height;
   // margin: 0 0 $small-spacing;
 }
 

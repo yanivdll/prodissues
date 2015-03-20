@@ -12,6 +12,16 @@
     margin: 0;
     padding: 0;
     border: 0;
+    @include media($tablet){
+      font-size: 1.3rem;
+      -webkit-font-smoothing: normal;
+    }
+    @include media($desktop){
+      font-size: 1.4em;
+    }
+    @include media($largedesktop){
+      font-size: 1.5em;
+    }
   }
 
   html, body{
@@ -26,9 +36,6 @@
     min-height: 100%;
     margin-bottom: -100px; //should be same as footer height
     width: 100%;
-    // @include media($mobile) {
-    //   font-size: 0.8em;
-    // }
   }
 
   section:after {
@@ -43,7 +50,6 @@
     @include media($mobile) {
       @include span-columns(4);
       text-align: left;
-      
     }
     @include media($tablet) {
       @include span-columns(2);
@@ -51,6 +57,8 @@
     @include media($desktop) {
       @include span-columns(3);
     }
+    // @include media($largedesktop){
+    // }
   }
 
   article {
@@ -62,6 +70,9 @@
       @include span-columns(6);
     }
     @include media($desktop) {
+      @include span-columns(8);
+    }
+    @include media($largedesktop){
       @include span-columns(8);
     }
 

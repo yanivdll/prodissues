@@ -9,9 +9,9 @@ $max-width: 100%; //original
 
 
 // Neat Breakpoints
-$mobile-size: 320px;
-$tablet-size: 768px;
-$desktop-size: 840px;
+$mobile-size: em(320);
+$tablet-size: em(768);
+$desktop-size: em(840);
 $largedesktop-size:em(1300);
 
 // Bourbon Neat Breakpoints
