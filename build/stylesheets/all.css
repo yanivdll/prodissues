@@ -161,16 +161,12 @@ blockquote {
   list-style-type: decimal; }
 
 /* Bitters needs to be imported before Neat */
-/* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 9, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
   box-sizing: inherit; }
 
 /* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
@@ -184,7 +180,7 @@ html {
   margin-right: auto;
   background-color: #FFFDFD;
   font-size: 1.05em; }
-  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
   html::after {
     clear: both;
     content: "";
@@ -224,7 +220,7 @@ section {
   min-height: 100%;
   margin-bottom: -100px;
   width: 100%; }
-  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
   section::after {
     clear: both;
     content: "";
@@ -248,7 +244,7 @@ aside {
       margin-right: 8.71718%;
       width: 100%;
       text-align: left; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       aside:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 48em) {
@@ -258,7 +254,7 @@ aside {
       display: block;
       margin-right: 4.17655%;
       width: 21.86759%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       aside:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 52.5em) {
@@ -268,7 +264,7 @@ aside {
       display: block;
       margin-right: 2.74614%;
       width: 22.9404%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       aside:last-child {
         margin-right: 0; } }
 
@@ -282,7 +278,7 @@ article {
       display: block;
       margin-right: 8.71718%;
       width: 100%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 48em) {
@@ -292,7 +288,7 @@ article {
       display: block;
       margin-right: 4.17655%;
       width: 73.95586%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 52.5em) {
@@ -302,7 +298,7 @@ article {
       display: block;
       margin-right: 2.74614%;
       width: 65.75129%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 81.25em) {
@@ -312,7 +308,7 @@ article {
       display: block;
       margin-right: 2.04556%;
       width: 48.97722%; }
-      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       article:last-child {
         margin-right: 0; } }
   /* line 79, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_layout.scss */
@@ -335,7 +331,7 @@ header {
   padding-left: 1em;
   padding-right: 1em;
   width: 100%; }
-  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
   header::after {
     clear: both;
     content: "";
@@ -365,7 +361,7 @@ footer {
   margin-right: auto;
   margin: 2em 0;
   height: 100px; }
-  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
   footer::after {
     clear: both;
     content: "";

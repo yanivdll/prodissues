@@ -13,6 +13,7 @@ gem "bitters"
 gem "bourbon"
 gem "neat"
 gem "kramdown"
+gem "nokogiri"
 
 group :development do
 	gem "middleman-livereload", "~> 3.3.0"

@@ -5,152 +5,20 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2015-03-17T13:26:00-04:00</updated>
+  <updated>2015-05-01T11:33:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>Another Exmample for Blog Post</title>
-    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-a-test-article.html"/>
-    <id>http://blog.url.com/2015/03/this-is-a-test-article.html</id>
-    <published>2015-03-17T13:26:00-04:00</published>
-    <updated>2015-03-20T10:15:40-04:00</updated>
+    <title>Ekko for iOS</title>
+    <link rel="alternate" href="http://blog.url.com/2015/05/ekko-for-ios.html"/>
+    <id>http://blog.url.com/2015/05/ekko-for-ios.html</id>
+    <published>2015-05-01T11:33:00-04:00</published>
+    <updated>2015-05-01T12:03:36-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;I've just saw this in Quora&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;"… a product requirements document shouldn't exist in a Lean Startup context."&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;and can't disagree more with this statement. This view reflects misconception of what a product requirement document (i.e. spec) is, and what purpose it should serve.&lt;/p&gt;
-
-
-&lt;p&gt;Outbrain was built on the lean startup methodology. New employees are still getting Eric Ries's book as part of their welcome pack, and everything we build, for better or worst start as an MVP, and evolves though the build-measure-learn cycles. But unfortunately, this methodology is prone to misconceptions, such as the one above. And don't get me started with the abuse people are doing to the concept of MVP…&lt;/p&gt;
-
-&lt;p&gt;Take for example a recent issue we've had with our API. At times it returned content recommendations with low quality images or no image at all. This was a bug in our system, which was designed to filter this type of recommendations. We fixed the bug, but wanted to add a bulletproof mechanism. Filtering and replacing recommendations in realtime is very costly in performance, so we had to find a way to "fix" articles that we're about to serve and that don't include  thumbnails.&lt;/p&gt;
-
-&lt;p&gt;The solution we came up with was a pool of images that we'll tap into when we intercept problematic recommendations. Developing this feature is rather simple and doesn't requires more than couple days of work.&lt;/p&gt;
-
-&lt;p&gt;So, to move ahead with the solution I had to send a quick email to our product designer, asking her to come up with about 10 generic images that we'll then use in case we have to inject an image.&lt;/p&gt;
-
-&lt;p&gt;I was about send the email, but realized I need to provide some context, otherwise she'll reply with follow up questions - what are those images for? what type of images, etc. To save time and effort, I've added some background and described the problem and what we're trying to solve.&lt;/p&gt;
-
-&lt;p&gt;Reading my email again&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; the email still seem unclear. If I were the product designer reading this email, I would have asked "what do we want users to see and what reaction do we try to evoke?", "how should those images relate to the article they attached to?", "why not use stock images service such as Getty images?" and so on.&lt;/p&gt;
-
-&lt;p&gt;No reason to send this email, knowing that it's partial. So, I added information about what we're trying to achieve. I explained that when a story doesn't have a native image, we would like to add one ourselves. This image should "trick" the user into thinking that the image &lt;em&gt;do&lt;/em&gt; belong to the recommendation. This effect can be achieved by choosing images with color scheme that blend with the the rest of content in the page, and don't hold too much notable features. A good example if pattern images with warm colors &lt;!--add image--&gt;. Those images help the user ‘glide’ through the thumbnail, without paying too much attention to the content of the image. The user will unconsciously check the mental box that saying ‘this recommendation looks complete’ and move on to inspect other elements, such as the title and the source of the article.&lt;/p&gt;
-
-&lt;p&gt;I've linked to a good article in NYT, which explains why stock images are useless&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;, and lastly added few minor requirements, such as minimum image resolutions, and aspect ratio.&lt;/p&gt;
-
-&lt;!--the lesson--&gt;
-&lt;p&gt;Guess what my email turned out to be - a &lt;strong&gt;spec&lt;/strong&gt;. And here's the point I'm driving at - don't think of it as a document in a certain format. It shouldn't be a 120 pages document that will bore its readers to death. Think of it as a product. The users of this product are those who you count on to build or execute your product, feature, idea.&lt;/p&gt;
-
-&lt;p&gt;Spec is the An efficient way to communicate a thought, idea or aspiration in a way that can be translate by the user&lt;/p&gt;
-
-&lt;p&gt;Spec is a way to communicate an idea, feature product from an abstract, high level thought into an actionable and digestible format.&lt;/p&gt;
-
-&lt;div class="footnotes"&gt;
-  &lt;ol&gt;
-    &lt;li id="fn:1"&gt;
-      &lt;p&gt;Answer to the question &lt;a href="http://www.quora.com/What-should-a-lean-startup-functional-spec-product-requirements-doc-look-like"&gt;"What should a lean startup functional spec / product requirements doc look like?"&lt;/a&gt; &lt;a href="#fnref:1" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id="fn:2"&gt;
-      &lt;p&gt;I'm (trying to be) religious about reading my emails again just before I send them. 90% of the times I'll find a spelling mistake or find better way to express something that I was trying to say. I even have the "undo" feature added to my gmail, and set to 30 sec (the longest duration). &lt;a href="#fnref:2" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id="fn:3"&gt;
-      &lt;p&gt;&lt;a href="http://bits.blogs.nytimes.com/2010/11/02/study-shows-people-ignore-generic-photos-online/?_r=1"&gt;Study Shows People Ignore Generic Photos Online, NYT&lt;/a&gt; &lt;a href="#fnref:3" class="reversefootnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Blog Post</title>
-    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-a-new-article-3.html"/>
-    <id>http://blog.url.com/2015/03/this-is-a-new-article-3.html</id>
-    <published>2015-03-11T21:38:00-04:00</published>
-    <updated>2015-03-13T17:41:23-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, eam erant erroribus eu, nam in falli commodo conclusionemque, cum reprimique scriptorem interpretaris et. His eu odio accumsan definitionem. Et nihil tantas diceret eam, vim inermis ullamcorper no. Consulatu temporibus in vim, quo quando fabulas philosophia no. Quo omnium commune menandri id.&lt;/p&gt;
-
-
-
-&lt;p&gt;In quot inani quidam usu, cu autem fabulas vim. Est quis debet labores id, quodsi eripuit efficiendi vim in, te nam novum errem. No putant fabulas vocibus duo. Paulo rationibus pri ad, vix eripuit delicatissimi cu.&lt;/p&gt;
-
-&lt;p&gt;Iudico denique probatus ex usu, illud habemus urbanitas pri no. Eu cetero fastidii mei, pri suavitate vulputate mnesarchum an. Causae legimus no per, id falli euismod abhorreant mel. Numquam feugiat pri ut, est in wisi nullam melius. Eam te habeo nonumy, quaeque expetenda dissentiunt ea quo.&lt;/p&gt;
-
-&lt;p&gt;Eu vel dicta aliquam. Ut sea suavitate dignissim referrentur, ex omnes assueverit nec. Sed at ipsum postulant, qui ad solet minimum, ea qui sale dicam graece. Ad quod sint inani pro. Vis an civibus vivendum recteque, duo mutat sonet vitae ei, qui ut meis posse sensibus.&lt;/p&gt;
-
-&lt;p&gt;Choro ancillae dissentiet ei sit, at per persecuti elaboraret efficiantur, ea quo decore accumsan. Nam dicit interesset id. Vis eu nisl aeterno senserit, nam aliquando consequuntur ex. Sed erat vocent no, aliquam dolorem eos cu. In solum inani nam, an pro odio dicat laoreet.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Another Example for Blog Post</title>
-    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-a-new-article.html"/>
-    <id>http://blog.url.com/2015/03/this-is-a-new-article.html</id>
-    <published>2015-03-11T21:38:00-04:00</published>
-    <updated>2015-03-13T17:04:31-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, eam erant erroribus eu, nam in falli commodo conclusionemque, cum reprimique scriptorem interpretaris et. His eu odio accumsan definitionem. Et nihil tantas diceret eam, vim inermis ullamcorper no. Consulatu temporibus in vim, quo quando fabulas philosophia no. Quo omnium commune menandri id.&lt;/p&gt;
-
-
-
-&lt;p&gt;In quot inani quidam usu, cu autem fabulas vim. Est quis debet labores id, quodsi eripuit efficiendi vim in, te nam novum errem. No putant fabulas vocibus duo. Paulo rationibus pri ad, vix eripuit delicatissimi cu.&lt;/p&gt;
-
-&lt;p&gt;Iudico denique probatus ex usu, illud habemus urbanitas pri no. Eu cetero fastidii mei, pri suavitate vulputate mnesarchum an. Causae legimus no per, id falli euismod abhorreant mel. Numquam feugiat pri ut, est in wisi nullam melius. Eam te habeo nonumy, quaeque expetenda dissentiunt ea quo.&lt;/p&gt;
-
-&lt;p&gt;Eu vel dicta aliquam. Ut sea suavitate dignissim referrentur, ex omnes assueverit nec. Sed at ipsum postulant, qui ad solet minimum, ea qui sale dicam graece. Ad quod sint inani pro. Vis an civibus vivendum recteque, duo mutat sonet vitae ei, qui ut meis posse sensibus.&lt;/p&gt;
-
-&lt;p&gt;Choro ancillae dissentiet ei sit, at per persecuti elaboraret efficiantur, ea quo decore accumsan. Nam dicit interesset id. Vis eu nisl aeterno senserit, nam aliquando consequuntur ex. Sed erat vocent no, aliquam dolorem eos cu. In solum inani nam, an pro odio dicat laoreet.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Blog Post</title>
-    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-a-new-article-2.html"/>
-    <id>http://blog.url.com/2015/03/this-is-a-new-article-2.html</id>
-    <published>2015-03-11T21:38:00-04:00</published>
-    <updated>2015-03-13T17:41:28-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, eam erant erroribus eu, nam in falli commodo conclusionemque, cum reprimique scriptorem interpretaris et. His eu odio accumsan definitionem. Et nihil tantas diceret eam, vim inermis ullamcorper no. Consulatu temporibus in vim, quo quando fabulas philosophia no. Quo omnium commune menandri id.&lt;/p&gt;
-
-
-
-&lt;p&gt;In quot inani quidam usu, cu autem fabulas vim. Est quis debet labores id, quodsi eripuit efficiendi vim in, te nam novum errem. No putant fabulas vocibus duo. Paulo rationibus pri ad, vix eripuit delicatissimi cu.&lt;/p&gt;
-
-&lt;p&gt;Iudico denique probatus ex usu, illud habemus urbanitas pri no. Eu cetero fastidii mei, pri suavitate vulputate mnesarchum an. Causae legimus no per, id falli euismod abhorreant mel. Numquam feugiat pri ut, est in wisi nullam melius. Eam te habeo nonumy, quaeque expetenda dissentiunt ea quo.&lt;/p&gt;
-
-&lt;p&gt;Eu vel dicta aliquam. Ut sea suavitate dignissim referrentur, ex omnes assueverit nec. Sed at ipsum postulant, qui ad solet minimum, ea qui sale dicam graece. Ad quod sint inani pro. Vis an civibus vivendum recteque, duo mutat sonet vitae ei, qui ut meis posse sensibus.&lt;/p&gt;
-
-&lt;p&gt;Choro ancillae dissentiet ei sit, at per persecuti elaboraret efficiantur, ea quo decore accumsan. Nam dicit interesset id. Vis eu nisl aeterno senserit, nam aliquando consequuntur ex. Sed erat vocent no, aliquam dolorem eos cu. In solum inani nam, an pro odio dicat laoreet.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Another Exmample for Blog Post</title>
-    <link rel="alternate" href="http://blog.url.com/2015/03/this-is-another-article.html"/>
-    <id>http://blog.url.com/2015/03/this-is-another-article.html</id>
-    <published>2015-03-08T17:26:00-04:00</published>
-    <updated>2015-03-13T17:05:04-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, eam erant erroribus eu, nam in falli commodo conclusionemque, cum reprimique scriptorem interpretaris et. His eu odio accumsan definitionem. Et nihil tantas diceret eam, vim inermis ullamcorper no. Consulatu temporibus in vim, quo quando fabulas philosophia no. Quo omnium commune menandri id.&lt;/p&gt;
-
-
-
-&lt;p&gt;In quot inani quidam usu, cu autem fabulas vim. Est quis debet labores id, quodsi eripuit efficiendi vim in, te nam novum errem. No putant fabulas vocibus duo. Paulo rationibus pri ad, vix eripuit delicatissimi cu.&lt;/p&gt;
-
-&lt;p&gt;Iudico denique probatus ex usu, illud habemus urbanitas pri no. Eu cetero fastidii mei, pri suavitate vulputate mnesarchum an. Causae legimus no per, id falli euismod abhorreant mel. Numquam feugiat pri ut, est in wisi nullam melius. Eam te habeo nonumy, quaeque expetenda dissentiunt ea quo.&lt;/p&gt;
-
-&lt;p&gt;Eu vel dicta aliquam. Ut sea suavitate dignissim referrentur, ex omnes assueverit nec. Sed at ipsum postulant, qui ad solet minimum, ea qui sale dicam graece. Ad quod sint inani pro. Vis an civibus vivendum recteque, duo mutat sonet vitae ei, qui ut meis posse sensibus.&lt;/p&gt;
-
-&lt;p&gt;Choro ancillae dissentiet ei sit, at per persecuti elaboraret efficiantur, ea quo decore accumsan. Nam dicit interesset id. Vis eu nisl aeterno senserit, nam aliquando consequuntur ex. Sed erat vocent no, aliquam dolorem eos cu. In solum inani nam, an pro odio dicat laoreet.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a href="https://itunes.apple.com/us/app/ekko-Player/id969512337"&gt;Ekko&lt;/a&gt; is a useful app letting you interact with content using natural language. I've recently worked with the maker, Intelligence Interactive, helping productize their technology. Ekko, the first fruit of this work, was realeased couple of weeks ago, and now getting &lt;a href="http://9to5mac.com/2015/04/30/ekko-player-ios/"&gt;warm reviews&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>

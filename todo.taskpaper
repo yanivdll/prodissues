@@ -5,4 +5,10 @@ SASS:
   ✔ Fix workaround in the footer text (stick to bottom nicely) @done (15-03-15 11:25)
   ✔ Fix work arround in the post.erb - currently there is an if statment before the wrap. Need to find better solution. @done (15-03-15 11:25)
   ☐ add styling to backquotes
+  ☐ remove the underline from links
+  ☐ Write bio
+  ☐ Connect to twitter
+  ☐ Link to atom feed
+  ☐ Design a 404 page
+  ☐ 
   
