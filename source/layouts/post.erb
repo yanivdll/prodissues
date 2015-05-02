@@ -4,7 +4,7 @@
 <%= yield %>
 <div><strong>Tags:</strong>
 	<% current_article.tags.each do |tag| %>
-	<a href="/blog/tags/<%= tag %>/" class="tag"><%= tag %></a>
+	<a href="/tags/<%= tag.downcase %>.html" class="tag"><%= tag %></a>
 	<% end %>
 </div>
 <% end %>

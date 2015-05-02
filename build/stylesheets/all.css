@@ -336,23 +336,23 @@ header {
     clear: both;
     content: "";
     display: table; }
-  /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
-  header .blog-title {
-    text-align: left;
-    text-decoration: none;
-    vertical-align: middle;
-    letterspacing: 5px;
-    text-transform: lowercase;
-    font-family: PTSansNarrowBold;
-    color: black;
-    font-size: 3em; }
-    /* line 26, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
-    header .blog-title a:hover {
-      border-bottom: none; }
-    @media screen and (min-width: 48em) {
-      /* line 15, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
-      header .blog-title {
-        font-size: 4em; } }
+
+/* line 16, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+a.blog-title {
+  text-align: left;
+  vertical-align: middle;
+  letterspacing: 5px;
+  text-transform: lowercase;
+  font-family: PTSansNarrowBold;
+  color: black;
+  font-size: 3em; }
+  /* line 24, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+  a.blog-title:hover {
+    border-bottom: none; }
+  @media screen and (min-width: 48em) {
+    /* line 16, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_header.scss */
+    a.blog-title {
+      font-size: 4em; } }
 
 /* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_footer.scss */
 footer {
@@ -376,35 +376,37 @@ footer {
     padding-left: 1em;
     text-align: center; }
 
-/* line 2, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-p.sidebar {
+/* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+li.sidebar {
   display: inline; }
-  /* line 4, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-  p.sidebar a.sidebar {
-    text-align: center;
-    font-size: 1.4em;
-    font-family: PTSansNarrow;
-    color: #3D709D;
-    display: inline;
-    text-align: center; }
-    @media screen and (min-width: 48em) {
-      /* line 4, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-      p.sidebar a.sidebar {
-        font-size: 1.2em;
-        display: block;
-        text-align: right;
-        padding-right: 1em; }
-        /* line 20, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-        p.sidebar a.sidebar a {
-          display: block; }
-          /* line 22, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-          p.sidebar a.sidebar a:hover {
-            border-bottom: none;
-            text-decoration: none; } }
-  /* line 32, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
-  p.sidebar a.sidebar::after {
-    content: " /";
-    color: #A22027; }
+  @media screen and (min-width: 48em) {
+    /* line 1, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+    li.sidebar {
+      text-align: right;
+      display: list-item;
+      padding-right: 1em; } }
+
+/* line 11, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+li.sidebar::after {
+  content: " /";
+  color: #A22027; }
+
+/* line 16, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+a.sidebar {
+  font-size: 1.4em;
+  font-family: PTSansNarrow;
+  color: #3D709D; }
+  /* line 20, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+  a.sidebarhover {
+    text-decoration: underline; }
+  @media screen and (min-width: 48em) {
+    /* line 16, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+    a.sidebar {
+      font-size: 1.2em; }
+      /* line 26, /Users/ygilad/dev/prodissues/source/stylesheets/partials/_sidebar.scss */
+      a.sidebar a:hover {
+        border-bottom: none;
+        text-decoration: none; } }
 
 @font-face {
   font-family: PTSansNarrow;
