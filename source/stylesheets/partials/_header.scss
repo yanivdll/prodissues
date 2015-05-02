@@ -10,22 +10,20 @@ header {
   padding-left: $base-padding;
   padding-right: $base-padding;
   width: 100%;
+}
 
 
-  .blog-title {
-
-    text-align: left;
-    text-decoration: none;
-    vertical-align: middle;
-    letterspacing: 5px;
-    text-transform: lowercase;
-    font-family: $base-title-font-family;
-    color: $base-title-color;
-    font-size: 3em;
-    a{
-      &:hover{
-        border-bottom: none;
-      }
+a.blog-title {
+  text-align: left;
+  vertical-align: middle;
+  letterspacing: 5px;
+  text-transform: lowercase;
+  font-family: $base-title-font-family;
+  color: $base-title-color;
+  font-size: 3em;
+  &:hover{
+      // color: $base-title-color;
+      border-bottom: none;
     }
     @include media($tablet){
       font-size: 4em;
@@ -33,5 +31,3 @@ header {
 
 
   }
-
-}

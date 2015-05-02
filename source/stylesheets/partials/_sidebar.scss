@@ -1,37 +1,35 @@
-
-p.sidebar{
+li.sidebar{
+  // text-align: right;
   display: inline;
-  a.sidebar{
-    text-align: center;
-    font-size: 1.4em;
-    font-family: $base-heading-font-family;
-    color: $base-nav-color;
-    display: inline;
-    text-align: center;
-    // display: block;
-    // margin-left: $base-padding;
-    // margin-right: $base-padding;
-
-    @include media($tablet){
-      font-size: 1.2em;
-      display: block;
-      text-align: right;
-      padding-right: $base-padding;
-      a{
-        display: block;
-        &:hover{
-          border-bottom: none;
-          text-decoration: none;
-        }
-
-      }
-
-    }
-
+  @include media($tablet){
+    text-align: right;
+    display: list-item;
+    padding-right: $base-padding
   }
-  a.sidebar::after{
-   content: " /";
-   color: $color-4;
- }
-} 
+}
+
+li.sidebar::after{
+  content: " /";
+  color: $color-4;
+}
+
+a.sidebar{
+  font-size: 1.4em;
+  font-family: $base-heading-font-family;
+  color: $base-nav-color;
+  &hover{
+    text-decoration: underline;
+  }
+  @include media($tablet){
+    font-size: 1.2em;
+    a{
+      &:hover{
+        border-bottom: none;
+        text-decoration: none;
+      }   
+    }
+  }
+}
+
+
 
