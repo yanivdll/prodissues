@@ -16,6 +16,10 @@ sup a{
 	}
 }
 
+sup{
+	line-height: 0;
+}
+
 a.reversefootnote{
 	position: relative;
 	top: -0.2em;
@@ -44,8 +48,13 @@ blockquote{
 }
 
 .footnotes{
-	li{
-		list-style-type: decimal;
+	ol{
+		border-top: $base-break-border;
+		padding-top: $base-padding;
+		padding-left: $base-padding;
+		li{
+			list-style-type: decimal;
+		}
 	}
 }
 
