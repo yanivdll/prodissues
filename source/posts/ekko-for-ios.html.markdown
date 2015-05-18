@@ -8,6 +8,6 @@ tags: iOS, ekko
 
 <!-- more -->
 
-The company that developed Ekko is Intelligence Interactive. It's a small NYC based startup, and I'm part of its advisory board. My help revolve mainly around product strategy, and Ekko is the first fruit of that collaboration. There's hardly anything as satisfying as turning an idea into a real product, especially one that's getting [warm reviews](http://9to5mac.com/2015/04/30/ekko-player-ios/).
+The company that developed Ekko is Intelligence Interactive. It's a small NYC based startup, and I'm part of its advisory board. My help revolves mainly around product strategy, and Ekko is the first fruit of that collaboration. There's hardly anything as satisfying as turning an idea into a real product, especially one that's getting [warm reviews](http://9to5mac.com/2015/04/30/ekko-player-ios/).
 
 [^1]: When you say "play", you should add a keyword from the headline, so Ekko can infer which headline you're trying to select.

@@ -128,10 +128,14 @@ sup a {
   text-decoration: none; }
   /* line 13, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
   sup a:hover {
-    color: #FFFDFD;
+    color: #FBFAF5;
     background-color: #A22027; }
 
 /* line 19, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+sup {
+  line-height: 0; }
+
+/* line 23, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
 a.reversefootnote {
   position: relative;
   top: -0.2em;
@@ -143,12 +147,12 @@ a.reversefootnote {
   border-radius: 0.4em;
   padding: 0.2em 0.4em 0;
   text-decoration: none; }
-  /* line 31, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+  /* line 35, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
   a.reversefootnote:hover {
-    color: #FFFDFD;
+    color: #FBFAF5;
     background-color: #A22027; }
 
-/* line 38, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+/* line 42, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
 blockquote {
   margin: 1em 0;
   background-color: #eee;
@@ -156,9 +160,14 @@ blockquote {
   border-radius: 0.3em;
   padding: 1em 1.5em 0.5em 1.5em; }
 
-/* line 47, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
-.footnotes li {
-  list-style-type: decimal; }
+/* line 51, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+.footnotes ol {
+  border-top: 1px dotted black;
+  padding-top: 1em;
+  padding-left: 1em; }
+  /* line 55, /Users/ygilad/dev/prodissues/source/stylesheets/base/_quote-and-footnotes.scss */
+  .footnotes ol li {
+    list-style-type: decimal; }
 
 /* Bitters needs to be imported before Neat */
 /* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
@@ -178,7 +187,7 @@ html {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FFFDFD;
+  background-color: #FBFAF5;
   font-size: 1.05em; }
   /* line 20, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
   html::after {
