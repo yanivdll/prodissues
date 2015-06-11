@@ -7,6 +7,8 @@ tags: focus
 
 It seems that Steve Jobs attained a monopoly on the idea of being focused, as many of the articles I read lately on the subject refer to or quote him. [Here's the latest one](http://themindfulbit.com/blog/focus) of them.  
 
+<!-- more -->
+
 I might be breaking some unwritten law now, quoting someone else's take on what being focused means. I ran into this line in [Ayn Rand](http://en.m.wikipedia.org/wiki/Ayn_Rand)'s book [The Art of Nonfiction](http://www.goodreads.com/book/show/2112.The_Art_of_Nonfiction): 
 
 > When I was writing Atlas Shrugged, I accepted neither day nor evening appointments, with rare exceptions, for roughly thirteen years.
