@@ -8,7 +8,7 @@ I'm sold on it. Yeah, it might be a hasty conclusion based on less than 24 hours
 
 First off, I should say that I had very low expectations. I'm not the kind of guy who's crazy about watches. I don't even know why I'm wearing one[^watch]. I bought the Apple Watch, and did it so early, simply because I knew I'll buy it *eventually*. After all, I can't resist Apple's incredible marketing machine. Forking the $350 now, I thought, will save me the agonizing deliberations and endless reading of equivocal reviews. And I'm happy I did, because I found it to be a beautiful, useful and humble timepiece. 
 
-Much was already written about [it's design](http://9to5mac.com/2015/05/04/review-apple-watch-as-a-design-piece/), so there is no point for me to come up with more superlatives to describe its allure. Trust me, it looks just like in the pictures - a charming gadgety garment that will give your hand a bionic yet chichi and fashionable look. 
+Much was already written about [its design](http://9to5mac.com/2015/05/04/review-apple-watch-as-a-design-piece/), so there is no point for me to come up with more superlatives to describe its allure. Trust me, it looks just like in the pictures - a charming gadgety garment that will give your hand a bionic yet chichi and fashionable look. 
 
 Aside from design, it's surprisingly useful, exactly when you want it to. In my company we use [Duo](https://www.duosecurity.com) for security services. Duo has a cool feature that allows you to authenticate by responding to a push notification on your phone. As cool as this feature is, you still have to find your phone, usually scrambling to take it out of your front pocket[^1]. Getting and accepting the request using your watch can't be more natural and convenient. 
 
