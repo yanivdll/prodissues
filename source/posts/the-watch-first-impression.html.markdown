@@ -18,7 +18,7 @@ The one thing that put me off was the learning curve I went through before getti
 
 But overall, I'm happy with the Watch. I think it'll be a good replacement for my current watch, and I see how it can help me break the unhealthy ties with my iPhone. Now, all I have to do is get one of my own, assuming my wife come up with the same conclusion. 
 
-**Update** - Well she didn't. After 2 days with the watch my wife concluded that it's beautiful and humble, but not useful enough to justify the expense. 
+**Update** - She didn't. After 2 days with the watch my wife concluded that it's beautiful and humble, but not useful enough to justify the expense. 
 
 [^watch]: I wear a simple [polar watch](http://www.amazon.com/Polar-RS100-Heart-Monitor-Stopwatch/dp/B000FW3Z6O)
 [^1]: If you use the [silicon case](http://store.apple.com/us/product/MGQF2ZM/A/iphone-6-silicone-case-black) you know what a hassle it is
