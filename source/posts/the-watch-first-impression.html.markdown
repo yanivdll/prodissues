@@ -4,7 +4,7 @@ date: 2015-06-13 05:01 UTC
 tags: watch, product-gem
 ---
 
-I'm sold on it. Yeah, it might be a hasty conclusion based on less than 24 hours with it, but the Watch is here to stay. Well, probably not the exact one I used, because I passed it over to my wife, trying to get her drinking the quaalude too.
+I'm sold on it. Yeah, it might be a hasty conclusion based on less than 24 hours with it, but the Watch is here to stay. Well, probably not the exact one I used, because I passed it over to my wife, trying to get her drinking the quaalude as well.
 
 First off, I should say that I had very low expectations. I'm not the kind of guy who's crazy about watches. I don't even know why I'm wearing one[^watch]. I bought the Apple Watch, and did it so early, simply because I knew I'll buy it *eventually*. After all, I can't resist Apple's incredible marketing machine. Forking the $350 now, I thought, will save me the agonizing deliberations and endless reading of equivocal reviews. And I'm happy I did, because I found it to be a beautiful, useful and humble timepiece. 
 
@@ -18,6 +18,7 @@ The one thing that put me off was the learning curve I went through before getti
 
 But overall, I'm happy with the Watch. I think it'll be a good replacement for my current watch, and I see how it can help me break the unhealthy ties with my iPhone. Now, all I have to do is get one of my own, assuming my wife come up with the same conclusion. 
 
+**Update** - Well she didn't. After 2 days with the watch my wife concluded that it's beautiful and humble, but not useful enough to justify the expense. 
 
 [^watch]: I wear a simple [polar watch](http://www.amazon.com/Polar-RS100-Heart-Monitor-Stopwatch/dp/B000FW3Z6O)
 [^1]: If you use the [silicon case](http://store.apple.com/us/product/MGQF2ZM/A/iphone-6-silicone-case-black) you know what a hassle it is
