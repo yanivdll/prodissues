@@ -1,5 +1,5 @@
 ---
-title: why I decided to move away from evernote
+title: Why I Decided to Move Away From Evernote
 date: 2015-06-21 02:24 UTC
 tags: evernote
 ---
@@ -16,7 +16,7 @@ Of course, not everything was perfect. I never liked the note taking editor, and
 
 That’s why when Evernote shifted its roadmap, I started to feel that we don’t share the same vision anymore. At first, there were those small annoyances, such as promoting [Evernote’s physical stuff](http://blogs.imediaconnection.com/blog/2014/06/04/physical-digital-evernote/) inside the app, and introducing features that work only with Evernote branded hardware. Then more concerning intrusive features, such as [“Context”](http://www.512pixels.net/blog/2014/10/on-evernotes-new-context-feature-and-why-its-a-problem) followed. But it wasn’t until Evernote has gone full throttle on sharing and collaboration that I realized it’s time for me to move on. 
 
-I’m not very surprised with the change Evernote is going through. You see, for 10 long years Evernote worked diligently to develop an amazing app, believing that’s the only way to build an engaged audience. You can’t build such a user base with less than exceptional product. But as it grew bigger, it got under pressure to show how it translates users into $$. This pressure became unbearable when it started to [plan for an IPO](http://www.wsj.com/articles/note-taking-app-evernote-considering-ipo-in-next-few-years-1411563762).
+I’m not very surprised with the change Evernote is going through. You see, for 10 long years Evernote worked diligently to develop an amazing app, believing that’s the only way to build an engaged audience. You can’t build such a user base with less than exceptional product. But as it grew bigger, it got under pressure to show how it translates users into $s. This pressure became unbearable when it started to [plan for an IPO](http://www.wsj.com/articles/note-taking-app-evernote-considering-ipo-in-next-few-years-1411563762).
 
 My speculation is that when Evernote took the IPO route, it found that 100 million users, 5% of them are paying customers, won't get it the valuation it desires. It won’t, because when evaluating companies, Wall Street doesn’t care about reality and past achievements. It is much more interested in future potential, in dreams. So for Evernote to be priced 10x it’s revenue, it must convince investors that such a dream exists. Now, due to the amount of users it already has, Evernote can’t project an exponential user growth. It can, alternatively, prove it can increase its users’ LTV[^ltv], or show growth in new markets or segments.
 
