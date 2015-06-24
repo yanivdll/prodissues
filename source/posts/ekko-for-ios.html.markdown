@@ -2,6 +2,7 @@
 title: Ekko for iOS
 date: 2015-05-01 15:33 UTC
 tags: iOS, ekko
+author: Yaniv Gilad
 ---
 
 [Ekko](https://itunes.apple.com/us/app/ekko-Player/id969512337) is a true "news reader" app - it actually reads the news to you. Not only will it speak headlines and stories, but it will also listen to your voice instructions. Say "headlines", and it will read the top headlines; "play"[^1], and it will read an entire article; "ekko" and it will stop reading and wait for your next instruction. It's like having Siri as your personal news anchor.
