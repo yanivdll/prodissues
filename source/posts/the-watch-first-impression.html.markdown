@@ -2,6 +2,7 @@
 title: The Watch - First Impression
 date: 2015-06-13 05:01 UTC
 tags: watch, product-gem
+author: Yaniv Gilad
 ---
 
 I'm sold on it. Yeah, it might be a hasty conclusion based on less than 24 hours with it, but the Watch is here to stay. Well, probably not the exact one I used, because I passed it over to my wife, trying to get her drinking the quaalude as well.

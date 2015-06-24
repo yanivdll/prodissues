@@ -2,6 +2,7 @@
 title: Focus - Not Only Steve Jobs
 date: 2015-05-18 12:07 UTC
 tags: focus
+author: Yaniv Gilad
 ---
 
 

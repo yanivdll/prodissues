@@ -2,6 +2,7 @@
 title: Why I Decided to Move Away From Evernote
 date: 2015-06-21 02:24 UTC
 tags: evernote
+author: Yaniv Gilad
 ---
 
 For the last few months things between Evernote and I weren’t as good as they used to be. The direction the company is taking, [focusing on enterprise customers](http://www.newsfactor.com/news/Evernote+Renews+Focus+on+Biz+Users/story.xhtml?story_id=100009Z18N6S#), and [monetizing its users’ data](http://techcrunch.com/2014/10/02/evernote-unveils-evernote-context-an-ai-play-that-surfaces-content-from-ouside-sources-as-you-write/), eroded my trust in it. Since I use Evernote as the repository for my most personal and precious data, trust is invaluable. And as this factor is gradually taken away, I’ve stopped adding new notes, and sadly started looking for alternatives.  

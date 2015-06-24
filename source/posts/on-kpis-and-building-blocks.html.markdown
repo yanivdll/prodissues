@@ -2,6 +2,7 @@
 title: On KPIs and Building Blocks
 date: 2015-06-10 02:17 UTC
 tags: building-blocks, kpi
+author: Yaniv Gilad
 ---
 
 Few days ago I presented our product vision and roadmap to our R&D group. At the end of my presentation I was asked what gives me confidence that we build the right stuff. I didn't think too much, and answered that our vision and product roadmap define the *what*. Knowing our partners and users, I added, and listening to their feedback, problems, and goals help us plan the *when*. That's a typical product guy's answer, yet it's not a satisfactory one.
