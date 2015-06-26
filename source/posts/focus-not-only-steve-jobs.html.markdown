@@ -5,7 +5,6 @@ tags: focus
 author: Yaniv Gilad
 ---
 
-
 It seems that Steve Jobs attained a monopoly on the idea of being focused, as many of the articles I read lately on the subject refer to or quote him. [Here's the latest one](http://themindfulbit.com/blog/focus) of them.  
 
 <!-- more -->
