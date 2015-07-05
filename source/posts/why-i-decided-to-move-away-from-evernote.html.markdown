@@ -1,7 +1,7 @@
 ---
 title: Why I Decided to Move Away From Evernote
 date: 2015-06-21 02:24 UTC
-tags: evernote
+tags: evernote, trust
 author: Yaniv Gilad
 ---
 

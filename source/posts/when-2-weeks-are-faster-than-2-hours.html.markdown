@@ -1,12 +1,12 @@
 ---
 title: When 2 Weeks Are Faster Than 2 Hours
-date: 2015-07-04 03:41 UTC
+date: 2015-07-03 03:41 UTC
 tags: amazon, trust, ux
 ---
 
 Few weeks ago I bought my wife a set of lenses for her iPhone. Usually I buy everything on amazon, but this time I ordered from B&H, a brick and mortar retailer with an online store, because it sold what I wanted for 40% less. 
 
-When I received the item I found that I ordered the wrong model - one for the iPhone 4s instead of the 5s. I submitted a request for an exchange, which was approved. I wasn't clear on how their exchange process works, so I called B&H's customer care. The guy I spoke with, who were super nice, explained the process and said that it might take about two weeks to get a replacement. To avoid the long wait, he added, I might want to swing by the store and make the exchange there. It will be faster, he said, and I agreed. 
+When I received the item I found that I ordered the wrong model - one for the iPhone 4s instead of the 5s. I submitted a request for an exchange, which was approved. I wasn't clear on how B&H's exchange process works, so I called their customer care. The guy I spoke with, who was super nice, explained the process and said that it might take about two weeks to get a replacement. To avoid the long wait, he suggested I'll swing by the store and make the exchange there. It will be faster, he said, and I agreed. 
 
 Today I went to the store. But when I got there I found that I'm not the only one thinking they can "game" the system. About 20 other customers had the same idea, creating an expected waiting time of about 2 hours. I loathe lines. Just the idea of waiting for an hour at the DMV gives me more agitations than that of going through a root canal procedure. So no way I'm going to wait 2 hours to replace merchandise. 
 
@@ -36,10 +36,10 @@ Thinking about this process, I can see why the B&H representative suggested I wi
 
 Now, think about Amazon, where all of this complexity is hidden from the user. You want to return an item? no problem - here's the label. Print and attach it to you're item. Drop the item at the closest UPS store, and a refund will hit your account (minus delivery fee), or a replacement process will initiate as soon as you exist the door. The whole process is automated, done using printers, scanners and emails. No human intervention, hence no place for error. At least that's how you feel. And just like a magic, few days later a new package delivery is waiting at your door.
 
-And so, here's what I learned:
+And so, here are my take aways:
 
 1. As a customer - trust worth money.
-2. As someone who builds product - keep your users in Wonderland, and don't ever let them see through your challenges, problems and complexities.
+2. As someone who builds products - keep your users in Wonderland, and don't ever let them see through your challenges, problems and complexities.
 
 
 [^RMA]: They keep referring to this form as RMA, which I have no clue what it means. Using internal lingo with your customers is a horrible idea. Don't ever do it!
