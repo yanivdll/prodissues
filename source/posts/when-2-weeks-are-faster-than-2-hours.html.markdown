@@ -4,7 +4,7 @@ date: 2015-07-03 03:41 UTC
 tags: amazon, trust, ux
 ---
 
-Few weeks ago I bought my wife a set of lenses for her iPhone. Usually I buy everything on amazon, but this time I ordered from B&H, a brick and mortar retailer with an online store, because it sold what I wanted for 40% less. 
+Few weeks ago I bought my wife a set of lenses for her iPhone. Usually I buy everything on amazon, but this time I ordered from B&H, a brick and mortar retailer with an online store, because it sold what I wanted for 25% less. 
 
 When I received the item I found that I ordered the wrong model - one for the iPhone 4s instead of the 5s. I submitted a request for an exchange, which was approved. I wasn't clear on how B&H's exchange process works, so I called their customer care. The guy I spoke with, who was super nice, explained the process and said that it might take about two weeks to get a replacement. To avoid the long wait, he suggested I'll swing by the store and make the exchange there. It will be faster, he said, and I agreed. 
 
