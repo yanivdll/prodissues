@@ -7,6 +7,8 @@ tags: gtd, productivity
 
 If you are reading this sentence, it means that I proved my point without even getting you through the rest of the article.
 
+<!-- more -->
+
 Just came back from a run, which reminded me the one principle I etched in my mind as one of the mottos I live by. 
 
 I didn't really want to go running today. I had an eventful weekend, which included many miles of walking. I was tired and hungry and above all had a presentation for a lecture I'm giving tomorrow, which I had to finalize. Many good reasons to call it a day and give up this one run. After all I run 3-4 times a week; skipping one session won't be the end of the world.
