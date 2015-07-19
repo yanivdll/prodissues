@@ -1,5 +1,13 @@
+---
+title: When 2 Weeks Are Faster Than 2 Hours
+date: 2015-07-04 03:41 UTC
+tags: amazon, trust, ux
+---
+
 
 If you're reading this sentence, it means that I proved my point without even getting you through the rest of the article.
+
+<!-- more -->
 
 I've just got back from a run, which reminded me the one principle I etched in my mind as one of the mottos I live by. 
 
