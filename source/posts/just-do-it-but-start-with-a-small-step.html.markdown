@@ -1,7 +1,7 @@
 ---
-title: When 2 Weeks Are Faster Than 2 Hours
-date: 2015-07-04 03:41 UTC
-tags: amazon, trust, ux
+title: Just Do It, But Start With a Small Step
+date: 2015-07-13 03:41 UTC
+tags: productivity, gtd
 ---
 
 
