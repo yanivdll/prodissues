@@ -6,7 +6,7 @@ tags: leadership
 
 Marimekko is one of my favorite stores[^store]. Whenever I go in there, I get filled with excitement and an urge to swallow its entire collection. I'm fascinated by the vibrant colors and the unique, yet simple, patterns. I'm compelled by the layout of the store and by the arrangement of the items. All I want when I'm there is to buy everything, and turn my home to an exact replica of that store. 
 
-![Marimekko](https://dl.dropboxusercontent.com/u/6886419/prodissues/images/IMG_5090.jpg "Marimekko on 5th Ave. NYC")
+![Marimekko](https://dl.dropboxusercontent.com/u/6886419/prodissues/images/IMG_5090.jpg "Marimekko on 5th Ave., NYC")
 
 Unfortunately, I can't afford taking over Marimekko yet, and even if I could, I don't know what would I do with hundreds of yards of beautiful fabric[^fabric]. And so I have to limit my focus to only one, maybe a couple of items at a time. But when doing so, much of the early excitement vanishes.
 
@@ -25,4 +25,4 @@ If you're in a leadership position, remember that while you live and breath visi
 
 [^fabric]: I *do* try to find uses for their fabric, often as a gift wrap for special people in my life.
 
-[^store]: I'm referring to Marimekko NYC Flagship Store. [Here's](Marimekko NYC Flagship Store) where it located.
+[^store]: I'm referring to Marimekko NYC Flagship Store. [Here's](https://www.google.com/maps/place/Marimekko+NYC+Flagship+Store/@40.7419618,-73.9896784,15z/data=!4m2!3m1!1s0x0:0xd61b0f9793581e4a?sa=X&ved=0CIYBEPwSMApqFQoTCLO4rOvNoccCFYOSHgod4SwCyg) where it located.

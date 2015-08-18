@@ -29,6 +29,8 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+activate :syntax, :line_numbers => true
+
 page "/feed.xml", layout: false
 
 ###

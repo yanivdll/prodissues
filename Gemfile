@@ -14,7 +14,7 @@ gem "bourbon"
 gem "neat"
 gem "kramdown"
 gem "nokogiri"
-
+gem "middleman-syntax"
 group :development do
 	gem "middleman-livereload", "~> 3.3.0"
 end
