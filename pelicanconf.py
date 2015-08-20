@@ -12,7 +12,12 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
 
+# Default attributes for a post
 DEFAULT_METADATA = {}
+
+# Create a create per-year, per-month archives
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -28,8 +33,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 	('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-	('Another social link', '#'),)
+SOCIAL = (('tweeter', 'http://twitter.com/prodissues'),)
 
 DEFAULT_PAGINATION = 10
 
