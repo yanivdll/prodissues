@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+
 AUTHOR = u'Yaniv Gilad'
 SITENAME = u'prodissues'
 SITEURL = ''
@@ -60,4 +61,11 @@ DEFAULT_PAGINATION = 10
 # Disable disable caching in Dev
 LOAD_CONTENT_CACHE = False
 
+JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
+
+# THEME = '/Users/ygilad/dev/pelican-themes/aboutwilson'
 THEME = '/Users/ygilad/dev/pelican-themes/prodissues_simple'
+ASSET_URL = '/static/'
+
+PLUGIN_PATHS = ["/Users/ygilad/dev/pelican-plugins"]
+PLUGINS = ["assets"]

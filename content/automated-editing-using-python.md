@@ -3,27 +3,19 @@ title: Automated Editing Using Python
 date: 2015-08-15 02:21 UTC
 tags:
 ---
-Read this:
+Read the sentence bellow:
 
+> This is something to  
+> to think about.
+
+Have you noticed the repetition of "to"? 
 
 Here's a simple script I wrote for catching repetitive to
-to repetitive words. 
+to repetitive words.
 
 I trigger it after finishing to write an article, to make sure that my eyes weren't decided by repetitive words illusion.
 
 Here's the script:
-
-```ruby
-def my_cool_method(message)
-puts message
-end
-def my_cool_method(message)
-puts message
-end
-def my_cool_method(message)
-puts message
-end
-```
 
 ```python
 #! /usr/local/bin/python3
@@ -33,10 +25,10 @@ import pyperclip, re
 
 text = str(pyperclip.paste())
 
-#regex definitions for reapeated spaces
+#regex definitions for repeated spaces
 repeatSpacesRegex = re.compile(r'\b(\s)+\1+\b') 
 
-#regex definitions for reapeated words
+#regex definitions for repeated words
 repeatRegex = re.compile(r'\b((\w+)\s+)\1\b')
 
 #remove the extra spaces
