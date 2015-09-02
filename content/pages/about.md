@@ -11,6 +11,7 @@ This site centers on topics related to product leadership, user experience, and 
 
 ---
 
+<a name="contact"></a>
 # Contact
 
 Please feel free to contact me at [yanivdll@gmail.com](mailto:yanivdll@gmail.com) or find me on Twitter [@prodissues](https://twitter.com/prodissues).
