@@ -74,3 +74,6 @@ ASSET_URL = '/static/'
 
 PLUGIN_PATHS = ["../pelican-plugins"]
 PLUGINS = ["assets"]
+
+# For testing, to make sure traffic is tracked in ga. Should be commented after testing.
+#GOOGLE_ANALYTICS = "UA-60771520-1"
