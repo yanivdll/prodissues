@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 
-AUTHOR = u'Yaniv Gilad'
+AUTHOR = u'Yaniv'
 SITENAME = u'prodissues'
 SITEURL = ''
 

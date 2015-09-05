@@ -6,7 +6,7 @@ tags: leadership
 
 Marimekko is one of my favorite stores[^store]. Whenever I go in there, I get filled with excitement and an urge to swallow its entire collection. I'm fascinated by the vibrant colors and the unique, yet simple, patterns. I'm compelled by the layout of the store and by the arrangement of the items. All I want when I'm there is to buy everything, and turn my home to an exact replica of that store. 
 
-![Marimekko](https://dl.dropboxusercontent.com/u/6886419/prodissues/images/IMG_5090.jpg "Marimekko on 5th Ave., NYC")
+![Marimekko](http://media.prodissues.com/images/2015/09/IMG_5090.jpg "Marimekko on 5th Ave., NYC")
 
 Unfortunately, I can't afford taking over Marimekko yet, and even if I could, I don't know what would I do with hundreds of yards of beautiful fabric[^fabric]. And so I have to limit my focus to only one, maybe a couple of items at a time. But when doing so, much of the early excitement vanishes.
 
@@ -20,7 +20,7 @@ At other times I use it to give some perspective to a feature owner who feels di
 
 A vision, like the Marimekko store, excites and inspires only when viewed in its entirety. When you dive into the details,  the products and features that comprise it, you might loose your initial enthusiasm. 
 
-If you're in a leadership position, remember that while you live and breath vision, your team is soaked in the details, and in the day to day tedious work that is anything but exciting. Your challenge will be to respire them, and keep them inhaling the dream. Otherwise your team might lose the moral and motivation imperative to build toward your vision. And if that happens, the collection you envision will turn up to be an incoherent pile of stuff that looks bad anyway you look at it.
+If you're in a leadership position, remember that while you live and breathe vision, your team is soaking in the details, and in the day to day tedious work that is anything but exciting. Your challenge will be to inspire them, and keep them inhaling the dream. Otherwise, your team’s morale and its motivation to follow your lead towards fulfilling your vision will quickly evaporate. Thus, the collection you envision will turn into an incoherent pile of items that look bad anyway from near and far.
 
 
 [^fabric]: I *do* try to find uses for their fabric, often as a gift wrap for special people in my life.
