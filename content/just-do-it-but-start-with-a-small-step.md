@@ -9,7 +9,7 @@ If you're reading this sentence, it means that I proved my point without even ge
 
 <!-- more -->
 
-I've just got back from a run, which reminded me the one principle I etched in my mind as one of the mottos I live by. 
+I've just got back from a run, which reminded me a principle that is etched in my mind and serves as one of my mottoes in life. 
 
 I didn't really want to go running today. I had an eventful weekend, which included many miles of walking. I was tired and hungry and above all had a presentation for a lecture I'm giving tomorrow, which I had to finalize. Many good reasons to call it a day and give up on this one run. After all I run 3-4 times a week; skipping one day won't be the end of the world.
 

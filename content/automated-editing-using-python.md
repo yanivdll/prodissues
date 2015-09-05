@@ -1,5 +1,5 @@
 ---
-title: Find Repeating Words Using Python
+title: Find Repetitive Words Using Python
 date: 2015-09-02 02:21 UTC
 tags: python, writing
 category: Code 
@@ -13,9 +13,9 @@ Read this question from [stackoverflow](http://stackoverflow.com/questions/28230
 > 
 > Why are you laughing? Are my my regular expressions THAT bad??
 
-Did you notice the repetitions? chances are you didn't. The eye sees what the eye wants to see, and it'll take away any obstacles to let your brain comprehend. I too often catch myself writing the same word twice. The problem is that when I notice the mistake, it's usually too late. The email was sent or post was already published. 
+Have you notice the repetitions? chances are you haven't. The eye sees what the eye wants to see, and it'll take away any obstacle to let your brain comprehend. I too often catch myself writing the same word twice. The problem is that when I do, it's usually too late. The email was sent or post got  published. 
 
-To make sure I catch those repetitions in time, I wrote a simple Python script removes superfluous spaces and highlight word duplications, using [CriticMarkup](http://criticmarkup.com). I run this script using Keyboard Maestro as soon as I finish writing. It works much better than my eyes in finding those elusive duplications.
+To make sure I find those repetitions in time, I wrote a simple Python script that removes superfluous spaces and highlight words' duplications, using [CriticMarkup](http://criticmarkup.com). I run this script as soon as I finish writing. It works much better than my eyes in finding those elusive duplications.
 
 Here's the script:
 
@@ -54,14 +54,12 @@ if len(repeatWords) > 0:
 pyperclip.copy(text)
 ```
 
-To use it, you have to copy the text you want to check into the clipboard. You then run the script and its output will be ready for you back in the clipboard. Just past it over the original text. Note that if the script finds repetitions it won't remove them, but mark them using CriticMarkup. If your editor supports CM, you can decide whether to accept or reject those changes.
+To use it, copy the text you want to check into the clipboard. You then run the script and its output will be ready for you back in the clipboard. Just past it over the original text. Note that if the script finds repetitions it won't remove them, but mark them using CriticMarkup. If your editor supports CM, you can decide whether to accept or reject those changes. 
 
-Running this script on the quote from stackoverflow above, you'll get this output:
+Running this script on the quote from stackoverflow above produces the following output:
 
 ```text
 Paris in {~~the  the ~>the~~}{>>repeating words<<}spring. Not {~~that  that ~>that~~}{>>repeating words<<}is related.
  
 Why are you laughing? Are {~~my  my ~>my~~}{>>repeating words<<}regular expressions THAT bad??
 ```
-
-In this example, I would have rejected the first suggestion for change, and accepted the other two. 

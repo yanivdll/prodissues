@@ -68,7 +68,7 @@ LOAD_CONTENT_CACHE = False
 
 JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 
-# THEME = '/Users/ygilad/dev/pelican-themes/aboutwilson'
+# THEME = '../pelican-themes/aboutwilson'
 THEME = '../pelican-themes/prodissues_simple'
 ASSET_URL = '/static/'
 
