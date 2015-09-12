@@ -1,5 +1,5 @@
 title: A Recipe To Work-In-Progress Documents
-date: 2015-07-08 14:07:00
+date: 2015-09-11 21:58:00
 process: @post
 tags: Python, Hazel, Automation
 synonym: plain text
