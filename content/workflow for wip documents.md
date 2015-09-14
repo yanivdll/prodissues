@@ -73,4 +73,4 @@ While I can't edit the file directly in nvAlt, I can still do it in MultiMarkdow
 
 [^iphone]: I keep git repositories in a local folder out of Dropbox reach, because I heard that [you shouldn't mix the two together](http://scripting.com/2014/01/24/githubAndDropboxDoNotPlayWellTogether.html).
 
-[^hazel_folders]: I found that creating a rule that monitors a folder and its sub-folders is a bit tricky, but eventually found the way to do it thanks to [this post](http://www.noodlesoft.com/forums/viewtopic.php?f=4&t=470).
+[^hazel_folders]: I found that creating a rule that monitors a folder and its sub-folders is a bit tricky, but eventually learned how to do it thanks to [this post](http://www.noodlesoft.com/forums/viewtopic.php?f=4&t=470).
