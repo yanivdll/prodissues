@@ -6,9 +6,10 @@ tags: leadership
 
 Marimekko is one of my favorite stores[^store]. Whenever I go in there, I get filled with excitement and an urge to swallow its entire collection. I'm fascinated by the vibrant colors and the unique, yet simple, patterns. I'm compelled by the layout of the store and by the arrangement of the items. All I want when I'm there is to buy everything, and turn my home to an exact replica of that store. 
 
+<!--
 ![Marimekko](http://media.prodissues.com/images/2015/09/IMG_5090.jpg "Marimekko on 5th Ave., NYC")
-
-Unfortunately, I can't afford taking over Marimekko yet, and even if I could, I don't know what would I do with hundreds of yards of beautiful fabric[^fabric]. And so I have to limit my focus to only one, maybe a couple of items at a time. But when doing so, much of the early excitement vanishes.
+-->
+Unfortunately, I can't afford taking over Marimekko yet, and even if I could, I don't know what would I do with hundreds of yards of beautiful fabric[^fabric]. And so I have to limit my focus to only one, maybe couple, of items at a time. But when doing so, much of the early excitement vanishes.
 
 When looking at each of the items separately, they don't look as compelling. A colorful serving plate loses its charm when I figure it won't fit our current portfolio of dull white dinnerware. A Puisto-osasto print bag looks great, only until I see it's a tote style bag, which I would never dare to carry. A sofa pillow with colorful flowers' print, which is Marimekko's signature, is stunning, yet won't make it to our subtle, minimalist living room. 
 
