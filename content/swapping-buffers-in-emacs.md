@@ -8,7 +8,7 @@ synonym: plain text
 
 It took me awhile to find a way to swap the position of two buffers in emacs. Yes, there is a description in [emacs wiki](<http://www.emacswiki.org/emacs/SwitchingBuffers>), and the code bellow is actually taken from there, but it's not that easy to find through the tons of irrelevant information around it.
 
-So if you're looking to simply get the right buffer show on the right, and vice-versa, here's what you should add to your init file:
+So if you're looking to simply get the right buffer show on the left, or vice-versa, here's what you should add to your init file:
 
 ```elisp
     (defun transpose-buffers (arg)
@@ -23,4 +23,3 @@ So if you're looking to simply get the right buffer show on the right, and vice-
             (select-window (funcall selector)))
           (setq arg (if (plusp arg) (1- arg) (1+ arg))))))
 ```
-
