@@ -1,5 +1,5 @@
 title: On Touch Typing and Failure
-date: 2015-11-10 22:25:00
+date: 2015-10-11 22:25:00
 status: 
 process: @post
 tags:
