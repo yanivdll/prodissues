@@ -72,8 +72,15 @@ JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 THEME = '../pelican-themes/prodissues_simple'
 ASSET_URL = '/static/'
 
-PLUGIN_PATHS = ["../pelican-plugins"]
-PLUGINS = ["assets"]
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['assets', 'org_reader', 'pelican_comment_system']
+
+# Org Reader plugin
+ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
+ORG_READER_EMACS_SETTINGS = "~/.emacs.d/init.el"
+
+# Commenting system
+PELICAN_COMMENT_SYSTEM = True
 
 # For testing, to make sure traffic is tracked in ga. Should be commented after testing.
 #GOOGLE_ANALYTICS = "UA-60771520-1"
