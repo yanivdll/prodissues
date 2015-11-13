@@ -1,0 +1,35 @@
+li.sidebar{
+  // text-align: right;
+  display: inline;
+  @include media($tablet){
+    text-align: right;
+    display: list-item;
+    padding-right: $base-padding
+  }
+}
+
+li.sidebar::after{
+  content: " /";
+  color: $color-4;
+}
+
+a.sidebar{
+  font-size: 1.4em;
+  font-family: $base-heading-font-family;
+  color: $base-nav-color;
+  &hover{
+    text-decoration: underline;
+  }
+  @include media($tablet){
+    font-size: 1.2em;
+    a{
+      &:hover{
+        border-bottom: none;
+        text-decoration: none;
+      }   
+    }
+  }
+}
+
+
+
