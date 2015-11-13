@@ -80,9 +80,9 @@ ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
 ORG_READER_EMACS_SETTINGS = "~/.emacs.d/init.el"
 
 
-# Commenting systems
-# PELICAN_COMMENT_SYSTEM = True
+# TESTINGS::
+## disqus
+DISQUS_SITENAME = 'prodissues'
 
-
-# For testing, to make sure traffic is tracked in ga. Should be commented after testing.
+# Google Analytics
 #GOOGLE_ANALYTICS = "UA-60771520-1"
