@@ -21,7 +21,7 @@ So if you're looking to simply get the right buffer show on the right, and vice 
 #+END_SRC
 
           
-I have no idea what this code means[fn:1], but it does what it supposed to. I also didn't create a keybinding for it, but you can I you want. Here's how to bind it to, say, `f8`:
+I have no idea what this code means[fn:1], but it does what I expected it to do. I also didn't create a keybinding for it, but you can if you would like to. Here's how to bind it to, say, ~f8~:
 
 #+BEGIN_SRC emacs-lisp
 (global-set-key [f8] 'transpose-buffers)
