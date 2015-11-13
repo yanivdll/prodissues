@@ -1,0 +1,23 @@
+<h5>
+	<abbr class="published" title="{{ article.date.isoformat()}}"> {{ article.locale_date }} </abbr>
+	{% if article.authors %} 
+	by 
+	<span class="author">
+		{% for author in article.authors %}
+		{{ author }}
+		{% endfor %}
+	</span>
+	{% endif %}
+</h5>
+
+<!-- <div class="published">
+  <span>{{ article.locale_date }}</span>
+  {% if article.authors %} 
+  by 
+  <span class="author">
+    {% for author in article.authors %}
+    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+    {% endfor %}
+  </span>
+  {% endif %}
+</div>--> 

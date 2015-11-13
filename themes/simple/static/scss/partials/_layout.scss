@@ -1,0 +1,101 @@
+  * {
+    margin: 0;
+  }
+
+  html {
+    @include outer-container;
+    background-color: $base-page-background;
+    font-size: $base-font-size;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    @include media($tablet){
+      font-size: 1.3rem;
+      -webkit-font-smoothing: normal;
+    }
+    @include media($desktop){
+      font-size: 1.4em;
+    }
+    @include media($largedesktop){
+      font-size: 1.5em;
+    }
+  }
+
+  html, body{
+    height: 100%;
+  }
+
+  section {
+    @include outer-container;
+    padding-left: $base-padding;
+    padding-right: $base-padding;
+    align-content: center;
+    min-height: 100%;
+    margin-bottom: -100px; //should be same as footer height
+    width: 100%;
+  }
+
+  section:after {
+    content: "";
+    display: block;
+    height: 100px; //should be same as footer height
+  }
+
+  aside {
+    padding-top: $base-padding;
+    text-align: right;
+    @include media($mobile) {
+      @include span-columns(4);
+      text-align: left;
+    }
+    @include media($tablet) {
+      @include span-columns(2);
+    }
+    @include media($desktop) {
+      @include span-columns(3);
+    }
+    // @include media($largedesktop){
+    // }
+  }
+
+  article {
+    padding-top: $base-padding;
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+    @include media($desktop) {
+      @include span-columns(8);
+    }
+    @include media($largedesktop){
+      @include span-columns(8);
+    }
+
+    li.post-summary{
+      border-bottom: $base-break-border;
+      margin-bottom: 2em;
+    }
+  }
+
+  // ol {
+  //   font-size: 1em;
+  //   font-weight: 500;
+
+  //   li {
+  //     margin: .5em 0;
+
+  //     span {
+  //       display: inline-block;
+
+  //       &:before {
+  //         content: '/';
+  //         margin: 0 .3em;
+  //       }
+  //     }
+  //   }
+  // }

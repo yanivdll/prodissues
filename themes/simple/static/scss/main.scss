@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@import "bourbon/bourbon.scss";
+@import 'base/base.scss';
+@import "neat/neat.scss";
+
+@import "partials/layout.scss";
+@import "partials/header.scss";
+@import "partials/footer.scss";
+@import "partials/sidebar.scss";
+// @import "partials/mobile";
+// @import "partials/tablet";
+// @import "partials/largedesktop";
+
+@include font-face(PTSansNarrow, '../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont', normal, normal);
+@include font-face(PTSansNarrowBold, '../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont', normal, normal);
+// @include font-face(PTSandsRegular, '../fonts/ptsans_regular_macroman/PTS55F-webfont', normal, normal);
+// @include font-face(Cochin, '../fonts/nicolas-cochin-ef-regular/nicolas-cochin-ef', normal, normal);
+@include font-face(PTSerif, '../fonts/ptserif_regular_macroman/PTF55F-webfont', normal, normal)
