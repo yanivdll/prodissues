@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
+
 {% for keyword in article.keywords %}
 <meta name="keywords" content="{{keyword}}" />
 {% endfor %}
@@ -21,33 +22,15 @@
 {% include 'post_meta.html' %}<!-- /.post-meta -->
 
 <div class="entry-content">
-  {{ article.content }}
+
+{{ article.content }}
 </div><!-- /.entry-content -->
 
-<!-- commenting system -->
-<!-- {% if article.comments %}
-{% for comment in article.comments recursive %}
-{% if loop.depth0 == 0 %}
-{% set marginLeft = 0 %}
-{% else %}
-{% set marginLeft = 50 %}
-{% endif %}
-<article id="comment-{{comment.slug}}" style="border: 1px solid #DDDDDD; padding: 5px 0px 0px 5px; margin: 0px -1px 5px {{marginLeft}}px;">
-  <a href="{{ SITEURL }}/{{ article.url }}#comment-{{comment.slug}}" rel="bookmark" title="Permalink to this comment">Permalink</a>
-  <h4>{{ comment.author }}</h4>
-  <p>Posted on <abbr class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</abbr></p>
-  {{ comment.metadata['my_custom_metadata'] }}
-  {{ comment.content }}
-  {% if comment.replies %}
-  {{ loop(comment.replies) }}
-  {% endif %}
-</article>
-{% endfor %}
-{% else %}
-<p>There are no comments yet.<p>
-  {% endif %} -->
-  <!-- end commenting system -->
+{# discuss comments #}
+{% include 'disqus.html' %}
+{# end discuss comments #}
 
-  {% endblock %}
+{% endblock %}
+
 
 
