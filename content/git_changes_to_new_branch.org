@@ -1,0 +1,27 @@
+#+TITLE:       Copy Git Changes to a New Branch
+#+AUTHOR:      Yaniv
+#+EMAIL:       yanivdll@gmail.com
+#+DATE:        2015-11-12
+#+TAGS:        git
+#+DESCRIPTION: Way to copy changes you made in one branch to a new one
+
+I'm still not fluent with git and version control. I manage repositories for projects I'm working on, but sill have hard time managing my changes, commits and branches. 
+
+For example, I'm currently working on integrating Emacs's org-mode support to pelican, a static web-page generator I use for this blog. I was proud of myself when I remembered to create a new branch when starting the work. But like any other thing that do, somewhere at the middle of the work I drifted to something else - adding a commenting system - and went right about doing it. After making some changes, I realized that it will be a good idea to do those changes in a dedicated branch. Unfortunately, I noticed that the changes I /did/ make were on the branch I created for the org integration. 
+
+I wondered if I can take the changes that I made, since my last commit, and pour them over into a new branch. Luckily, I can, and here's how, thank to [[http://stackoverflow.com/a/4746696/1424287][this answer in stack-overflow]]:
+
+#+BEGIN_QUOTE
+You can simply check out a new branch, and then commit:
+
+#+BEGIN_SRC bash
+git checkout -b my_new_branch
+git commit
+#+END_SRC
+
+Checking out the new branch will not discard your changes.
+#+END_QUOTE
+
+Tried it and it worked. Learning new things is fun...
+
+ 
