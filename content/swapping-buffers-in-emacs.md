@@ -22,4 +22,17 @@ So if you're looking to simply get the right buffer show on the left, or vice-ve
             (set-window-buffer (funcall selector) this-win)
             (select-window (funcall selector)))
           (setq arg (if (plusp arg) (1- arg) (1+ arg))))))
+
+          
+I have no idea what this code means[^1], but it does what it supposed to. I also didn't create a keybinding for it, but you can I you want. Here's how to bind it to, say, `f8`:
+
+```elisp
+    (global-set-key [f8] 'transpose-buffers)
 ```
+
+
+
+
+
+[^1]: Learning elisp is on my todo list
+
