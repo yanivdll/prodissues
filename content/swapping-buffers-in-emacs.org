@@ -11,7 +11,7 @@ So if you're looking to simply get the right buffer show on the right, and vice 
       "Transpose the buffers shown in two windows."
       (interactive "p")
       (let ((selector (if (>= arg 0) 'next-window 'previous-window)))
-        (while (/= arg 0)
+
           (let ((this-win (window-buffer))
                 (next-win (window-buffer (funcall selector))))
             (set-window-buffer (selected-window) next-win)

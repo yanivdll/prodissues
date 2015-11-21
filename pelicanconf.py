@@ -53,7 +53,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 MENUITEMS = (('about', '/about/'),
 	('contact', '/about/#contact'),
 	('twitter','https://twitter.com/prodissues'),
-	('feed','/feeds/all.atom.xml'),)
+	('feed','/feeds/all.atom.xml'),
+	('wip', '/posts_drafts/'))
 
 # Social widget
 SOCIAL = (('tweeter', 'http://twitter.com/prodissues'),)
@@ -77,7 +78,7 @@ PLUGINS = ['assets', 'org_reader']
 
 # Org Reader plugin
 ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
-ORG_READER_EMACS_SETTINGS = "~/.emacs.d/init.el"
+ORG_READER_EMACS_SETTINGS = "~/.emacs.d/lisp/pelicon-export.el"
 
 
 # TESTINGS::

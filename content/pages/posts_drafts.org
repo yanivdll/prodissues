@@ -1,0 +1,419 @@
+#+TITLE:      Drafts
+#+AUTHOR:	Yaniv
+#+EMAIL:	yanivdll@gmail.com
+#+DATE:     2015-11-15
+#+URI:        
+#+KEYWORDS:   
+#+TAGS:       
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:2 \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 
+
+This is an org mode based file where I draft all my posts. It orginized in top level categories. 
+# I will need to link for the workflow of how to turn a draft into a final, published article. 
+
+* Emacs
+ 
+
+** Pelican + Orgmode                                       :orgmode:pelican:
+For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
+1. The source should be in a text based format, so text, markdown or org, each will be good.
+2. I would like to be able to manage and edit from one folder, preferable the folder where I have all my notes.
+
+Until recently, I wrote my articles in markdown. When I was done with the article, I copied it to the content folder in my pelicon based blog. I then run `make html` to process the source into a static html, and when I was sutisfied with the piece, I would have pushed the pelican output folder to aws, where my blog is hosted.
+
+Rarely was I satisfied with the piece when copying it to the pelican folder. Many times I had to do some final editing. Since I edited my original text in a a markdown editor, and the code for the site in Sublime Text, I was inclined to the open the article in Sublime, cause mose of the times I was already there, messing with other code, and do the changes on the spot. In that broken workflow, I was left with two copies for each of my posts. Most of the times these copies weren't identicle. So, once copying a post into pelican, I couldn't trust that I can edit the original post, but had to go back to the content folder, and open the post there. That turned my central note folder useless when it came to managing my posts. 
+
+I recently started to work with emacs, and move a lot of my text based activities to it. And so working on the site and on articles are done at the same place. 
+
+I still want to keep a version of my posts in dropbox though, so I still want to have some kind of export workflow in place. This is also true since I want to start writing my posts in org, which isn't supported out of the box by pelican.
+
+So after a long introduction, the problem I'm trying to solve is 
+
+**** How to export a post from my dropbox folder to the content folder in Pelican?
+I want to have the editable format of the article available only in one place. What I've experienced so far was that I started an article in my notes folder, at first through nvAlt and then moved to emacs and deft. When I thought I was done and moved the article to the content 
+*** Configure Org mode to publish (in general)
+This is a straight forward customization. I had to follow the tutorial.
+
+*** Configure the html export to pelican
+*** Importing html file into Pelican
+It turns out importing to pelican is harder than I expected.
+
+But, the export doesn't work as I thought it will. The problem was that the header that Pelican expect, wasn't translated in a way it can work with. So as a result, the file that was created in the Pelican content folder wasn't compiled to the output.
+
+*** Trying an import to markdown
+HTML publishing didn't work for now. Before trying to work on the main problem, which is the header of the file, I'll try to do a markdown export and see that it works. If it does, I might keep it like that and work with org to markdown.
+
+Markdown export doesn't work well also. Two issues that I had:
+- Org add the outline of the post on top. This is annoying, but I'm sure I can find the solution easily, but not at the moment.
+- The bigger issue is that I can't seem to be able to pass the head meta tags that Pelican expects to get and process.
+
+Hitting the wall. Markdown export doesn't work either.
+
+*** Trying the org-export
+I tried to follow [[http://nhoffman.github.io/borborygmi/getting-started.html][this article]] but wasn't able to make it work. I cloned [[https://github.com/nhoffman/org-export][the repository]] and made the export. But still, the header meta wasn't included in the output HTML. Now the post mentioned another utility that was "easily" created to do that, but it's not included, so what's the point in the article...?
+
+
+So, just as I'm about to give up, I found a way that allows me to pass header parameters to the html output. Now, I can have org communicate with pelican. I don't like this solution that much, because it clatters my org file with markup, but this is something I can live with.
+
+[[https://github.com/fniessen/org-html-themes/blob/328260286c89aa0b8a4f3bd6be902de50da696bf/setup/theme-bigblow-local.setup][reference to how the header tag looks like]]
+
+Now, I'm only missing the syntax highlighting in the output file, the one that goes to the site.
+Found a solution for that. I had to include htmlize, and now I can export or files into html! yay.
+
+Next problem to solve:
+Footnotes are shown awkwardly. I've looked for a setting that will allow me to remove the footnote header. Found this variable "Org Footnote Section" and removed the "Collect footnotes under heading" to nil. I'm going to restart emacs and see what happens. Finger crossed...
+
+Oh wow. I found the tresure! I went to emacs settings and searched for "org html export". I found that I can control evry element of the export, including how the footnotes section will be formated. But I'm greedy, and now looking for header construction, in a way that I can include tags or meta headers in markdown or org format, and have them translate into header tags. This way I won't have to include ugly markups in my source files.
+
+Found [[https://pavpanchekha.com/blog/org-mode-publish.html][another article]] that was helpful in understanding how ord export works, and include some tips on setting up the publishing hook for git - export the site whenever I do a commit. I might get back to it at some point.
+ 
+
+Ok, I think I got to the end of the journey. I found out that after all the trubles that I went through, there is a [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][plugin for pelican]]. How stupid am I not to figure it out. And more than that - the plugin set in my computer all this time... so reading [[http://msnyder.info/posts/2013/12/introducing-pelicorg/][this post]] walked me through the setup, and now I can have my org files directly in my pelican content directory. Halelluya!!!
+
+One last obsecal. That damn syntaxy highlighting thing went away again. I think the first article I read had a solution for that. I'll go check it out again.
+
+Yes, Yes, Yes! adding this simple  (require 'color-theme-github) did the trick, and now my implementation is done.
+
+And now that I can have my org files directly in pelican, I can actually save also this pipeline posts file there, only in dradt mode.
+
+*** References
+- [[http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing orgmode files to HTML]]
+- [[http://orgmode.org/worg/org-tutorials/org-jekyll.html][Using org with Jekyll]] - This is a good reference to setup the publishing of the org files to the content folder in Jekyll. It seems that with pelican, the setup will be very similar.
+
+- mention the good tutorial [here](http://nhoffman.github.io/borborygmi/getting-started.html)
+*** Merging Drafts Into One Orgmode File
+Up until now my writing workflow included creating new file for each post I started to write. I gave those drafts a file name starting with "post -". This way it was easy to sift through my posts ideas in nvAlt. 
+
+Recentely, I moved to emacs, and was drawn into orgmode. I now write everything in org. Org is the best outliner I worked with, and so when I read [Sacha's]() tip on managing all her posts-to-be in one org outline, I got curious. I started by outlining several new ideas that I had, and eventually decided to merge my entire collection of drafts into one org file.
+
+*** Why is it a good idea?
+
+I started to do it, but realised quickly that it will be lame to manually copy and paste the content of some 30 files into one file. Inspired by the "Automate The Boring Stuff With Python" that I read couple of months ago, I thought this might be a good opportunity to implement what I learned. And so I went ahead and wrote the following script that scan my draft files, create a new outline header from the filename (minuse the "post - "prefix) and append the content of each file under the relevant header.
+
+
+** Exporting a post from org mode to pelican
+I'm trying to move my blog posts from markdown to org.
+
+Starting with an outline that is part of a bigger org file that holds all my drafts.
+In my Dropbox folder, I keep all my notes in a Notes/ folder. In that folder I created a sub-folder for all my posts. 
+
+I then killed the sub-tree that held my draft and yanked it into a new org file in the post folder. 
+
+Now, before exporting this post to an HTML in the pelican folder, I needed to add some meta data, especially date, which pelican is finicky about. 
+
+Ok, reporting failure on that for now. I didn't find a good reference to how I do the export to HTML, and what org headers I need to use to make the transition. And so I did for now, an export to markdown, saved the markdown in the Pelicon content folder and published from there.
+
+This is a bad compromise, because I had to do some modifications to the markdown document, such as adding 
+
+** Comment and uncomment a line
+This is something that I found very handy in Sublime Text. I think it's also one of the features that keeps me with Sublime, and not let me do a full conversion to emacs. Funny thing is that while I'm more than comfortable doing every other writing in emacs, coding still feels more comfortable in Sublime.
+
+Today I made a big step toward writing code in emacs (not that I write a lot of code...), thanks to defining an easy way to comment and uncomment a line of code. Again, thanks to the good users at stack-overflow.
+
+Here's a function I learned, that do the trick:
+[[file:~/.emacs.d/config.org::#comment-or-uncomment][comment-uncomment-code]] or uncomment a line
+
+
+I know it looks a little absurd. Isn't commenting one of the most basic features of /any/ decent editor? I guess... for some reason, though, it doesn't discourage me, even a little.
+** Link to a specific subtree in another org file
+
+** Refile a Subtree to a New Org File
+I manage all my drafts for new posts in one file. This is an insperation from Sacha.
+So now, what I want to be able to do is refiling a subtree, which represent post's draft, to a new file that will turn to the final post.
+
+I googled it, and [[http://superuser.com/questions/373617/re-file-outline-tree-into-new-org-mode-file][here]] is the result I got. Reading through it makes me think that like integrating org with pelican, this isn't going to be a quick configuration, but will require some more involvemnt. I will therefore stash this modification, cause I have some more important things to work on at the moment...
+
+** Setting Emacs on Mac for Python
+
+
+*** What do I try to achive with this integration?
+#+DATE: 2015-11-06
+
+- Python syntax highlighting
+- Auto-complition, including for default and 3rd party packages
+- Evaluate code in a seperate, horizontal buffer (like I did in CodeRunner)
+
+
+I recently moved all my writing to emacs, and since I do, or should I say - try to do some python coding -  I searched for a tutorial on how to customize emacs as a Python editor. 
+
+Before emacs, the litle Python I wrote, was done with CodeRunner and Sublime Text, but mostly in the out-of-box IDLE. Each one of these enviornemt lacked something, so I didn't have any strings attached when I decided to move my coding to emacs.
+
+I started to google things like "setting emacs for python on mac", but I didn't find one tutorial that could walk me through the entire configuration. I did find some useful sprinkles of tips and information. 
+
+# Give an exapmles for useful posts. Jesika is one, the video of the Japanese guy is another.
+
+ anything relevant. So instead of keep looking, I decided to figure it out myself, and write a tutorial on it, so other in my position have a better start than I had. 
+
+** Switching buffer focus
+By default, the keybinding to circle through open buffers is `C-x o`. I couldn't think of a more annoying keybinding, requiring two steps to just switch focus to another buffer. 
+
+I decided to change this behavior and define a different keybinding, that fits better with my mental model, which associate `tab` with switching between different areas on the screen. This was also a good opportunity to establish a workflow for customizing various behaviors of emacs. 
+
+Here's the workflow I came up with:
+- Define what the outcome behavior should be. In this case, I wanted to define a comfortable keybinding to circle through open bufferes.
+# In my case
+
+- Is there already a keybinding for that function? if yes, look for the function this keybinding trigger. `C-h k RET [keybinding]` will describe exactly what happens when you run the sequence of keys.
+# In my case
+
+- Locate the function that is triggered when the keybinding used.
+# In my case...
+
+- Go to your init file, where the keybinding of your liking should be configured.
+
+- Insert this elips snippet anywhere[fn:1]
+#+BEGIN_SRC emacs-lisp
+(global-set-key [(control tab)] 'other-window)
+#+END_SRC
+
+#+RESULTS:
+: other-window
+
+
+This is a good example for how to start customizing emacs. I first looked for what
+** Load dired-x by default                                            :emacs:
+There are times when I want to take a peek at a file's underlying folder. I might want to open another file from that folder, do a quick rename or just get myself oriented about where the file I'm working on lives.
+
+I learned that there is a [[http://www.cs.washington.edu/acm/tutorials/editors/dired-refcard.gnu.pdf][keybinding]] for it, but that I can use this keybinding only if I have dired-x enabled. 
+
+After some googling I learned that dired-x is part of emacs, and there is no need to install anything. I needed, however, to enable it somehow[fn:2]. A little more digging till I found in the [[http://www.gnu.org/software/emacs/manual/html_node/dired-x/Optional-Installation-Dired-Jump.html][dired manual]] the following code snippet that will auto load the package:
+
+#+BEGIN_SRC emacs-lisp
+(autoload 'dired-jump "dired-x"
+  "Jump to Dired buffer corresponding to current buffer." t)
+
+(autoload 'dired-jump-other-window "dired-x"
+  "Like \\[dired-jump] (dired-jump) but in other window." t)
+
+(define-key global-map "\C-x\C-j" 'dired-jump)
+(define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
+#+END_SRC  
+
+And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
+
+** Pass Org Header Parameters to Pelican
+After a long process of trying to integrate Org with Pelican, I landed on Pelican's [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]. It works well and allows me to write my posts in orgmode. But as I gain more posts, I want to categorize and orginize them better. 
+
+Org_reader is quit limiting in the amount of header properties it allows to map. In fact it support only the ~title~, ~category~, ~date~ and ~author~. In fact, it maps org's ~category~ to pelican's ~tags~, while both org and pelican has the accurate property names for both tags and category.
+
+So, I decided to expand this plugin to support more properties (maybe all?). I don't know yet how to do it, whether I should simply change the package localy on my computer and risk breaking it when an update to this plugin is available, or do it the proper way - forking (either to add the missing functionality and then making a pull request, or use it as a starting point to an alternative version of the plugin).
+
+While the second route makes much more sence, it also mean that a quick and dirty solution isn't an option. And that means I have to learn, at least some, elisp. I'm not sure I'm ready for it at the moment.
+
+So, I'll put that project on a hold for now, and I'll start by setting my emacs environment to work with elisp - development and debugging. Yeah, I already see how I'm going to be sucked into learning elisp in no time... 
+
+*10 minutes later:*
+I forked the org_reader repository...
+
+*2 hours later:*
+Started to read [[https://github.com/hypernumbers/learn_elisp_the_hard_way]["Learning Elisp the Hard Way"]].
+
+** Experimitation with Spacemacs
+   - Note taken on [2015-11-16 Mon 14:45] \\
+     Start
+
+The other day I added @melpa_emacs to my emacs twitter list, so now I can see every new package or update that is submitted to melpa.
+
+One of those packages is [[https://github.com/TheBB/spaceline][spaceline]]. I didn't know what it is, but saw that it has many downloads (relatively). I was intrigued to learn more. Realized it a package that imitates the look and feel of spacemacs mode-line. Hmmm... Spacemacs. Should I try it? afterall it aims to combine the benefites of vim and emacs. Since I use Evil mode, I thought it might be a good idea to take spacemacs for a spin. 
+
+I was relactunt to do it in the past, because spacemacs is known for the amount of packages it adds by default, and I liked the idea of controling and growing the emacs installation and customization with me. My curiosity won, and I cloned spacemacs. 
+
+I loaded it, but figured it will ential another phase of learning completly new product, and decided it's not the right time for me to start that journey. Especially as I'm starting to feel more comfortable with emacs "vanilla".
+
+So, I backed up the spacemacs folder and stashed it for now. I'll probably want to get back to it at some point in the future. I hope that by then I'll have more capacity to learn new things, and be even more proficient with emacs.
+ 
+** Add several folders to deft
+*** Question
+- How do I pass a list of folders so deft search in them?
+
+
+*** Answer
+There is no way to specify more than one folder. The variable name hint to that - it called setq deft-directory - note directory in singular rather than plural[fn:3]
+*** Reference
+- [[http://jblevins.org/projects/deft/][Deft documentation page]]
+
+** Flip between light and dark themes
+I want to creat a function that flip between light and dark thems.
+- Choose the themes I want to flip through.
+- Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
+** Links in orgmode
+
+*** Create an external link
+The format for a link in org is:
+#+BEGIN_SRC 
+[[link_url][description]]
+#+END_SRC
+
+I found it tricky to use this convention. The way I inclined to create links is to first construct he governing brackets, so to get something like [[][]][fn:4]. I'll then go and add the description and lastly the url. 
+
+The problem is that when I enter the description part, and move the point outside the description's enclosed paranthesees, the link changes, and all I can see is the description. In that view I can't modify the url part of the link.
+
+I found the answer in [[http://orgmode.org/guide/Link-format.html#Link-format][Org Mode Compact Guide]] 
+#+BEGIN_QUOTE
+
+Org will recognize plain URL-like links and activate them as clickable
+links. The general link format, however, looks like this: 
+
+#+BEGIN_SRC 
+[[link][description]] or alternatively [[link]] 
+#+END_SRC
+
+Once a link in the buffer is complete (all brackets present), Org will change the display so that ‘description’ is displayed instead of ‘[[link][description]]’ and ‘link’ is
+displayed instead of ‘[[link]]’. To edit the invisible ‘link’ part, use
+C-c C-l with the cursor on the link.
+
+#+END_QUOTE
+
+So now, instead of constructing the markup for a link, I simply type 'C-c C-l RET' at the point where I want the reference link to be inserted. In the prompt that shows in the mini-buffer, I enter the link's url and the description. I 
+
+*** Remove a link
+I created a link, but want to remove the link, and keep only the description. Here's a function that I'll have to add to my init file. 
+
+#+BEGIN_SRC emacs-lisp
+(defun afs/org-replace-link-by-link-description ()
+    "Replace an org link by its description or if empty its address"
+  (interactive)
+  (if (org-in-regexp org-bracket-link-regexp 1)
+      (let ((remove (list (match-beginning 0) (match-end 0)))
+        (description (if (match-end 3) 
+                 (org-match-string-no-properties 3)
+                 (org-match-string-no-properties 1))))
+    (apply 'delete-region remove)
+    (insert description))))
+#+END_SRC
+
+I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
+
+** How to modify emacs window so the buffer have right and left margins
+There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
+** Inserting an inline image with org
+I'm trying to add an image from a url that will show inline (and not as a link). What I found in the org manual is how to do it with a local file, but it seems to not work with remote file, or with using ~http:~ instead of ~file:~.
+
+Here's what I found so far:
+
+
+Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
+* Prodissues
+* Code
+** Integrating Sphere with Alfred
+We have a hackathon
+** How to figure out the size of a folder from terminal
+Here's a quick way to find the size of a folder, via terminal
+
+
+#+BEGIN_QUOTE
+The command du "summarizes disk usage of each FILE, recursively for directories," e.g.,
+
+#+BEGIN_SRC sh 
+du -hs /path/to/directory
+#+END_SRC
+
+- ~-h~ is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes)
+- ~-s~ is for summary 
+
+(otherwise you'll get not only the size of the folder but also for everything in the folder separately)
+#+END_QUOTE
+
+[[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
+
+* Work
+** Elastic Search is amazing
+
+*** Fraking
+Few years ago, gas prices went beserk, to well over 150$ a barrle. It seemed as if oil will be over in just a few years. Might be good news for some, but that's not the argument I'm trying to get at.
+
+Anyway, just as it seemed that we are forced into a oil-less economy, and started to think of sustainable energy resources, fraking started to cought out steam as a way to access deep layers of pockets of gas and oil. Suddenly oil resovoure quadrupled(?)
+
+# oil reservoir with and without fracking - what's the differenct?
+
+Again, I'm not an anti inviormentalist, so get of my back. What I'm trying to get at is that Elastic Search is like fraking, just without all the bad things that comes with it. Let me share with you how ES feels like from a product point of view.
+
+*** It took us almost a month to drill a report
+
+*** It took us a year to create a pool of content, and it's very limited.
+
+*** Elastic search brings all though resources to the ground level
+Now, with easy to use interface, even non-technocal people can dig the data and play with it. Suddenly we have milions of documents at the tip of our finger, and I can search for documents in with any filter I'm interested in, just like I can do with Google, only that I know that I will get content in return.
+
+
+#+BEGIN_SRC js 
+{
+  "size": 75,
+  "query": {
+    "filtered": {
+      "query": {
+        "range": {
+          "Leiki.Metallica": {
+            "gte": 0.5
+          }
+        }
+      },
+      "filter": {
+        "term": {
+          "langId": "en"
+        }
+      }
+    }
+  }
+}
+#+END_SRC
+
+ 
+
+* Workflows
+** Remove HTML Files With Hazel
+Here's a simple Hazel rule I created in order to deal with superflous html files that are created whenever I do a file export from my ~\~/Dropbox/Notes~ folder.
+
+- [ ] I need to see how I set the rule so it monitor both files within the folder and within sub-folder in that folder.
+  - Read through the hazel forum here: [[https://www.noodlesoft.com/forums/viewtopic.php?f%3D4&t%3D470][How to get Hazel to go into subfolders]]
+* Other
+** No Exuse to Blogging
+*** What is the question I would like to answer?
+- Which excuse are you working on first, or are there other things that
+are getting in your way?
+
+*** Answer
+- I like a lot the write as you learn
+- Answer a question. This one is helpful in particular, because not only it helps with writing, but it also helps a lot to focus, and prioritize what I'm going to learn and write about. I simply have to come up with answers.j
+- Write about the stuff that you google for and find now satisfactory answer
+- Write for yourself, as a documentation or note to self
+** Don't Build a Dominos Pizza Company
+   - Note taken on [2015-11-16 Mon 15:45] \\
+     started writing this
+
+I want to follow up on my discussion with Elad today. I want to say something about us being the wrong people at the wrong phase of the company. But I also want to say that the company's going astray. I want to make a metaphor to Domino's pizza. I want to say that about 20 years ago dominoes was all about the pizza about making it the best pizza for their customers.
+The van over the years dominoes look for other ways to make revenue. Pizza wasn't necessarily the only thing they wanted to do in order to grow. So, new people who join dominoes wearing to miss surly passionate about pizza but passionate about making money. People probably join from McDonald's and brought with them the best way to do burgers in people join from K FC with recipes for chicken wings. So little by little those old people who cared about pizza is where less and less relevant. Not only that he cared about one thing but they were people of the past.
+
+What I want to say, is that those people might be the people of the past. It might be that Domino's is no longer at pizza place. But as a customer I don't know the hell what Domino's is you have no identity and it's not here to stay.
+
+*** When Domino's pizza just started
+I'm sure they were all about the pizza. How to bake the best pizza, that will take over the world
+
+
+*** At some point, pizza didn't take over the world
+
+*** Domino's moved to another mode
+
+*** Bring new people, who were more adapt to the new company
+But those people didn't have the initial dna of the early dominos days. They weren't passionate about the pizza, but about the business and about fixing this company.
+
+*** From kfc, and macdonald
+Dominos hired people "who already did it". Some from KFC, some from macdonald. The early employees of dominos now were part of the past. They were naive, and didn't "grow" with the business. Sell only pizza is so 60s.
+
+** Webarchive
+Just a reminder about this tool.
+
+Many times I find a link that seemed to be dead. I saih disappointed and look for a new resource. Sometimes I recall this amazing site, tha
+* Footnotes
+
+[fn:1] Just make sure you don't stepping inside of another decleration. 
+# how can I make sure I'm not doing that?
+[fn:2] The way [[http://www.emacswiki.org/emacs/DiredExtra#Dired_X][EmacsWiki]] suggests to enable it didn't work for me, because it requires to use dired before using dired-x. 
+
+[fn:3] Note to self - is it a true assumption that I can tell from a variable name whether it can hold a list of only a single value?
+
+[fn:4] I still follow a tip that I've learned from my C professor - always insert pairs - so I never have to worry about finding which parentheses I forgot to close.
+
+
+

@@ -1,3 +1,5 @@
 output/
 __pycache__/
 .DS_Store
+themes/simple/static/.sass-cache/
+.gitignore~
