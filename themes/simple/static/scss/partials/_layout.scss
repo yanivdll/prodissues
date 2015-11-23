@@ -45,6 +45,7 @@
   }
 
   aside {
+    // position: fixed;
     padding-top: $base-padding;
     text-align: right;
     @include media($mobile) {

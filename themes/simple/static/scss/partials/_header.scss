@@ -1,13 +1,16 @@
 header {
-  @include outer-container;
+  //@include outer-container;
+  @include span-columns(8);
+  @include omega();
   display: block;
   line-height: 30px;
+  align: right;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
   padding-bottom: $base-padding;
   padding-top: $base-padding;
-  padding-left: $base-padding;
+  // padding-left: $base-padding;
   padding-right: $base-padding;
   width: 100%;
 }
@@ -26,7 +29,7 @@ a.blog-title {
       border-bottom: none;
     }
     @include media($tablet){
-      font-size: 4em;
+      font-size: 3em;
     }
 
 

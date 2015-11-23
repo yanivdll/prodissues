@@ -1,8 +1,6 @@
 ul,
 ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
 dl {
   margin-bottom: 0.725em; }
   dl dt {
@@ -17,6 +15,11 @@ dl {
 .entry-content ol li {
   margin: .5em 0;
   list-style-type: decimal; }
+
+.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
@@ -284,23 +287,23 @@ article {
     margin-bottom: 2em; }
 
 header {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.74614%;
+  width: 65.75129%;
+  margin-right: 0;
   display: block;
   line-height: 30px;
+  align: right;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
   padding-bottom: 1em;
   padding-top: 1em;
-  padding-left: 1em;
   padding-right: 1em;
   width: 100%; }
-  header::after {
-    clear: both;
-    content: "";
-    display: table; }
+  header:last-child {
+    margin-right: 0; }
 
 a.blog-title {
   text-align: left;
@@ -314,7 +317,7 @@ a.blog-title {
     border-bottom: none; }
   @media screen and (min-width: 48em) {
     a.blog-title {
-      font-size: 4em; } }
+      font-size: 3em; } }
 
 footer {
   max-width: 100%;
@@ -348,14 +351,14 @@ li.sidebar::after {
   color: #A22027; }
 
 a.sidebar {
-  font-size: 1.4em;
+  font-size: 1em;
   font-family: Montserrat, sans-serif;
   color: #3D709D; }
   a.sidebarhover {
     text-decoration: underline; }
   @media screen and (min-width: 48em) {
     a.sidebar {
-      font-size: 1.2em; }
+      font-size: 1em; }
       a.sidebar a:hover {
         border-bottom: none;
         text-decoration: none; } }

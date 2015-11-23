@@ -209,6 +209,64 @@ I forked the org_reader repository...
 *2 hours later:*
 Started to read [[https://github.com/hypernumbers/learn_elisp_the_hard_way]["Learning Elisp the Hard Way"]].
 
+** Forking the org_reader plugin
+The goal is to be able to export org files simlessly to pelican. I want to have all the meta tags that Pelican allows, synced from org in Emacs.
+I will build on top of the org_reader plugin, and then decide if I make a pull request, or add my own version with attribution to the other plugin.
+
+Here's what I did:
+*** Forked the org_reader plugin
+*** Copied the plugin to a new folder - ort_to_pelican
+*** Created a test blog in pelican
+I don't want to make changes that harm my current implementation. Want to create a clean environment to experimintations.
+*** Find the touching point with org meta
+I found the part of the code where the plug in connect with the org export meta data. I switched the json to get static values, just to make sure I'm touching the right spot.
+
+Here's the before:
+#+BEGIN_SRC python
+...
+metadata = {'title': 'json_output['title']',
+                    'tags': json_output['category'] or '',
+                    'slug': slug,
+                    'author': json_output['author'],
+                    'date': json_output['date']}
+
+        parsed = {}
+        for key, value in metadata.items():
+            parsed[key] = self.process_metadata(key, value)
+
+        return json_output['post'], parsed
+#+END_SRC
+
+And the after:
+
+#+BEGIN_SRC python
+...
+ metadata = {'title': 'TITLE - This is a test of a static json',
+                    'tags': 'emacs',
+                    'slug': 'This is a test slug',
+                    'author': 'Yaniv',
+                    'date': '2015-11-11'}
+
+        parsed = {}
+        for key, value in metadata.items():
+            parsed[key] = self.process_metadata(key, value)
+
+        return json_output['post'], parsed
+
+#+END_SRC
+
+I changed the attributes of the json that probably feeds the pelican with static values. The resulted article showed those static attributes.
+
+Next.
+
+*** Read the meta tags from the org post
+Instead of waiting for the meta tags to be exported from org, I'll go ahead and fetch them directly from the org file. The reason for going around the org export is that it's apis only expost subset of entities, while I want to support more properties.
+
+*** Implemented the parsing method
+This method read the org file.
+It read lines and if a line is a property line, it breaks it into a dictionaty.
+
+*** Need to map the resulting dictionary with the pelicon terminology.
 ** Experimitation with Spacemacs
    - Note taken on [2015-11-16 Mon 14:45] \\
      Start
@@ -237,6 +295,23 @@ There is no way to specify more than one folder. The variable name hint to that 
 I want to creat a function that flip between light and dark thems.
 - Choose the themes I want to flip through.
 - Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
+** Add Solarized theme to emacs
+I fell in love with that theme. 
+I installed the solarized theme from elpa (github repo [[https://github.com/bbatsov/solarized-emacs][here]])
+This was very easy, but the problem was that the headers in org mode didn't adhear to the theme.
+I tried this package: https://github.com/sellout/emacs-color-theme-solarized, but couldn't make init to load the theme correctly. I also didn't want to change my path to themes to that theme's folder, because I might want to add more themes to that path, and the ~custom-theme-directory~ doesn't seem to be a list.
+
+So now I found this post - https://blog.sleeplessbeastie.eu/2014/06/09/how-to-use-solarized-theme-in-emacs/.
+I hope this article will be helpful. It wasn't.
+
+Both Sacha's configuration, and the article I read didn't help. It seemed that I have a cumborsum variable of the header that inherited it's value, and overriden the theme.
+
+Eventually, like many other questions, I found a solution in an answer at [[http://emacs.stackexchange.com/a/16873/10150][stack-overflow]]. I had to use the first repo, and add this line to the init:
+
+#+BEGIN_SRC emacs-lisp
+(setq solarized-scale-org-headlines nil)
+#+END_SRC
+
 ** Links in orgmode
 
 *** Create an external link
@@ -294,6 +369,9 @@ Here's what I found so far:
 
 
 Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
+** TODO Undo tree mode
+Copied the setting from Sacha's config file - http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline158
+Need to learn a little more how to use it.
 * Prodissues
 * Code
 ** Integrating Sphere with Alfred
@@ -303,7 +381,7 @@ Here's a quick way to find the size of a folder, via terminal
 
 
 #+BEGIN_QUOTE
-The command du "summarizes disk usage of each FILE, recursively for directories," e.g.,
+The command ~du~ "summarizes disk usage of each FILE, recursively for directories," e.g.,
 
 #+BEGIN_SRC sh 
 du -hs /path/to/directory
@@ -316,6 +394,9 @@ du -hs /path/to/directory
 #+END_QUOTE
 
 [[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
+
+** Writing a python script for Lorem Ipsum
+I want to be able to get a Lorem Ipsum text in varying length. I think I can write a small script to do it. I will be able to run it using alfred, with an argument for the number of words I would like to get.
 
 * Work
 ** Elastic Search is amazing

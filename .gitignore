@@ -3,3 +3,5 @@ __pycache__/
 .DS_Store
 themes/simple/static/.sass-cache/
 .gitignore~
+themes/simple/static/scss/.sass-cache/
+.sass-cache/
