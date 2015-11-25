@@ -267,6 +267,23 @@ This method read the org file.
 It read lines and if a line is a property line, it breaks it into a dictionaty.
 
 *** Need to map the resulting dictionary with the pelicon terminology.
+*** Resources
+- Pelican documentation
+  - [[https://github.com/getpelican/pelican-plugins/blob/master/Contributing.rst][Contributing a plugin]]
+  - [[http://docs.getpelican.com/en/latest/contribute.html#using-git-and-github][Contributing guidelines]] and Contribution quality standards
+- A blog post about [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][pelican plugin tests]] 
+- Documentation for the [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]
+- [[http://nhoffman.github.io/borborygmi/getting-started.html#sec-1-1][Creating a site with Pelican and org-mode]]
+
+
+
+
+
+
+
+
+
+
 ** Experimitation with Spacemacs
    - Note taken on [2015-11-16 Mon 14:45] \\
      Start
@@ -395,7 +412,7 @@ du -hs /path/to/directory
 
 [[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
 
-** Writing a python script for Lorem Ipsum
+* Writing a python script for Lorem Ipsum
 I want to be able to get a Lorem Ipsum text in varying length. I think I can write a small script to do it. I will be able to run it using alfred, with an argument for the number of words I would like to get.
 
 * Work
@@ -450,6 +467,16 @@ Here's a simple Hazel rule I created in order to deal with superflous html files
   - Read through the hazel forum here: [[https://www.noodlesoft.com/forums/viewtopic.php?f%3D4&t%3D470][How to get Hazel to go into subfolders]]
 * Other
 ** No Exuse to Blogging
+Few weeks ago I wrote about my experience learning to touch type. As part of the reading I did while writing it, I found [[http://sachachua.com/blog/2011/09/deliberate-practice-typing-faster-and-emacs/][this article]] by Sacha Chua. This was a good article that helped me cristilize /why/ it is important that I learn touch typing[fn:5]. I ended up spending almost an hour browsing in her site. The amount of resources, posts, tips and tutorials that she shares is humangous! 
+
+Now, it's not that I wouldn't have landed on her blog very soon after, even if I wouldn't have looked for touch type related articles. I would of because just a few days earlier, I started to look seriously at Emacs. And as it turned out, Sacha writes /alot/ about Emacs, and super involved in the Emacs community. So now I had two reasons to listen to what she has to say.
+
+And I'm happy that I did, because Sacha had an even more pivotal role in even more important aspect of what I do - writing. I found one in particular mode inspiring - the no excuses for blogging. 
+
+
+So here's how I felt after reading just a couple of insights from Sacha's ebook:
+
+
 *** What is the question I would like to answer?
 - Which excuse are you working on first, or are there other things that
 are getting in your way?
@@ -459,6 +486,22 @@ are getting in your way?
 - Answer a question. This one is helpful in particular, because not only it helps with writing, but it also helps a lot to focus, and prioritize what I'm going to learn and write about. I simply have to come up with answers.j
 - Write about the stuff that you google for and find now satisfactory answer
 - Write for yourself, as a documentation or note to self
+
+Other things to mention -
+- I create an entry for any new thing I want to learn, explore or do. Doing so keeps me very focused, and goal oriented. It also force me to document the path that I take, so I don't loose myself and drift away without a destination. Best of all, it is all ready to be posted. Actually, it's already posted - I keep my draft file under the wip category in this blog, so everything that I work on, learn or write about is there. So when I'm done writing, all I have to do is move the relevant post to it's own page.
+
+This new workflow doesn't only produce tons of ideas to write about, it also make me write as I go, and be ready to publish when I'm done.
+
+I only ready few tips in Sacha's book. I coudn't move forward, not because it was boring, or not relevant. The oposite! the simple, yet so sharp and percise, that my brain was like:
+  
+#+begin_html
+<img src="http://media.prodissues.com/images/2015/11/V64Vgdw_-_Imgur.gif" style="width:304px;height:228px;">
+#+end_html
+
+Those tips just poped up my brain, and let all my thoughts and ideas jusf flow into the page
+
+So do yourself a favor, and make sure to read that short ebook. If you're aspiring to write anything, it will probably be the most effective thing you'll read. Oh, and don't be as cheap as I was. I worth well over the 3$ I contributed to it...[fn:6]
+
 ** Don't Build a Dominos Pizza Company
    - Note taken on [2015-11-16 Mon 15:45] \\
      started writing this
@@ -486,6 +529,7 @@ Dominos hired people "who already did it". Some from KFC, some from macdonald. T
 Just a reminder about this tool.
 
 Many times I find a link that seemed to be dead. I saih disappointed and look for a new resource. Sometimes I recall this amazing site, tha
+
 * Footnotes
 
 [fn:1] Just make sure you don't stepping inside of another decleration. 
@@ -495,6 +539,10 @@ Many times I find a link that seemed to be dead. I saih disappointed and look fo
 [fn:3] Note to self - is it a true assumption that I can tell from a variable name whether it can hold a list of only a single value?
 
 [fn:4] I still follow a tip that I've learned from my C professor - always insert pairs - so I never have to worry about finding which parentheses I forgot to close.
+
+[fn:5] Mainly to reduce friction in my thought process.
+
+[fn:6] Sacha shares a way to read it for free, but I will let you search for it yourself, cause I really think she should get paid for her work.
 
 
 

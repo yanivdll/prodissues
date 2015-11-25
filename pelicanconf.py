@@ -54,7 +54,7 @@ MENUITEMS = (('about', '/about/'),
 	('contact', '/about/#contact'),
 	('twitter','https://twitter.com/prodissues'),
 	('feed','/feeds/all.atom.xml'),
-	('wip', '/posts_drafts/'))
+	('drafts', '/posts_drafts/'))
 
 # Social widget
 SOCIAL = (('tweeter', 'http://twitter.com/prodissues'),)

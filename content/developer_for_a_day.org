@@ -51,7 +51,7 @@ Here's how my next 24 hours have looked like:
 *10:10am* - I've just presented my thing. *I feel awesome*. I built something and got people's  applause.
 
 
-OK, so what did I learn from this schizophrenic experience:
+Now, what did I learn from this schizophrenic experience:
 *** I don't want to be a developer. 
 Yeah, as simple as that. I'll keep doing it as a hobby, but I'll never do it professionally. I mean, I love the problem solving, and creating something with my own hands is amazing. But, getting sucked into the smallest of details, spending hours trying to figure out what I did wrong, only to find a missing ~;~, and wasting tons of time on configuration before I can do /anything/, make me go nuts...
 
