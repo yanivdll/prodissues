@@ -9,102 +9,11 @@
 #+OPTIONS:     H:3 num:nil toc:2 \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: 
 
-This is an org mode based file where I draft all my posts. It orginized in top level categories. 
+* What's this?
+This is an org mode based file where I draft all my posts. I keep this file and post it because it helps me work on several posts in paralel, and add to drafts as I go. Once I'm done with a post, I move it to a new file, which is then pushed as a stand alone post. 
 # I will need to link for the workflow of how to turn a draft into a final, published article. 
-
 * Emacs
- 
 
-** Pelican + Orgmode                                       :orgmode:pelican:
-For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
-1. The source should be in a text based format, so text, markdown or org, each will be good.
-2. I would like to be able to manage and edit from one folder, preferable the folder where I have all my notes.
-
-Until recently, I wrote my articles in markdown. When I was done with the article, I copied it to the content folder in my pelicon based blog. I then run `make html` to process the source into a static html, and when I was sutisfied with the piece, I would have pushed the pelican output folder to aws, where my blog is hosted.
-
-Rarely was I satisfied with the piece when copying it to the pelican folder. Many times I had to do some final editing. Since I edited my original text in a a markdown editor, and the code for the site in Sublime Text, I was inclined to the open the article in Sublime, cause mose of the times I was already there, messing with other code, and do the changes on the spot. In that broken workflow, I was left with two copies for each of my posts. Most of the times these copies weren't identicle. So, once copying a post into pelican, I couldn't trust that I can edit the original post, but had to go back to the content folder, and open the post there. That turned my central note folder useless when it came to managing my posts. 
-
-I recently started to work with emacs, and move a lot of my text based activities to it. And so working on the site and on articles are done at the same place. 
-
-I still want to keep a version of my posts in dropbox though, so I still want to have some kind of export workflow in place. This is also true since I want to start writing my posts in org, which isn't supported out of the box by pelican.
-
-So after a long introduction, the problem I'm trying to solve is 
-
-**** How to export a post from my dropbox folder to the content folder in Pelican?
-I want to have the editable format of the article available only in one place. What I've experienced so far was that I started an article in my notes folder, at first through nvAlt and then moved to emacs and deft. When I thought I was done and moved the article to the content 
-*** Configure Org mode to publish (in general)
-This is a straight forward customization. I had to follow the tutorial.
-
-*** Configure the html export to pelican
-*** Importing html file into Pelican
-It turns out importing to pelican is harder than I expected.
-
-But, the export doesn't work as I thought it will. The problem was that the header that Pelican expect, wasn't translated in a way it can work with. So as a result, the file that was created in the Pelican content folder wasn't compiled to the output.
-
-*** Trying an import to markdown
-HTML publishing didn't work for now. Before trying to work on the main problem, which is the header of the file, I'll try to do a markdown export and see that it works. If it does, I might keep it like that and work with org to markdown.
-
-Markdown export doesn't work well also. Two issues that I had:
-- Org add the outline of the post on top. This is annoying, but I'm sure I can find the solution easily, but not at the moment.
-- The bigger issue is that I can't seem to be able to pass the head meta tags that Pelican expects to get and process.
-
-Hitting the wall. Markdown export doesn't work either.
-
-*** Trying the org-export
-I tried to follow [[http://nhoffman.github.io/borborygmi/getting-started.html][this article]] but wasn't able to make it work. I cloned [[https://github.com/nhoffman/org-export][the repository]] and made the export. But still, the header meta wasn't included in the output HTML. Now the post mentioned another utility that was "easily" created to do that, but it's not included, so what's the point in the article...?
-
-
-So, just as I'm about to give up, I found a way that allows me to pass header parameters to the html output. Now, I can have org communicate with pelican. I don't like this solution that much, because it clatters my org file with markup, but this is something I can live with.
-
-[[https://github.com/fniessen/org-html-themes/blob/328260286c89aa0b8a4f3bd6be902de50da696bf/setup/theme-bigblow-local.setup][reference to how the header tag looks like]]
-
-Now, I'm only missing the syntax highlighting in the output file, the one that goes to the site.
-Found a solution for that. I had to include htmlize, and now I can export or files into html! yay.
-
-Next problem to solve:
-Footnotes are shown awkwardly. I've looked for a setting that will allow me to remove the footnote header. Found this variable "Org Footnote Section" and removed the "Collect footnotes under heading" to nil. I'm going to restart emacs and see what happens. Finger crossed...
-
-Oh wow. I found the tresure! I went to emacs settings and searched for "org html export". I found that I can control evry element of the export, including how the footnotes section will be formated. But I'm greedy, and now looking for header construction, in a way that I can include tags or meta headers in markdown or org format, and have them translate into header tags. This way I won't have to include ugly markups in my source files.
-
-Found [[https://pavpanchekha.com/blog/org-mode-publish.html][another article]] that was helpful in understanding how ord export works, and include some tips on setting up the publishing hook for git - export the site whenever I do a commit. I might get back to it at some point.
- 
-
-Ok, I think I got to the end of the journey. I found out that after all the trubles that I went through, there is a [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][plugin for pelican]]. How stupid am I not to figure it out. And more than that - the plugin set in my computer all this time... so reading [[http://msnyder.info/posts/2013/12/introducing-pelicorg/][this post]] walked me through the setup, and now I can have my org files directly in my pelican content directory. Halelluya!!!
-
-One last obsecal. That damn syntaxy highlighting thing went away again. I think the first article I read had a solution for that. I'll go check it out again.
-
-Yes, Yes, Yes! adding this simple  (require 'color-theme-github) did the trick, and now my implementation is done.
-
-And now that I can have my org files directly in pelican, I can actually save also this pipeline posts file there, only in dradt mode.
-
-*** References
-- [[http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing orgmode files to HTML]]
-- [[http://orgmode.org/worg/org-tutorials/org-jekyll.html][Using org with Jekyll]] - This is a good reference to setup the publishing of the org files to the content folder in Jekyll. It seems that with pelican, the setup will be very similar.
-
-- mention the good tutorial [here](http://nhoffman.github.io/borborygmi/getting-started.html)
-*** Merging Drafts Into One Orgmode File
-Up until now my writing workflow included creating new file for each post I started to write. I gave those drafts a file name starting with "post -". This way it was easy to sift through my posts ideas in nvAlt. 
-
-Recentely, I moved to emacs, and was drawn into orgmode. I now write everything in org. Org is the best outliner I worked with, and so when I read [Sacha's]() tip on managing all her posts-to-be in one org outline, I got curious. I started by outlining several new ideas that I had, and eventually decided to merge my entire collection of drafts into one org file.
-
-*** Why is it a good idea?
-
-I started to do it, but realised quickly that it will be lame to manually copy and paste the content of some 30 files into one file. Inspired by the "Automate The Boring Stuff With Python" that I read couple of months ago, I thought this might be a good opportunity to implement what I learned. And so I went ahead and wrote the following script that scan my draft files, create a new outline header from the filename (minuse the "post - "prefix) and append the content of each file under the relevant header.
-
-
-** Exporting a post from org mode to pelican
-I'm trying to move my blog posts from markdown to org.
-
-Starting with an outline that is part of a bigger org file that holds all my drafts.
-In my Dropbox folder, I keep all my notes in a Notes/ folder. In that folder I created a sub-folder for all my posts. 
-
-I then killed the sub-tree that held my draft and yanked it into a new org file in the post folder. 
-
-Now, before exporting this post to an HTML in the pelican folder, I needed to add some meta data, especially date, which pelican is finicky about. 
-
-Ok, reporting failure on that for now. I didn't find a good reference to how I do the export to HTML, and what org headers I need to use to make the transition. And so I did for now, an export to markdown, saved the markdown in the Pelicon content folder and published from there.
-
-This is a bad compromise, because I had to do some modifications to the markdown document, such as adding 
 
 ** Comment and uncomment a line
 This is something that I found very handy in Sublime Text. I think it's also one of the features that keeps me with Sublime, and not let me do a full conversion to emacs. Funny thing is that while I'm more than comfortable doing every other writing in emacs, coding still feels more comfortable in Sublime.
@@ -116,13 +25,6 @@ Here's a function I learned, that do the trick:
 
 
 I know it looks a little absurd. Isn't commenting one of the most basic features of /any/ decent editor? I guess... for some reason, though, it doesn't discourage me, even a little.
-** Link to a specific subtree in another org file
-
-** Refile a Subtree to a New Org File
-I manage all my drafts for new posts in one file. This is an insperation from Sacha.
-So now, what I want to be able to do is refiling a subtree, which represent post's draft, to a new file that will turn to the final post.
-
-I googled it, and [[http://superuser.com/questions/373617/re-file-outline-tree-into-new-org-mode-file][here]] is the result I got. Reading through it makes me think that like integrating org with pelican, this isn't going to be a quick configuration, but will require some more involvemnt. I will therefore stash this modification, cause I have some more important things to work on at the moment...
 
 ** Setting Emacs on Mac for Python
 
@@ -191,8 +93,114 @@ After some googling I learned that dired-x is part of emacs, and there is no nee
 #+END_SRC  
 
 And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
+** Quick reload of init.el file
+I'm constantly customizing my emacs. I have an ~init.el~ file, but most of the configuration in a more literal way, in an org [[https://github.com/yanivdll/.emacs.d/blob/master/config.org][config file]].
 
-** Pass Org Header Parameters to Pelican
+When I make changes to Emacs settings, I need to reload the init file in order for the changes to take an effect. So far, I typed ~C-x C-f~ to find the init file and then ~M-x [RET] eval-buffer~ to reload it. Repeating this flow hundreds of times becomes annoying.
+
+A quick question in IRC, taught me that I can use the commend ~load-file~ and the name of the file I would like to load. Having a function to load a file, means that I can wrap it with my own function, and reload my init file with a customized keybind. And with the help of [this answer](http://stackoverflow.com/a/12558095/1424287) at stack-overflow, I came up with the following shortcut to reload my Emacs configuration:
+
+
+
+
+** Orgmode
+*** Pelican + Orgmode                                       :orgmode:pelican:
+For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
+1. The source should be in a text based format, so text, markdown or org, each will be good.
+2. I would like to be able to manage and edit from one folder, preferable the folder where I have all my notes.
+
+Until recently, I wrote my articles in markdown. When I was done with the article, I copied it to the content folder in my pelicon based blog. I then run `make html` to process the source into a static html, and when I was sutisfied with the piece, I would have pushed the pelican output folder to aws, where my blog is hosted.
+
+Rarely was I satisfied with the piece when copying it to the pelican folder. Many times I had to do some final editing. Since I edited my original text in a a markdown editor, and the code for the site in Sublime Text, I was inclined to the open the article in Sublime, cause mose of the times I was already there, messing with other code, and do the changes on the spot. In that broken workflow, I was left with two copies for each of my posts. Most of the times these copies weren't identicle. So, once copying a post into pelican, I couldn't trust that I can edit the original post, but had to go back to the content folder, and open the post there. That turned my central note folder useless when it came to managing my posts. 
+
+I recently started to work with emacs, and move a lot of my text based activities to it. And so working on the site and on articles are done at the same place. 
+
+I still want to keep a version of my posts in dropbox though, so I still want to have some kind of export workflow in place. This is also true since I want to start writing my posts in org, which isn't supported out of the box by pelican.
+
+So after a long introduction, the problem I'm trying to solve is 
+
+***** How to export a post from my dropbox folder to the content folder in Pelican?
+I want to have the editable format of the article available only in one place. What I've experienced so far was that I started an article in my notes folder, at first through nvAlt and then moved to emacs and deft. When I thought I was done and moved the article to the content 
+**** Configure Org mode to publish (in general)
+This is a straight forward customization. I had to follow the tutorial.
+
+**** Configure the html export to pelican
+**** Importing html file into Pelican
+It turns out importing to pelican is harder than I expected.
+
+But, the export doesn't work as I thought it will. The problem was that the header that Pelican expect, wasn't translated in a way it can work with. So as a result, the file that was created in the Pelican content folder wasn't compiled to the output.
+
+**** Trying an import to markdown
+HTML publishing didn't work for now. Before trying to work on the main problem, which is the header of the file, I'll try to do a markdown export and see that it works. If it does, I might keep it like that and work with org to markdown.
+
+Markdown export doesn't work well also. Two issues that I had:
+- Org add the outline of the post on top. This is annoying, but I'm sure I can find the solution easily, but not at the moment.
+- The bigger issue is that I can't seem to be able to pass the head meta tags that Pelican expects to get and process.
+
+Hitting the wall. Markdown export doesn't work either.
+
+**** Trying the org-export
+I tried to follow [[http://nhoffman.github.io/borborygmi/getting-started.html][this article]] but wasn't able to make it work. I cloned [[https://github.com/nhoffman/org-export][the repository]] and made the export. But still, the header meta wasn't included in the output HTML. Now the post mentioned another utility that was "easily" created to do that, but it's not included, so what's the point in the article...?
+
+
+So, just as I'm about to give up, I found a way that allows me to pass header parameters to the html output. Now, I can have org communicate with pelican. I don't like this solution that much, because it clatters my org file with markup, but this is something I can live with.
+
+[[https://github.com/fniessen/org-html-themes/blob/328260286c89aa0b8a4f3bd6be902de50da696bf/setup/theme-bigblow-local.setup][reference to how the header tag looks like]]
+
+Now, I'm only missing the syntax highlighting in the output file, the one that goes to the site.
+Found a solution for that. I had to include htmlize, and now I can export or files into html! yay.
+
+Next problem to solve:
+Footnotes are shown awkwardly. I've looked for a setting that will allow me to remove the footnote header. Found this variable "Org Footnote Section" and removed the "Collect footnotes under heading" to nil. I'm going to restart emacs and see what happens. Finger crossed...
+
+Oh wow. I found the tresure! I went to emacs settings and searched for "org html export". I found that I can control evry element of the export, including how the footnotes section will be formated. But I'm greedy, and now looking for header construction, in a way that I can include tags or meta headers in markdown or org format, and have them translate into header tags. This way I won't have to include ugly markups in my source files.
+
+Found [[https://pavpanchekha.com/blog/org-mode-publish.html][another article]] that was helpful in understanding how ord export works, and include some tips on setting up the publishing hook for git - export the site whenever I do a commit. I might get back to it at some point.
+ 
+
+Ok, I think I got to the end of the journey. I found out that after all the trubles that I went through, there is a [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][plugin for pelican]]. How stupid am I not to figure it out. And more than that - the plugin set in my computer all this time... so reading [[http://msnyder.info/posts/2013/12/introducing-pelicorg/][this post]] walked me through the setup, and now I can have my org files directly in my pelican content directory. Halelluya!!!
+
+One last obsecal. That damn syntaxy highlighting thing went away again. I think the first article I read had a solution for that. I'll go check it out again.
+
+Yes, Yes, Yes! adding this simple  (require 'color-theme-github) did the trick, and now my implementation is done.
+
+And now that I can have my org files directly in pelican, I can actually save also this pipeline posts file there, only in dradt mode.
+
+**** References
+- [[http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing orgmode files to HTML]]
+- [[http://orgmode.org/worg/org-tutorials/org-jekyll.html][Using org with Jekyll]] - This is a good reference to setup the publishing of the org files to the content folder in Jekyll. It seems that with pelican, the setup will be very similar.
+
+- mention the good tutorial [here](http://nhoffman.github.io/borborygmi/getting-started.html)
+**** Merging Drafts Into One Orgmode File
+Up until now my writing workflow included creating new file for each post I started to write. I gave those drafts a file name starting with "post -". This way it was easy to sift through my posts ideas in nvAlt. 
+
+Recentely, I moved to emacs, and was drawn into orgmode. I now write everything in org. Org is the best outliner I worked with, and so when I read [Sacha's]() tip on managing all her posts-to-be in one org outline, I got curious. I started by outlining several new ideas that I had, and eventually decided to merge my entire collection of drafts into one org file.
+
+**** Why is it a good idea?
+
+I started to do it, but realised quickly that it will be lame to manually copy and paste the content of some 30 files into one file. Inspired by the "Automate The Boring Stuff With Python" that I read couple of months ago, I thought this might be a good opportunity to implement what I learned. And so I went ahead and wrote the following script that scan my draft files, create a new outline header from the filename (minuse the "post - "prefix) and append the content of each file under the relevant header.
+
+**** Exporting a post from org mode to pelican
+I'm trying to move my blog posts from markdown to org.
+
+Starting with an outline that is part of a bigger org file that holds all my drafts.
+In my Dropbox folder, I keep all my notes in a Notes/ folder. In that folder I created a sub-folder for all my posts. 
+
+I then killed the sub-tree that held my draft and yanked it into a new org file in the post folder. 
+
+Now, before exporting this post to an HTML in the pelican folder, I needed to add some meta data, especially date, which pelican is finicky about. 
+
+Ok, reporting failure on that for now. I didn't find a good reference to how I do the export to HTML, and what org headers I need to use to make the transition. And so I did for now, an export to markdown, saved the markdown in the Pelicon content folder and published from there.
+
+This is a bad compromise, because I had to do some modifications to the markdown document, such as adding 
+*** Link to a specific subtree in another org file
+
+*** Refile a Subtree to a New Org File
+I manage all my drafts for new posts in one file. This is an insperation from Sacha.
+So now, what I want to be able to do is refiling a subtree, which represent post's draft, to a new file that will turn to the final post.
+
+I googled it, and [[http://superuser.com/questions/373617/re-file-outline-tree-into-new-org-mode-file][here]] is the result I got. Reading through it makes me think that like integrating org with pelican, this isn't going to be a quick configuration, but will require some more involvemnt. I will therefore stash this modification, cause I have some more important things to work on at the moment...
+*** Pass Org Header Parameters to Pelican
 After a long process of trying to integrate Org with Pelican, I landed on Pelican's [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]. It works well and allows me to write my posts in orgmode. But as I gain more posts, I want to categorize and orginize them better. 
 
 Org_reader is quit limiting in the amount of header properties it allows to map. In fact it support only the ~title~, ~category~, ~date~ and ~author~. In fact, it maps org's ~category~ to pelican's ~tags~, while both org and pelican has the accurate property names for both tags and category.
@@ -209,16 +217,64 @@ I forked the org_reader repository...
 *2 hours later:*
 Started to read [[https://github.com/hypernumbers/learn_elisp_the_hard_way]["Learning Elisp the Hard Way"]].
 
-** Forking the org_reader plugin
+*** Links in orgmode
+
+**** Create an external link
+The format for a link in org is:
+#+BEGIN_SRC 
+[[link_url][description]]
+#+END_SRC
+
+I found it tricky to use this convention. The way I inclined to create links is to first construct he governing brackets, so to get something like [[][]][fn:4]. I'll then go and add the description and lastly the url. 
+
+The problem is that when I enter the description part, and move the point outside the description's enclosed paranthesees, the link changes, and all I can see is the description. In that view I can't modify the url part of the link.
+
+I found the answer in [[http://orgmode.org/guide/Link-format.html#Link-format][Org Mode Compact Guide]] 
+#+BEGIN_QUOTE
+
+Org will recognize plain URL-like links and activate them as clickable
+links. The general link format, however, looks like this: 
+
+#+BEGIN_SRC 
+[[link][description]] or alternatively [[link]] 
+#+END_SRC
+
+Once a link in the buffer is complete (all brackets present), Org will change the display so that ‘description’ is displayed instead of ‘[[link][description]]’ and ‘link’ is
+displayed instead of ‘[[link]]’. To edit the invisible ‘link’ part, use
+C-c C-l with the cursor on the link.
+
+#+END_QUOTE
+
+So now, instead of constructing the markup for a link, I simply type 'C-c C-l RET' at the point where I want the reference link to be inserted. In the prompt that shows in the mini-buffer, I enter the link's url and the description. I 
+
+**** Remove a link
+I created a link, but want to remove the link, and keep only the description. Here's a function that I'll have to add to my init file. 
+
+#+BEGIN_SRC emacs-lisp
+(defun afs/org-replace-link-by-link-description ()
+    "Replace an org link by its description or if empty its address"
+  (interactive)
+  (if (org-in-regexp org-bracket-link-regexp 1)
+      (let ((remove (list (match-beginning 0) (match-end 0)))
+        (description (if (match-end 3) 
+                 (org-match-string-no-properties 3)
+                 (org-match-string-no-properties 1))))
+    (apply 'delete-region remove)
+    (insert description))))
+#+END_SRC
+
+I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
+
+*** Forking the org_reader plugin
 The goal is to be able to export org files simlessly to pelican. I want to have all the meta tags that Pelican allows, synced from org in Emacs.
 I will build on top of the org_reader plugin, and then decide if I make a pull request, or add my own version with attribution to the other plugin.
 
 Here's what I did:
-*** Forked the org_reader plugin
-*** Copied the plugin to a new folder - ort_to_pelican
-*** Created a test blog in pelican
+**** Forked the org_reader plugin
+**** Copied the plugin to a new folder - ort_to_pelican
+**** Created a test blog in pelican
 I don't want to make changes that harm my current implementation. Want to create a clean environment to experimintations.
-*** Find the touching point with org meta
+**** Find the touching point with org meta
 I found the part of the code where the plug in connect with the org export meta data. I switched the json to get static values, just to make sure I'm touching the right spot.
 
 Here's the before:
@@ -259,30 +315,109 @@ I changed the attributes of the json that probably feeds the pelican with static
 
 Next.
 
-*** Read the meta tags from the org post
+**** Read the meta tags from the org post
 Instead of waiting for the meta tags to be exported from org, I'll go ahead and fetch them directly from the org file. The reason for going around the org export is that it's apis only expost subset of entities, while I want to support more properties.
 
-*** Implemented the parsing method
+**** Implemented the parsing method
 This method read the org file.
 It read lines and if a line is a property line, it breaks it into a dictionaty.
 
-*** Need to map the resulting dictionary with the pelicon terminology.
-*** Resources
+**** Need to map the resulting dictionary with the pelicon terminology.
+**** Resources
 - Pelican documentation
   - [[https://github.com/getpelican/pelican-plugins/blob/master/Contributing.rst][Contributing a plugin]]
   - [[http://docs.getpelican.com/en/latest/contribute.html#using-git-and-github][Contributing guidelines]] and Contribution quality standards
 - A blog post about [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][pelican plugin tests]] 
 - Documentation for the [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]
 - [[http://nhoffman.github.io/borborygmi/getting-started.html#sec-1-1][Creating a site with Pelican and org-mode]]
+*** Inserting an inline image with org
+I'm trying to add an image from a url that will show inline (and not as a link). What I found in the org manual is how to do it with a local file, but it seems to not work with remote file, or with using ~http:~ instead of ~file:~.
+
+Here's what I found so far:
+
+
+Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
+*** Orgmode - Presentation With Reavel
+I want to be able to write my presentation with text. I don't like doing my presentation with any of the ordinary apps because I end up spending most of my time on the look and feel rather than on the content, and on what I want to achive from the presentation.
+
+As I move more and more parts of my life to org, running presentations using it sounded like a good idea. I looked for plugins that I can use for that task. I used landslide with markdown before, the experience was ok. What I found for org, which work also with markdown, is Reveal. So I decided to give it a try.
+
+**** Installation and configuration
+- Clone reveal into ~/dev/reveal. Here's a [[https://github.com/hakimel/reveal.js/releases/latest][link to the latest version]].
+- Configure org-reveal package in Emacs
+  - First try: Add the following to my init file
+   #+BEGIN_SRC emacs-lisp
+   (use-package ox-reveal
+   :ensure t
+   :config
+   (setq org-reveal-root "~/dev/reveal/reveal.js"))
+   #+END_SRC
+  
+   That didn't work. When evaluating my init file, it complained that the package isn't available.
+
+  - Second try: Clone the org-reveal repository into my ~/.emacs.d/lisp/ folder  (that's were I place packages that I downloaded manually, i.e. not from one of the  package hubs). That didn't work either. My init loaded without problem, but the  org-reveal package didn't.
+
+  - Third try: I commented the use-package config, and used the ordinary require:
+       #+BEGIN_SRC emacs-lisp
+         (require 'ox-reveal)
+       #+END_SRC
+       This time it worked.
+
+- Try it out - Seems that the package is now loading. So I created a test presentation, like this one:
+  #+BEGIN_SRC org
+    * Slide 1
+    * Slide 2 
+    ** Slide 2.1
+    ** Slide 2.2
+    * Slide 3
+  #+END_SRC
+
+I then called ~org-reveal-export-to-html~, but got an error ~Symbol's function definition is void: org-export-get-referenc~. Not sure why... Taking a step backward, to read the documentation again, and see where did I take the wrong step.
 
 
 
+**** Reference 
+- [[http://jr0cket.co.uk/2013/10/create-html5-presentations-emacs-revealjs.html.html][Create HTML5 Presentations Easily With Emacs and Reveal.js]]
 
+** Themes
+*** Flip between light and dark themes
+I want to creat a function that flip between light and dark thems.
+- Choose the themes I want to flip through.
+- Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
+*** Add Solarized theme to emacs
+I fell in love with that theme. 
+I installed the solarized theme from elpa (github repo [[https://github.com/bbatsov/solarized-emacs][here]])
+This was very easy, but the problem was that the headers in org mode didn't adhear to the theme.
+I tried this package: https://github.com/sellout/emacs-color-theme-solarized, but couldn't make init to load the theme correctly. I also didn't want to change my path to themes to that theme's folder, because I might want to add more themes to that path, and the ~custom-theme-directory~ doesn't seem to be a list.
 
+So now I found this post - https://blog.sleeplessbeastie.eu/2014/06/09/how-to-use-solarized-theme-in-emacs/.
+I hope this article will be helpful. It wasn't.
 
+Both Sacha's configuration, and the article I read didn't help. It seemed that I have a cumborsum variable of the header that inherited it's value, and overriden the theme.
 
+Eventually, like many other questions, I found a solution in an answer at [[http://emacs.stackexchange.com/a/16873/10150][stack-overflow]]. I had to use the first repo, and add this line to the init:
 
+#+BEGIN_SRC emacs-lisp
+(setq solarized-scale-org-headlines nil)
+#+END_SRC
+*** Changing the default font in Emacs
+Josh Stella wrote a [[https://blog.fugue.co/2015-11-11-guide-to-emacs.html][delightful post]] about how he uses Emacs, not necceseraly for development work. I found quite a few configuration tips that I have already implemented in my setup, or planning to. One of those tweaks is using the Input font family. I thought it will be as simple as ~copy-paste~ (I'm still not used to the apropriate ~kill-yank~ terminology). I was wrong. 
 
+Using Josh's configuration (after changing the local-system name) didn't work - the font didn't pick up. But after few experimintations, I was able to make it work. First, I had to download and install the font in my mac, dahhh. But then I had to modify the name of the font. Here's the configuration I ended up with. It works, and indeed the font looks beatiful:
+
+#+BEGIN_SRC emacs-lisp
+;; set up fonts for different OSes. OSX toggles to full screen.
+(setq myfont "InputSerif")
+(cond
+((string-equal system-name "ygilad.local")
+ (set-face-attribute 'default nil :font myfont :height 144)
+ (toggle-frame-fullscreen)))
+#+END_SRC
+
+Here's a screen grab of this post with with the input font:
+http://media.prodissues.com/images/2015/11/emacs_with_input_font.png
+
+I'm left with one problem though - for some reason, my org-reader plugin breaks, and I can't export my org files to Pelican. Sadly, I'll have to resort to the default font (Monelo), until I figure out a fix.
 
 ** Experimitation with Spacemacs
    - Note taken on [2015-11-16 Mon 14:45] \\
@@ -307,89 +442,20 @@ So, I backed up the spacemacs folder and stashed it for now. I'll probably want 
 There is no way to specify more than one folder. The variable name hint to that - it called setq deft-directory - note directory in singular rather than plural[fn:3]
 *** Reference
 - [[http://jblevins.org/projects/deft/][Deft documentation page]]
-
-** Flip between light and dark themes
-I want to creat a function that flip between light and dark thems.
-- Choose the themes I want to flip through.
-- Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
-** Add Solarized theme to emacs
-I fell in love with that theme. 
-I installed the solarized theme from elpa (github repo [[https://github.com/bbatsov/solarized-emacs][here]])
-This was very easy, but the problem was that the headers in org mode didn't adhear to the theme.
-I tried this package: https://github.com/sellout/emacs-color-theme-solarized, but couldn't make init to load the theme correctly. I also didn't want to change my path to themes to that theme's folder, because I might want to add more themes to that path, and the ~custom-theme-directory~ doesn't seem to be a list.
-
-So now I found this post - https://blog.sleeplessbeastie.eu/2014/06/09/how-to-use-solarized-theme-in-emacs/.
-I hope this article will be helpful. It wasn't.
-
-Both Sacha's configuration, and the article I read didn't help. It seemed that I have a cumborsum variable of the header that inherited it's value, and overriden the theme.
-
-Eventually, like many other questions, I found a solution in an answer at [[http://emacs.stackexchange.com/a/16873/10150][stack-overflow]]. I had to use the first repo, and add this line to the init:
-
-#+BEGIN_SRC emacs-lisp
-(setq solarized-scale-org-headlines nil)
-#+END_SRC
-
-** Links in orgmode
-
-*** Create an external link
-The format for a link in org is:
-#+BEGIN_SRC 
-[[link_url][description]]
-#+END_SRC
-
-I found it tricky to use this convention. The way I inclined to create links is to first construct he governing brackets, so to get something like [[][]][fn:4]. I'll then go and add the description and lastly the url. 
-
-The problem is that when I enter the description part, and move the point outside the description's enclosed paranthesees, the link changes, and all I can see is the description. In that view I can't modify the url part of the link.
-
-I found the answer in [[http://orgmode.org/guide/Link-format.html#Link-format][Org Mode Compact Guide]] 
-#+BEGIN_QUOTE
-
-Org will recognize plain URL-like links and activate them as clickable
-links. The general link format, however, looks like this: 
-
-#+BEGIN_SRC 
-[[link][description]] or alternatively [[link]] 
-#+END_SRC
-
-Once a link in the buffer is complete (all brackets present), Org will change the display so that ‘description’ is displayed instead of ‘[[link][description]]’ and ‘link’ is
-displayed instead of ‘[[link]]’. To edit the invisible ‘link’ part, use
-C-c C-l with the cursor on the link.
-
-#+END_QUOTE
-
-So now, instead of constructing the markup for a link, I simply type 'C-c C-l RET' at the point where I want the reference link to be inserted. In the prompt that shows in the mini-buffer, I enter the link's url and the description. I 
-
-*** Remove a link
-I created a link, but want to remove the link, and keep only the description. Here's a function that I'll have to add to my init file. 
-
-#+BEGIN_SRC emacs-lisp
-(defun afs/org-replace-link-by-link-description ()
-    "Replace an org link by its description or if empty its address"
-  (interactive)
-  (if (org-in-regexp org-bracket-link-regexp 1)
-      (let ((remove (list (match-beginning 0) (match-end 0)))
-        (description (if (match-end 3) 
-                 (org-match-string-no-properties 3)
-                 (org-match-string-no-properties 1))))
-    (apply 'delete-region remove)
-    (insert description))))
-#+END_SRC
-
-I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
-
-** How to modify emacs window so the buffer have right and left margins
-There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
-** Inserting an inline image with org
-I'm trying to add an image from a url that will show inline (and not as a link). What I found in the org manual is how to do it with a local file, but it seems to not work with remote file, or with using ~http:~ instead of ~file:~.
-
-Here's what I found so far:
-
-
-Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
 ** TODO Undo tree mode
 Copied the setting from Sacha's config file - http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline158
 Need to learn a little more how to use it.
+
+** How to modify emacs window so the buffer have right and left margins
+There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
 * Prodissues
+** Add inline footnotes
+Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/11/developer_for_a_day.html][this post]]. Her feedback was that she would have liked to be able to read the footnotes inline, instead of having to scroll all the way down the article. That's a good feedback, and I want to think of ways to adderss it. One way will be to add a tooltip to the footnote reference.
+
+*** Reference
+- [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Tooltips using jQuery]] -  - this article describes the use of only tooltips, not together with footnotes.
+- [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Footnote Tooltips using jQuery]]
+ 
 * Code
 ** Integrating Sphere with Alfred
 We have a hackathon
@@ -457,8 +523,39 @@ Now, with easy to use interface, even non-technocal people can dig the data and 
 }
 #+END_SRC
 
- 
+** Getting Feedback from users and customers
+*** Intro
+A friend of mine asked me the other day how do we collect feedback from clienct, and how do we incorporate this feedback in our product roadmap. My immediate response was that we do collect feedback. This feedback includes not only meetings with clients, but mainly ....
 
+But my answer got me thinking. Do we really don't collect feedback? are we really driven only by a vision, thinking that we have all the answers, and only building something with the hope that everyone will understand it at the end of the day? and when I thought about it deeper, the answer become No. Absolutly not. 
+
+
+*** Feedback /is/ part of our process, even if we don't think of it as such
+A feedback loop is essential to everything I do, whether it's through direct partners' feedback, user testings, a\b testing or data analysis. Here are just few examples for the type of feedback we collected, what we learned from it, and how it influenced our product.
+
+*** Examples
+**** Direct to consumers first
+We started with direct to consumer products, such as a Firefox and chrome extensions. While the initial UI\UX were driven by our experience working with publishers, we quickly revised it after gathering data from user feedback that was collected through user testing, engagement data (mainly google analytics) and a\b testing.
+
+The feedback we gathered showed us a mixed picture. On the one hand, we satisfied a (small) segment of the users we saw. On the other hand, data showed that our building a d2c from scratch will not be sustainable. Our cost per user was way over the LTV.
+
+**** NTDs
+That led us to two main decisions. 1) We should build our distribution first and a destination second and 2) everything we build should be reusable (i.e. API driven). With that decision, we had to first chose the types of partners that will see the value in what we're building. After numerous meetings with different partners that have different goals, we selected partners who care mostly about engagement and audience growth (rather than pure monetization). Our initial partners were companies, usually technology driven, that don't produce their own content, but want to use content to drive engagement and retention. 
+
+Working with those partners, we learned about the KPIs they're interested in, and capabilities they would like to have. For example, one partner wanted to create an on-boarding experience to a content hub they were planning to build inside their app. They wanted to leverage our platform to power the content, but also to allow users to control the sites and categories of content they being recommended with. This request led us to expand our platform and expose a set of APIs that enable this functionality. Today, those APIs play an important role in our story.
+
+**** Back to publishers
+As we've started to scale our pilot with partners, we found that our vision and the platform we've built aligns well also with a certain segment of publishers - small, "high brow" publishers that produce premium content for niche audience. Meetings and brainstorming with such partners, we learned that taking an API route isn't practical, because they usually don't have the technical capabilities to integrate with our platform through an API. That led us to work on a JS based solution, with the goal of minimizing time to deployment, and the required technical skills to work with us.
+
+We launched that new product couple of weeks ago. You can take a look at [[http://firstround.com/review/slacks-first-product-manager-on-how-to-make-a-firehose-of-feedback-useful/][that article]] from First Round Review for an example how this product looks like (see the recommendation units on the sides and bottom of the article).
+
+**** The hackathon as a feedback loop
+The development hub that I showed briefly yesterday, was driven by tons of user testings, spec reviews and demos we presented to partners. Last week, we conducted a dry run for that platform, in a hackathon we organized in our office. We invited external teams to hack and build with our APIs. The goal was to test how "self-servised" and self-explanatory the work with our platform and documentation is. 
+
+You can take a look at [[http://prodissues.com/2015/11/developer_for_a_day.html][that blog post]] for my personal lessons. But we had another, bigger and surprising take-away. Most of the teams in the hackathon chose to use one certain API, that we made available the night before the hackathon, just as a through away and as an afterthought, without knowing how it can really be leveraged. That was a unique way to learn about how our partners *really* want to use our platform, and where we might want to grow it.
+
+*** Summary
+ 
 * Workflows
 ** Remove HTML Files With Hazel
 Here's a simple Hazel rule I created in order to deal with superflous html files that are created whenever I do a file export from my ~\~/Dropbox/Notes~ folder.
@@ -529,6 +626,7 @@ Dominos hired people "who already did it". Some from KFC, some from macdonald. T
 Just a reminder about this tool.
 
 Many times I find a link that seemed to be dead. I saih disappointed and look for a new resource. Sometimes I recall this amazing site, tha
+
 
 * Footnotes
 

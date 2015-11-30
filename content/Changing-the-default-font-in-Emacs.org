@@ -1,0 +1,31 @@
+#+TITLE:      Changing the default font in Emacs
+#+AUTHOR:	Yaniv
+#+EMAIL:	yanivdll@gmail.com
+#+DATE:     2015-11-30
+#+URI:        
+#+KEYWORDS:    
+#+TAGS:      emacs 
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION:  
+
+Josh Stella wrote a [[https://blog.fugue.co/2015-11-11-guide-to-emacs.html][delightful post]] about how he uses Emacs, not necessarily for development work. I found quite a few configuration tips, and already implemented few of them. One of those tweaks is using the Input font family. Visiting [[http://input.fontbureau.com][fontbureau]] made me want this font too! 
+
+I thought it will be as simple as ~copy-paste~ (I'm still not used to the appropriate ~kill-yank~ terminology). I took his configuration and modified the local-system name, as he noted. Yet, after reloading my init, the font didn't pick up. 
+
+Few experimentation later, though, and it /did/ work. First, I had to download and install the font in my mac, dahhh. Then I had to modify the name of the font. Here's the configuration I ended up with. It works, and indeed the font looks beautiful:
+
+#+BEGIN_SRC emacs-lisp
+;; set up fonts for different OSes. OSX toggles to full screen.
+(setq myfont "Input")
+(cond
+((string-equal system-name "ygilad.local")
+ (set-face-attribute 'default nil :font myfont :height 144)
+ (toggle-frame-fullscreen)))
+#+END_SRC
+
+Here's a screen grab of this post with with the input font:
+http://media.prodissues.com/images/2015/11/emacs_with_input_font.png
+
+I'm left with one problem though - for some reason, my org-reader plugin breaks, and I can't export my org files to Pelican. Sadly, I'll have to resort to the default font (Menlo), until I figure out a fix.
+
