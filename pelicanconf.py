@@ -54,7 +54,7 @@ MENUITEMS = (('about', '/about/'),
 	('contact', '/about/#contact'),
 	('twitter','https://twitter.com/prodissues'),
 	('feed','/feeds/all.atom.xml'),
-	('drafts', '/posts_drafts/'))
+	('drafts', '/drafts/'))
 
 # Social widget
 SOCIAL = (('tweeter', 'http://twitter.com/prodissues'),)
@@ -73,8 +73,8 @@ JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 THEME = 'themes/simple'
 ASSET_URL = '/static/'
 
-PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = ['assets', 'org_reader']
+PLUGIN_PATHS = ['../pelican-plugins-fork']
+PLUGINS = ['assets', 'org_emacs_reader']
 
 # Org Reader plugin
 ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"

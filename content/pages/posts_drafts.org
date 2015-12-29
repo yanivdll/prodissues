@@ -13,44 +13,10 @@
 This is an org mode based file where I draft all my posts. I keep this file and post it because it helps me work on several posts in paralel, and add to drafts as I go. Once I'm done with a post, I move it to a new file, which is then pushed as a stand alone post. 
 # I will need to link for the workflow of how to turn a draft into a final, published article. 
 * Emacs
-
-
-** Comment and uncomment a line
-This is something that I found very handy in Sublime Text. I think it's also one of the features that keeps me with Sublime, and not let me do a full conversion to emacs. Funny thing is that while I'm more than comfortable doing every other writing in emacs, coding still feels more comfortable in Sublime.
-
-Today I made a big step toward writing code in emacs (not that I write a lot of code...), thanks to defining an easy way to comment and uncomment a line of code. Again, thanks to the good users at stack-overflow.
-
-Here's a function I learned, that do the trick:
-[[file:~/.emacs.d/config.org::#comment-or-uncomment][comment-uncomment-code]] or uncomment a line
-
-
-I know it looks a little absurd. Isn't commenting one of the most basic features of /any/ decent editor? I guess... for some reason, though, it doesn't discourage me, even a little.
-
-** Setting Emacs on Mac for Python
-
-
-*** What do I try to achive with this integration?
-#+DATE: 2015-11-06
-
-- Python syntax highlighting
-- Auto-complition, including for default and 3rd party packages
-- Evaluate code in a seperate, horizontal buffer (like I did in CodeRunner)
-
-
-I recently moved all my writing to emacs, and since I do, or should I say - try to do some python coding -  I searched for a tutorial on how to customize emacs as a Python editor. 
-
-Before emacs, the litle Python I wrote, was done with CodeRunner and Sublime Text, but mostly in the out-of-box IDLE. Each one of these enviornemt lacked something, so I didn't have any strings attached when I decided to move my coding to emacs.
-
-I started to google things like "setting emacs for python on mac", but I didn't find one tutorial that could walk me through the entire configuration. I did find some useful sprinkles of tips and information. 
-
-# Give an exapmles for useful posts. Jesika is one, the video of the Japanese guy is another.
-
- anything relevant. So instead of keep looking, I decided to figure it out myself, and write a tutorial on it, so other in my position have a better start than I had. 
-
 ** Switching buffer focus
 By default, the keybinding to circle through open buffers is `C-x o`. I couldn't think of a more annoying keybinding, requiring two steps to just switch focus to another buffer. 
 
-I decided to change this behavior and define a different keybinding, that fits better with my mental model, which associate `tab` with switching between different areas on the screen. This was also a good opportunity to establish a workflow for customizing various behaviors of emacs. 
+I want to change this behavior and define a different keybinding, that fits better with my mental model, which associate ~tab~ with switching between different areas on the screen. That's also an opportunity to establish a workflow for customizing various behaviors of emacs. 
 
 Here's the workflow I came up with:
 - Define what the outcome behavior should be. In this case, I wanted to define a comfortable keybinding to circle through open bufferes.
@@ -74,6 +40,208 @@ Here's the workflow I came up with:
 
 
 This is a good example for how to start customizing emacs. I first looked for what
+
+
+
+
+
+
+
+
+
+
+
+
+** Adding a dictionary
+
+** Adding email support to Emacs - part 1
+Couple of days ago I went on a journy to add email support to my Emacs. In this post, I'll detail only the first part of this journey - integrating mu4e with Emacs. I will not detail the specific configurations that I made, nor will I review my experience with it (it's too soon for that anyway). But I still find it worthwhile to document the steps that I had to take, if only for my own future reference.
+
+*** Why?
+- Because I (read Emac) can.
+- Because when writing a serious email (one with more than two lines), I usually draft it in an editor first. And now that this edito is Emacs, it's only natural to do the editing /and/ the sending part in it...
+- Because I want org support in my emails
+- And, because the [[https://www.google.com/search?q%3Demacs%2Bemail%255C&client%3Dsafari&rls%3Den&source%3Dlnms&tbm%3Disch&sa%3DX&ved%3D0ahUKEwjSnqe8ys_JAhXH2D4KHYPAD4kQ_AUIBygB&biw%3D1496&bih%3D1003#tbm%3Disch&q%3Demacs%2Bemail][images I looked at]] makes emails look way cooler in Emacs than in any other email client.
+
+Enough reasoning. Let's chose a package.
+
+*** Chosing an email client
+I went back and forth between mu4e and gnus. Following [[http://codingquark.com/setting-up-gnus-in-emacs/][Dhavan Vaidya]] advise on reddit, I decided to just pick one and move on with it. Unlike him, though, I chose mu4e rather than gnus, mainly because mu4e is all about search.
+
+So here we go - implementing mu4e with Emacs. For a quick and dirty, follow the first part. It summaries the steps needed to be made. If your more of a FPS person, and interested in the details, read on through the second part, that journaling the steps, errors and fixes I had to make.
+
+
+# Add an assumption that we use [[http://brew.sh][homebrew]].
+
+*** The short story
+1. Get ~mu~ from git: https://github.com/djcb/mu
+2. Install ~offlineimap~.
+3. Configure ~offlineimap~ to point to the IMAP server you would like to connect to.
+4. Configure your init file to connect with ~mu4e~ and customize the client
+5. Run ~offlineimap~ for the first time to download your IMAP folder from the remote server
+6. Run ~mu~ to index and load the messages into Emacs
+7. 
+
+*** The gory details
+From the mu4e manual, I understood that it's only a client, or an interface for my emails, and does nothing of the fetching, storing, editing or sending them. 
+
+#+BEGIN_QUOTE
+This leaves mu4e to concentrate on what it does best: quickly finding the mails you are looking for, and handle them as efficiently as possible.
+#+END_QUOTE
+
+It's therefore needs to be complemented with each of the other components to work. As I'm writing this, I'm still reading the manual, about to install offlineimap. My hope is that installing all those other components won't be too big of a husle, and that I can report at the end of this process that it worth the extra effort... And with that, let's move on to the installation checklist.
+
+I start with the [[http://www.djcbsoftware.nl/code/mu/mu4e/Installation.html#Installation][mu4e manual]]. It looks very thorough and informative. However, I don't see how should I install ~mu~ and make it available in Emacs. I also learn that I should use something that will manage the IMAP repository for me, and I already getting confused.
+
+So I search for a blog post for some extra hand holding. I find [[http://blog.developwithpassion.com/2013/05/02/getting-up-and-running-with-a-sane-mutt-setup/][this one]] by Jean-Paul. I learn that I need to install 's advice to install offlineimap from brew, as well as installing sqlite to use as the db for massages states:
+
+#+BEGIN_SRC bash
+$ brew install offlineimap
+#+END_SRC
+
+I did this. I then had to configure the offlineimap configutation file:
+#+BEGIN_SRC bash
+[general]
+accounts = Gmail
+maxsyncaccounts = 3
+
+[Account Gmail]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Maildir
+
+[Repository Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = USERNAME@gmail.com
+remotepass = PASSWORD
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+maxconnections = 1
+realdelete = no
+#+END_SRC
+
+
+This ~sslcacertfile~ line, I got from [[http://superuser.com/questions/927632/configuring-offlineimap-for-gmail-ssl-error][this]] stack-overflow answer, after I got an error when trying to load ~offlineimap~.
+
+At that point, things still didn't work. Apperantly the folder specified in ~sslcacertfile~ doesn't exist in my computer, and I couldn't get a connection to my gmail account. I spent the next 30 minutes finding a solution, and finally found [[http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html][this]]. Here's what I had to do:
+
+1. Download the ca-cert bundle from [[https://downloads.sourceforge.net/project/machomebrew/mirror/%0Acurl-ca-bundle-1.87.tar.bz2][https://downloads.sourceforge.net/project/machomebrew/mirror/curl-ca-bundle-1.87.tar.bz2]]
+2. Copy the ca-bundle.crt file to ~/usr/local/etc/openssl/certs/~
+3. I didn't have to, but if that still doesn't work, run ~/usr/local/opt/openssl/bin/c_rehash~ to make openssl take count of the
+new certs.
+
+Ok. Now ~offlineimap~ is working, and downloading my emails. Waiting. I have 45977 massages to sync, so it seems that I'll have to wait for awhile.
+
+I had to kill the process, because it hanged after I closed and reopend the lid. When I tried to run  ~offlineimap~ again, I got an error. Simple fix - just delete the Gmail.lock file:
+
+#+BEGIN_SRC bash
+$ rm .offlineimap/Gmail.lock
+#+END_SRC
+
+
+Ok, my email is syncing again. Meanwhile, I'm moving to set things up in Emacs.
+
+Here's the code I added to my config file, taken as is from mu4e tutorial:
+
+#+BEGIN_SRC emacs-lisp
+;; the exact path may differ -- check it
+(add-to-list 'load-path "/usr/local/Cellar/mu/mu4e")
+(setq mu4e-mu-binary (executable-find "/usr/local/Cellar/mu/mu/mu"))
+(require 'mu4e)
+
+;; default
+(setq mu4e-maildir "~/Maildir")
+(setq mu4e-drafts-folder "/[Gmail].Drafts")
+(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
+(setq mu4e-trash-folder  "/[Gmail].Trash")
+(setq mu4e-refile-folder  "/[Gmail].All Mail")
+
+;; don't save message to Sent Messages, Gmail/IMAP takes care of this
+(setq mu4e-sent-messages-behavior 'delete)
+
+;; (See the documentation for `mu4e-sent-messages-behavior' if you have
+;; additional non-Gmail addresses and want assign them different
+;; behavior.)
+
+;; setup some handy shortcuts
+;; you can quickly switch to your Inbox -- press ``ji''
+;; then, when you want archive some messages, move them to
+;; the 'All Mail' folder by pressing ``ma''.
+
+(setq mu4e-maildir-shortcuts
+    '( ("/INBOX"               . ?i)
+       ("/[Gmail].Sent Mail"   . ?s)
+       ("/[Gmail].Trash"       . ?t)
+       ("/[Gmail].All Mail"    . ?a)))
+
+;; allow for updating mail using 'U' in the main view:
+(setq mu4e-get-mail-command "offlineimap"
+#+END_SRC
+
+Didn't work. I had to install mu from git:
+
+#+BEGIN_SRC bash
+$ git clone https://github.com/djcb/mu.git
+#+END_SRC
+
+Then, continue to follow the mu manual, and build mu. Only that before that, I had to install ~libtool~ (don't ask me what it is...).
+
+#+BEGIN_SRC bash
+$ brew install libtool
+#+END_SRC
+
+And now, building mu works:
+
+#+BEGIN_SRC bash
+$ autoreconf -i && ./configure && make
+#+END_SRC
+
+I hope that's the last stradle... I couldn't make the ~mu4e~ command to work from within Emacs. Did some more digging, and found that I should add the path to the ~mu4e~ folder, which is outside of my ~/.emacs.d~ folder. On top of that, I had to define the excecutable. Anyway, here are two additional lines of code that I added to my config:
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/usr/local/Cellar/mu/mu4e")
+(setq mu4e-mu-binary (executable-find "/usr/local/Cellar/mu/mu/mu"))
+#+END_SRC
+
+And now (drums....):
+#+BEGIN_SRC bash
+/usr/local/Cellar/mu/mu/$ ./mu index
+#+END_SRC
+
+Haleluya! run ~M-x mu4e~ again, and here's what I get:
+
+http://media.prodissues.com/images/2015/12/mu4e_first_screen.png
+
+*** Resources
+- [[http://www.djcbsoftware.nl/code/mu/mu4e/index.html#SEC_Contents][Mu4e manual]]
+- Answer for how to make openssl work - http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html
+** Commands to move between frames
+Now that I've started to use mu4e for my emails, I want to keep my inbox open in a seperate frame, and the documents that I'm working on in another. I'm looking for a simple way to move from one frame to the other.
+*** Reference
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Frame-Commands.html
+** Setting Emacs on Mac for Python
+
+
+*** What do I try to achive with this integration?
+#+DATE: 2015-11-06
+
+- Python syntax highlighting
+- Auto-complition, including for default and 3rd party packages
+- Evaluate code in a seperate, horizontal buffer (like I did in CodeRunner)
+
+
+I recently moved all my writing to emacs, and since I do, or should I say - try to do some python coding -  I searched for a tutorial on how to customize emacs as a Python editor. 
+
+Before emacs, the litle Python I wrote, was done with CodeRunner and Sublime Text, but mostly in the out-of-box IDLE. Each one of these enviornemt lacked something, so I didn't have any strings attached when I decided to move my coding to emacs.
+
+I started to google things like "setting emacs for python on mac", but I didn't find one tutorial that could walk me through the entire configuration. I did find some useful sprinkles of tips and information. 
+
+# Give an exapmles for useful posts. Jesika is one, the video of the Japanese guy is another.
+
+ anything relevant. So instead of keep looking, I decided to figure it out myself, and write a tutorial on it, so other in my position have a better start than I had. 
 ** Load dired-x by default                                            :emacs:
 There are times when I want to take a peek at a file's underlying folder. I might want to open another file from that folder, do a quick rename or just get myself oriented about where the file I'm working on lives.
 
@@ -93,13 +261,6 @@ After some googling I learned that dired-x is part of emacs, and there is no nee
 #+END_SRC  
 
 And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
-** Quick reload of init.el file
-I'm constantly customizing my emacs. I have an ~init.el~ file, but most of the configuration in a more literal way, in an org [[https://github.com/yanivdll/.emacs.d/blob/master/config.org][config file]].
-
-When I make changes to Emacs settings, I need to reload the init file in order for the changes to take an effect. So far, I typed ~C-x C-f~ to find the init file and then ~M-x [RET] eval-buffer~ to reload it. Repeating this flow hundreds of times becomes annoying.
-
-A quick question in IRC, taught me that I can use the commend ~load-file~ and the name of the file I would like to load. Having a function to load a file, means that I can wrap it with my own function, and reload my init file with a customized keybind. And with the help of [this answer](http://stackoverflow.com/a/12558095/1424287) at stack-overflow, I came up with the following shortcut to reload my Emacs configuration:
-
 
 
 
@@ -264,6 +425,12 @@ I created a link, but want to remove the link, and keep only the description. He
 #+END_SRC
 
 I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
+***** The want:
+I have a link that I've defined. Now I want to remove the link part, and remain only with the link's lable. So for example, if I have [[http://google.com][google]] linke, and I want to remove the underline url, but still keep the string google. 
+
+****** Solution
+I bumped into a function that's doing it in the past. I'm not sure if I documented it or not, but I should return\search for it and grab the code...
+
 
 *** Forking the org_reader plugin
 The goal is to be able to export org files simlessly to pelican. I want to have all the meta tags that Pelican allows, synced from org in Emacs.
@@ -378,6 +545,8 @@ I then called ~org-reveal-export-to-html~, but got an error ~Symbol's function d
 
 **** Reference 
 - [[http://jr0cket.co.uk/2013/10/create-html5-presentations-emacs-revealjs.html.html][Create HTML5 Presentations Easily With Emacs and Reveal.js]]
+*** Add footnote within the same section
+This way I can add footnotes to a post while still in draft stage and page.
 
 ** Themes
 *** Flip between light and dark themes
@@ -400,25 +569,6 @@ Eventually, like many other questions, I found a solution in an answer at [[http
 #+BEGIN_SRC emacs-lisp
 (setq solarized-scale-org-headlines nil)
 #+END_SRC
-*** Changing the default font in Emacs
-Josh Stella wrote a [[https://blog.fugue.co/2015-11-11-guide-to-emacs.html][delightful post]] about how he uses Emacs, not necceseraly for development work. I found quite a few configuration tips that I have already implemented in my setup, or planning to. One of those tweaks is using the Input font family. I thought it will be as simple as ~copy-paste~ (I'm still not used to the apropriate ~kill-yank~ terminology). I was wrong. 
-
-Using Josh's configuration (after changing the local-system name) didn't work - the font didn't pick up. But after few experimintations, I was able to make it work. First, I had to download and install the font in my mac, dahhh. But then I had to modify the name of the font. Here's the configuration I ended up with. It works, and indeed the font looks beatiful:
-
-#+BEGIN_SRC emacs-lisp
-;; set up fonts for different OSes. OSX toggles to full screen.
-(setq myfont "InputSerif")
-(cond
-((string-equal system-name "ygilad.local")
- (set-face-attribute 'default nil :font myfont :height 144)
- (toggle-frame-fullscreen)))
-#+END_SRC
-
-Here's a screen grab of this post with with the input font:
-http://media.prodissues.com/images/2015/11/emacs_with_input_font.png
-
-I'm left with one problem though - for some reason, my org-reader plugin breaks, and I can't export my org files to Pelican. Sadly, I'll have to resort to the default font (Monelo), until I figure out a fix.
-
 ** Experimitation with Spacemacs
    - Note taken on [2015-11-16 Mon 14:45] \\
      Start
@@ -447,7 +597,8 @@ Copied the setting from Sacha's config file - http://pages.sachachua.com/.emacs.
 Need to learn a little more how to use it.
 
 ** How to modify emacs window so the buffer have right and left margins
-There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
+   There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
+
 * Prodissues
 ** Add inline footnotes
 Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/11/developer_for_a_day.html][this post]]. Her feedback was that she would have liked to be able to read the footnotes inline, instead of having to scroll all the way down the article. That's a good feedback, and I want to think of ways to adderss it. One way will be to add a tooltip to the footnote reference.
@@ -459,6 +610,8 @@ Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/1
 * Code
 ** Integrating Sphere with Alfred
 We have a hackathon
+** Adding scheduled job in mac
+I want to run the ~offlineimap~ every x minutes. For that I can use either keyboard maestro or LaunchAgent. Need to decide on an approach.
 ** How to figure out the size of a folder from terminal
 Here's a quick way to find the size of a folder, via terminal
 
@@ -478,7 +631,7 @@ du -hs /path/to/directory
 
 [[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
 
-* Writing a python script for Lorem Ipsum
+** Writing a python script for Lorem Ipsum
 I want to be able to get a Lorem Ipsum text in varying length. I think I can write a small script to do it. I will be able to run it using alfred, with an argument for the number of words I would like to get.
 
 * Work
@@ -625,8 +778,43 @@ Dominos hired people "who already did it". Some from KFC, some from macdonald. T
 ** Webarchive
 Just a reminder about this tool.
 
-Many times I find a link that seemed to be dead. I saih disappointed and look for a new resource. Sometimes I recall this amazing site, tha
+Many times I find a link that seemed to be dead. I sigh disappointed and look for a new resource. Sometimes I recall this amazing site, tha
 
+** It's not about you. It's about the topic.
+
+Recently I spend more and more time in social networks other than the ones like Twitter and FB, though I rarely used FB. But my point is that my attention shifted to other channels. 
+
+The results of that narcissism:
+   - I started to use Reddit more, because I was interested in the topic.
+   - I found it more and more engaging. I liked it, because it didn't feel like a waste of time. It's knowledge about the things I'm interested in. (Emacs, product management, writing).
+   - Engagment led to participation.
+   - But then the equation skewed. Instead of logging it and read the new posts, for days I would open Reddit and scroll to find my submissions. How many upvotes were added? Any new comments? I suddenly noticed that I scroll past days of discussion, just to selfishly check the status of *my* posts.
+   - Than, few long days went by without me posting anything. Stat flattens. And suddenly I have less interest opening the app. No point, no one commented on what I said.
+
+*** So what's the point I'm trying to make?
+Is it the obsession with self centric attention? Is it the tension between narcissism and essence
+
+
+** Post - how to make yourself look dumb
+
+So here's a very effective tip to how to expedite the first impression your communicating, down hill.
+
+Earlier today I met with several executives from a company that do mobile development. The goal of the meeting was to brainstorm ideas and ways we can collaborate.
+
+After some chitchat we started the meeting. Before any of the participants introduced themselves, let alone giving some context to the meeting, one of the executive said something like: 
+
+"So let me guess, your challenge in mobile is that you didn't figure out the creative to drive the monetization your partners are looking to drive"
+
+My respond was simple, yet somewhat blunt:
+"Wrong guess. Do you want to try again, or do you prefer I give some background and context?"
+
+From that moment on, I couldn't make myself listens and take things that came out from that guy's mouth seriously. Instinctively I shut my ears to his comments, filtering them and waiting for him to go silent and let other people talk.
+
+The takeaway:
+What a bad strategy it is to come to a discussion with prior conviction, and blah your assumption on the table, before hearing something or looking for clues from the other side. The stacks are too high. It's like sitting in the blackjack table and asking "hit me" before being felt for the first card.
+
+But this goes well beyond discussions. How many times did you see managers falling into this trap? Starting a new role with decisions and actions, before taking the time to learn and listen. 
+[add my essay to business school?]
 
 * Footnotes
 

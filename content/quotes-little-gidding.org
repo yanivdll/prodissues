@@ -1,0 +1,39 @@
+#+TITLE:      Quotes: Little Gidding
+#+AUTHOR:	Yaniv
+#+EMAIL:	yanivdll@gmail.com
+#+DATE:     2015-12-28
+#+URI:        
+#+STATUS:   
+#+KEYWORDS:   
+#+TAGS:     quotes  
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 
+
+Couple of weeks ago I was vacationing with my family at DR. In one of the nights, at about midnight, I was lying half asleep in-front of the TV, watching some show about Vietnam in the only English channel (Discovery Channel, I remember that), while my ears caught this quote: 
+
+#+BEGIN_QUOTE
+We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time.
+#+END_QUOTE
+
+This line stirred me up so much, that I rose up, took my iPhone and googled the few words I was able to recall. It turned out that this line was taken from T.S Eliot's poem - [[http://www.columbia.edu/itc/history/winter/w3206/edit/tseliotlittlegidding.html][Little Gidding]]. The next day, I read the entire poem. It wasn't an easy read[fn:1], but several more parts of it moved me just as much. Here are couple of them:
+
+#+BEGIN_QUOTE
+... last year's words belong to last year's language 
+And next year's words await another voice.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Let me disclose the gifts reserved for age
+...
+Second, the conscious impotence of rage
+At human folly, and the laceration
+Of laughter at what ceases to amuse.
+#+END_QUOTE
+
+Mysterious are the ways of knowledge and inspiration... one should always be willing and ready to absorb more of them...
+
+* Footnotes
+
+[fn:1] Here's [[http://www.sparknotes.com/poetry/eliot/section10.rhtml][some analyses and commentary]], in case you would like to get deeper.
+

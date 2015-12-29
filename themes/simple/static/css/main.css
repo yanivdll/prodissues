@@ -116,6 +116,12 @@ pre {
   border: 1px solid #cccccc;
   border-radius: 4px; }
 
+code {
+  border: 1px solid #ddd;
+  border-radius: 0.4em;
+  font-weight: normal;
+  padding: 0 0.2em; }
+
 sup a {
   position: relative;
   top: 0;
