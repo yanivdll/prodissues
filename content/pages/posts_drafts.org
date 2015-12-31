@@ -51,6 +51,21 @@ This is a good example for how to start customizing emacs. I first looked for wh
 
 
 
+** Dictionary and Thesaurus
+This is a summary of the packages and functions suggested in this reddit thread, and the solution I moved forward with.
+
+- 
+
+** Draft mode
+One of the reasons I'm using Emacs is that it removes a lot of the distructions I would have otherwise have. Being completely text based, and keyboard driven, my hands are always in a typing position, so I have to concentrait less on stuff that are not writing. 
+Yet, I still get distructed often. For example, I will struggle with spelling a certain word, think of a better way to phrase a sentence I wrote in a previous paragraph, or spend time with finding a better way to say something. Those small distructions, while relevant to writing (it's not that I open a browser and go to reddit or anything, I'm still in writing mode), but they cut the line of thought, and might take my in tangles (link to the post about writing). 
+
+Long story short, I learned about draft-mode, a minor mode that once enabled let you do nothing but writing. It emulating a typewriter, so all you can do is move forward. No way back, no way to delete, lookup a word or do anything that is not keep typing.
+
+I found this entriguing, especially as a way to brain dump a though or a first draft. Sure, the outcome is messy to say the least, but being able to consentrait only on squeesing out this thought is invaluable. 
+
+So, here's what I did, and what I found out:
+
 
 ** Adding a dictionary
 
@@ -263,7 +278,14 @@ After some googling I learned that dired-x is part of emacs, and there is no nee
 And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
 
 
+** Bidirectional Editing
+I rarly write in hebrew, but now that I've started to use emacs for emails, sometime I'll have to answer an email in my native language. Writing in Hebrew is a challange because of its right-to-left nature that tend to break everything... for years I couldn't use mac for that reason.
 
+It turned out to be an easy enought to set Emacs to respect my Hebrew, and even to make it play nice when it's surrounded by other languages.
+
+*** References
+- Emacs manual - https://www.gnu.org/software/emacs/manual/html_node/emacs/Bidirectional-Editing.html
+- 
 ** Orgmode
 *** Pelican + Orgmode                                       :orgmode:pelican:
 For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
@@ -600,6 +622,9 @@ Need to learn a little more how to use it.
    There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
 
 * Prodissues
+** Adding a tag cloud
+- There's a plugin for that
+- [[http://www.stevenmaude.co.uk/posts/restoring-a-tag-cloud-dispersed-by-pelican-360][Here's a post about how to use the plugin]]
 ** Add inline footnotes
 Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/11/developer_for_a_day.html][this post]]. Her feedback was that she would have liked to be able to read the footnotes inline, instead of having to scroll all the way down the article. That's a good feedback, and I want to think of ways to adderss it. One way will be to add a tooltip to the footnote reference.
 
@@ -710,6 +735,58 @@ You can take a look at [[http://prodissues.com/2015/11/developer_for_a_day.html]
 *** Summary
  
 * Workflows
+** My Post-Evernote Life
+Few months ago I wrote about my decision to move away from Evernote. In that article, I didn't mention what was the alternative, and recently I got eamils from several readers who asked whether I actually stoped using Evernote, and if I did, what's my alternative solution. 
+
+Thanks for reading my post. Happy that you liked it; less happy that we
+both had to leave Evernote... it used to be a life saver app. But hey,
+we're [[http://techcrunch.com/2015/11/14/evernotes-freshly-minted-coo-linda-kozlowski-is-leaving-the-company/][not the only one leaving]]...
+
+So yes, I left. I still have it installed, because I didn't migrated my notes somewhere else, and so every now and then I have a note that I have to pull out, usually a password or a certain id number.
+
+I have an alternative solution, or should I say many smaller, but more focused solutions. I'm not sure of your technical acumen, so I'll just throw some of the apps I use, and I'm happy to follow up if you'll want clarifications.
+
+*** Note taking[footnote, talk about my recent move to emacs]
+- I store all my notes in plain text based
+- All of my notes are stored in a dropbox folder (~/Dropbox/Notes). 
+- I use several apps to create, edit, search and manage my notes, depending on the platform I'm on.
+**** iOS
+- I strart almost every new notes in Drafts. This is also the terminal, from which my notes take the right track.
+- Editorial is the app I use to edit existing notes. 
+**** Mac
+- I use an app called [[http://brettterpstra.com/projects/nvalt/][nvAlt]] to manage those notes. I use it to both search for notes (it has great searching capabilities) and to start taking new notes.
+
+*** Bookmarks and references
+- I use [[https://pinboard.in/u:yanivdll][Pinboard]] as my bookmarks manager. It's a paid service, offering a simple, no fluff service. 11$ a year and it has you covered.
+
+*** Scans
+- I use a service called [[https://filethis.com][FileThis]] to download invoices and store them in a another dropbox folder. This service connects to providers, such as your cable company, bank account etc, and download your invoices every month.
+- I still use one of Evernotes mobile apps - scannable. I love it, and use it for quick scans of documents. Usually I share those scans via email, or save them to the dropbox folder.
+
+*** Passwords and secure notes
+- I use an app called [[https://agilebits.com/onepassword][1password]]. 
+
+*** Image annotations
+Sometimes I need to take a screengrab and add some annotation on it. I don't do it that often, therefore didn't look for an alternative to Evernote's skitch, and so I still use it. When I annotate an image in Skitch, it's still save it to Evernote, but I don't care about it. I save the image in Dropbox if I need it for future use.
+
+*** List and Todos
+I never used evernote for those. Todo lists were never Evernote's strength. In addition, todos and GTD is a seperate workflow, and may I say different universe, with its own set of workflows and tools. Let me know if you're interested, and I'll expand on that on a seperate post. But in essense, here are the tools I use to manage my todos and lists:
+- Reminders - that's my repository for everything that has a date, and is not more than one atomic task - I can add a reminder from my mac, ipad and iphone, as well as from 3rd party apps, such as [[https://flexibits.com/fantastical][Fantastical]].
+- Projets and todos - taskpaper - simple, yet robust, text based task manager. It can hold huge amount of data, and has powerful search capabilities. Here's a[[http://www.macdrifter.com/2014/02/the-taskpaper-rd-notebook.html][ good review]] of that tool.
+
+*** Images
+I used to store select images in Evernote. Kind of like a journal. I didn't find a solution to that yet. But it is also not a priority.
+
+*** Journal\diary
+I used to through some journaling notes into evernote. Today I have one file in my Dropbox notes folder, to which I append enteries.
+
+I think that covers most of what I used Evernote for. Let me know if you used Evernote for more stuff. 
+
+Hope this is helpful.
+
+Thanks. Yaniv
+
+
 ** Remove HTML Files With Hazel
 Here's a simple Hazel rule I created in order to deal with superflous html files that are created whenever I do a file export from my ~\~/Dropbox/Notes~ folder.
 
@@ -829,6 +906,5 @@ But this goes well beyond discussions. How many times did you see managers falli
 [fn:5] Mainly to reduce friction in my thought process.
 
 [fn:6] Sacha shares a way to read it for free, but I will let you search for it yourself, cause I really think she should get paid for her work.
-
 
 
