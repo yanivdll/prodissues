@@ -82,8 +82,8 @@ ORG_READER_EMACS_SETTINGS = "~/.emacs.d/lisp/pelicon-export.el"
 
 
 # TESTINGS::
-## disqus
-DISQUS_SITENAME = 'prodissues'
+# ## disqus
+# DISQUS_SITENAME = 'prodissues'
 
-# Google Analytics
+# ## Google Analytics
 #GOOGLE_ANALYTICS = "UA-60771520-1"

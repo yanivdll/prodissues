@@ -12,40 +12,40 @@
 
 Few months ago I wrote about my decision to [[http://prodissues.com/2015/06/why-i-decided-to-move-away-from-evernote.html][move away from Evernote]]. Recently, few readers[fn:1] emailed me to ask whether I actually stooped using Evernote, and if I did, what's my alternative solution. 
 
-So yes, I don't use Evernote anymore (though I still use some of its satellite apps, as you'll note bellow). I still have it installed, because I didn't migrated my notes somewhere else, and therefore, every now and then I'll have to pull out a note from there, usually a password or a certain id number.
+So yes, I've stopped using Evernote (although I /do/ use some of its satellite apps, as you'll note bellow). I still have it installed, because I didn't migrated my notes somewhere else, and therefore, every now and then I'll have to pull out a note from it, usually a password or a certain id number.
 
 And yes, I have an alternative. But rather than one tool that inherited everything I use Evernote for, I use a set of specialized apps and services, each dedicated to a certain function or use-case. 
 
-I've tried to summaries those tools bellow. Drop a comment or[[mailto:yanivdll@gmail.com][ email me]] for other use-cases, or if you want to suggest other apps. So let's start:
+I've tried to summaries those tools bellow. Drop a comment or[[mailto:yanivdll@gmail.com][ email me]] for other use-cases, or if you want to suggest other apps. Let's start:
 
 ***** Note taking
-- I store all my notes in plain text based. If I learned anything from my experience with Evernote is that never again will I keep my notes and documents in a proprietary format. Everything I produce must be agnostic to the tool I create it with.
-- All of my notes are stored in a Dropbox folder (~/Dropbox/Notes). That way I can access my files from anywhere.
+- I store all my notes in plain text based files. If I've learned anything from my experience with Evernote is that never again will I keep my notes and documents in a proprietary format. Everything I produce must be agnostic to the tool I create it with.
+- All of my notes are stored in a Dropbox folder (~/Dropbox/Notes). That way I can access them from anywhere.
 - I use several apps to create, edit, search and manage my notes, depending on the platform I'm on:
   - iOS
-    - I start almost every new notes in [[http://agiletortoise.com/drafts/][Drafts]] because it opens quickly, and always ready to capture a new note. It also serves as a terminal, from which my notes depart to their destination. Those destinations might be an email, calendar event, document or a blog post etc. 
-    - [[http://omz-software.com/editorial/][Editorial]] - much more comprehensive editor for iOS. I use mostly to edit existing notes, or as a tool to elaborate on a note I've started in Drafts.
+    - I start almost every new notes in [[http://agiletortoise.com/drafts/][Drafts]] because it opens quickly, ready to accept my input. It also serves as a terminal, from which my notes depart to their final destination. Those destinations might be an email, calendar event, document or a blog post. There are many more, though. Take a look at [[http://drafts4-actions.agiletortoise.com][Drafts' action directory]] to get a sense of them.
+    - [[http://omz-software.com/editorial/][Editorial]] - a comprehensive editor for iOS. I use it to edit existing notes, or to elaborate on a note I've started in Drafts.
   - Mac [fn:2]
-    - I use an app called [[http://brettterpstra.com/projects/nvalt/][nvAlt]] to manage those notes. I use it to both search for notes (it has great searching capabilities) and to start taking new notes.
-    - [[http://multimarkdown.com][MultiMarkdown Composer]] - for editing more longer documents.
+    - I use an app called [[http://brettterpstra.com/projects/nvalt/][nvAlt]] to manage those notes. I use it to search for (it has great searching capabilities) or start new notes.
+    - [[http://multimarkdown.com][MultiMarkdown Composer]] - full blown multimarkdown editor (but it can be used for many more formats as well). When thinking about it, my workflow on mac resemble that on mobile - I usually start my notes in nvAlt, which is good for taking quick and short notes. Then, if I want to expand on a document, I'll open it in MMD.
     - Google Docs - for sharing and collaborate with colleagues. Usually I'll write a first draft in nvAlt or MMD, and then export it to google docs.
 
 ***** Bookmarks and references
 - I use [[https://pinboard.in/u:yanivdll][Pinboard]] as my bookmarks manager. It's a paid service, offering a simple, no fluff service. 11$ a year and it has you covered.
 
 ***** Scans
-- I use a service called [[https://filethis.com][FileThis]] to download invoices and store them in a another Dropbox folder. This service connects to providers, such as your cable company, bank account etc, and download your invoices every month. You can use it for free as long as you connect 6 providers or less.
-- I still use one of Evernote mobile apps - [[https://evernote.com/products/scannable/][scannable]]. I love it, and use it for quick scans of documents. Usually I share those scans via email, or save them to the Dropbox folder.
+- I use a service called [[https://filethis.com][FileThis]] to download invoices and store them in a another Dropbox folder. This service connects to providers, such as my bank, cable company or mobile provider, and download my invoices once a month. This service is free when connecting up to 6 providers (I've connected 4 so far).
+- I still use one of Evernote mobile apps - [[https://evernote.com/products/scannable/][scannable]] for on the go scans. Frankly, I love this app; it's fast, accurate and produce superb images. It does much better job, and much faster than, say, a physical scanner. It also allow me to save scan wherever I want. I usually either send a copy of the scans and discard the original, or save them to my Dropbox.
 
 ***** Passwords and secure notes
-- I use an [[https://agilebits.com/onepassword][1password]]. 
+- Very simple - I use [[https://agilebits.com/onepassword][1password]] for that. 
 ***** Image annotations
-Sometimes I need to take a screen-grab and add some annotation on it. I don't do it that often, therefore didn't look for an alternative to Evernote's [[https://evernote.com/skitch/][Skitch]], and so I'm still using it. When I annotate an image in Skitch, it'll save it to Evernote, but I don't care about it. If I need the annotated image for future use, I'll either upload it to Amazon S3 (where I store this site), or save it to my Dropbox.
+Sometimes I need to take a screen-grab and add annotate it. I don't do it often, and therefore didn't switch from Evernote's [[https://evernote.com/skitch/][Skitch]]. Skitch saves my annotated images to Evernote, but I don't care about it. If I need them for future use, I'll either upload them to Amazon S3 (where I store this site), or save them to my Dropbox.
 
 ***** List and Todos
-I rarely used Evernote for reminders and todos, as it never excelled in managing them. In addition, todos and GTD are a completely different beast, with separate workflows, and with their own set of tools. Let me know if you're interested, and I'll expand on that on a separate post. But in essence, here are the main tools I use to manage my todos:
-- Apple Reminders - that's my repository for everything that has a date, and isn't more than one atomic task. I then add reminders from my mac, iPad or iPhone, as well as from 3rd party apps, such as [[https://flexibits.com/fantastical][Fantastical]].
-- Taskpaper - simple, yet robust, text based task manager. I use it for my GTD workflow. It can hold huge amount of data, and has powerful search capabilities. Here's a[[http://www.macdrifter.com/2014/02/the-taskpaper-rd-notebook.html][ good review]] of that tool.
+I've rarely used Evernote for reminders and todos, as it never excelled in managing them. In addition, todos and GTD are completely different beast, with separate workflows, and with their own set of tools. Let me know if you're interested, and I'll expand on that in a separate post. In essence, though, here are the main tools I use to manage my todos:
+- Apple Reminders - that's my repository for everything with a due date, and include no more than one atomic task. I then add reminders from my mac, iPad or iPhone, as well as from 3rd party apps, such as [[https://flexibits.com/fantastical][Fantastical]].
+- [[http://www.hogbaysoftware.com/products/taskpaper][Taskpaper]] - simple, yet robust, text based task manager. I use it for my GTD workflow. It can hold huge amount of data, and has powerful search capabilities. Here's a[[http://www.macdrifter.com/2014/02/the-taskpaper-rd-notebook.html][ good review]] of that tool. Only caveat is that the app is somewhat deprecated, with limited to no support from the developer.
 
 ***** Images
 I used to store select images in Evernote. Kind of like a journal. I didn't find a solution for that use-case yet. But it is also not a priority.
@@ -60,7 +60,7 @@ I think that covers most of what I used Evernote for. Again, happy to learn abou
 
 [fn:1] Their number is still much, much, smaller than that of the users I converted into using Evernote over the years...
 
-[fn:2] Now, if you have the heart for it (and to be honest, I don't recommend taking this
+[fn:2] Now, if you have the heart for it (and to be honest, I don't recommend taking that
 path), I moved everything text based to [[https://www.gnu.org/software/emacs/][Emacs]]... I still store all my notes
 in Dropbox, but access, manage and edit them (and lots more) in Emacs.
 

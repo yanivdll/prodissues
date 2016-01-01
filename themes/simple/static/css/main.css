@@ -16,6 +16,9 @@ dl {
   margin: .5em 0;
   list-style-type: decimal; }
 
+#post-list {
+  padding-left: 0; }
+
 .sidebar {
   list-style-type: none;
   margin: 0;
@@ -219,78 +222,72 @@ section {
     clear: both;
     content: "";
     display: table; }
+  section aside {
+    padding-top: 1em;
+    text-align: right; }
+    @media screen and (min-width: 20em) {
+      section aside {
+        float: left;
+        display: block;
+        margin-right: 8.71718%;
+        width: 100%;
+        text-align: left; }
+        section aside:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 48em) {
+      section aside {
+        float: left;
+        display: block;
+        margin-right: 4.17655%;
+        width: 21.86759%; }
+        section aside:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 52.5em) {
+      section aside {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 22.9404%; }
+        section aside:last-child {
+          margin-right: 0; } }
+  section article {
+    padding-top: 1em; }
+    @media screen and (min-width: 20em) {
+      section article {
+        float: left;
+        display: block;
+        margin-right: 8.71718%;
+        width: 100%; }
+        section article:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 48em) {
+      section article {
+        float: left;
+        display: block;
+        margin-right: 4.17655%;
+        width: 73.95586%; }
+        section article:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 52.5em) {
+      section article {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%; }
+        section article:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 81.25em) {
+      section article {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 48.97722%; }
+        section article:last-child {
+          margin-right: 0; } }
 
-section:after {
-  content: "";
-  display: block;
-  height: 100px; }
-
-aside {
-  padding-top: 1em;
-  text-align: right; }
-  @media screen and (min-width: 20em) {
-    aside {
-      float: left;
-      display: block;
-      margin-right: 8.71718%;
-      width: 100%;
-      text-align: left; }
-      aside:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 48em) {
-    aside {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 21.86759%; }
-      aside:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 52.5em) {
-    aside {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 22.9404%; }
-      aside:last-child {
-        margin-right: 0; } }
-
-article {
-  padding-top: 1em; }
-  @media screen and (min-width: 20em) {
-    article {
-      float: left;
-      display: block;
-      margin-right: 8.71718%;
-      width: 100%; }
-      article:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 48em) {
-    article {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 73.95586%; }
-      article:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 52.5em) {
-    article {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 65.75129%; }
-      article:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 81.25em) {
-    article {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      article:last-child {
-        margin-right: 0; } }
-  article li.post-summary {
-    border-bottom: 1px dotted black;
-    margin-bottom: 2em; }
+li.post-summary {
+  border-bottom: 1px dotted black;
+  margin-bottom: 2em; }
 
 header {
   float: left;
@@ -343,6 +340,9 @@ footer {
     padding-top: 60px;
     padding-left: 1em;
     text-align: center; }
+
+ul.sidebar {
+  padding-left: 0; }
 
 li.sidebar {
   display: inline; }

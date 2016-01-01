@@ -21,5 +21,9 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
+
+## disqus
 DISQUS_SITENAME = 'prodissues'
+
+## ga
 GOOGLE_ANALYTICS = "UA-60771520-1"

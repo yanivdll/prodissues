@@ -36,13 +36,13 @@
     min-height: 100%;
     margin-bottom: -100px; //should be same as footer height
     width: 100%;
-  }
+  
 
-  section:after {
-    content: "";
-    display: block;
-    height: 100px; //should be same as footer height
-  }
+  // section:after {
+  //   content: "";
+  //   display: block;
+  //   height: 100px; //should be same as footer height
+  // }
 
   aside {
     // position: fixed;
@@ -76,11 +76,11 @@
     @include media($largedesktop){
       @include span-columns(8);
     }
-
-    li.post-summary{
+   }
+ }
+  li.post-summary{
       border-bottom: $base-break-border;
       margin-bottom: 2em;
-    }
   }
 
   // ol {
