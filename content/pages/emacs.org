@@ -330,3 +330,26 @@ than twenty characters predefined for use with ‘interactive’.  In almost
 every case, one of these options will enable you to pass the right
 information interactively to a function.  (*Note Code Characters for
 ‘interactive’: (elisp)Interactive Codes.)
+
+*** Variables
+- ~set~ and ~setq~ are used for global variables.
+- ~let~ is used to define a local variable. Local variable lives only within the ~let~ expression.
+
+#+BEGIN_SRC emacs-lisp
+     (let VARLIST BODY…)
+#+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+     (let ((VARIABLE VALUE)
+           (VARIABLE VALUE)
+           …)
+       BODY…)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+ (let ((zebra 'stripes)
+           (tiger 'fierce))
+       (message "One kind of animal has %s and another is %s."
+                zebra tiger))
+#+END_SRC
