@@ -8,7 +8,7 @@ synonym: plain text
 
 So [we're living in the future](https://www.whitehouse.gov/blog/2015/10/21/email-michael-j-fox-today-were-future), yet I'm traversing the past. It started with this blog, when I decided to build it from scratch rather than using one of the modern blogging platforms, such as Wordpress and tumblr. Not only that, but I also insisted on writing it in pure, static HTML. No real-time rendering, no dynamic libraries, no Ajax nor server-side scripts. Just HTML, CSS and a little of JavaScript. 
 
-Then, I [stooped using Evernote ](http://prodissues.com/2015/06/why-i-decided-to-move-away-from-evernote.html) and started to manage my life with plain text files. That transition opened the door to a search for a new text editor. *New* is just a figure of speech, because in the course of that search I fell under the spells of Emacs and Vim, two of the oldest pieces of software out there. 
+Then, I [stopped using Evernote ](http://prodissues.com/2015/06/why-i-decided-to-move-away-from-evernote.html) and started to manage my life with plain text files. That transition opened the door to a search for a new text editor. *New* is just a figure of speech, because in the course of that search I fell under the spells of Emacs and Vim, two of the oldest pieces of software out there. 
 
 And now, I'm taking another step into the past, to the Internet's cave era. Instead of embracing Twitter or Reddit (although Reddit *do* start to win me over), I resorted to... [IRC](http://www.irc.org). 
 

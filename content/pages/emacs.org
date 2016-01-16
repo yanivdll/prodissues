@@ -39,6 +39,22 @@ I don't think so, because the idea of having deft was that I can see the wip doc
 ** Copying an org sub-tree to a new file
 I want to do it when I move a post from a draft to a final post. 
 Currently, one issue that I experience is that the sub-tree doesn't move with the relevant footnotes. Also, the footnotes are number based, and the order is meaningful, even if the footnotes are for different drafts.
+** How I fucked up my Emacs init
+*** What I did to get this error
+- I tried to install org-reveal package.
+- Set it up, but got an error with the org-reveal package.
+- Looked online, and saw that it has something to do with the new org api, and that I need to get the new reveal package.
+- I didn't know how to update the package, and instead, I removed it and installed it again.
+- From there a cycle of craziness started, through which my config file messed up.
+
+I need to try and find the pages that I visited through the pass of destuction...
+
+*** Bread crumbs:
+- [[https://github.com/yjwen/org-reveal/issues/36][Wrong number of arguments when calling org-html-checkbox #36]]
+
+*** What did I do to solve it
+- I backed up the ~.status.el~ file in the ~/.emacs.d/el-get~ folder. When I did that and reload the init file, I was asked to creat this file again. I accepted, and startup went through without having the previous ~(org-define-error (quote org-link-broken) "Unable to resolve link; aborting") require(ox)~ error.
+- No I got a new error, but it seems to be related with el-get packages that I initiate in my init, and don't defined in the new ~.status.el~ file. 
 * Learn
 ** TODO Yasnippet
 *** Reference
@@ -178,6 +194,7 @@ called zpresentation
 
 #+RESULTS:
 : Hello, world!
+
 
 
 ** Custom themes
@@ -353,3 +370,52 @@ information interactively to a function.  (*Note Code Characters for
        (message "One kind of animal has %s and another is %s."
                 zebra tiger))
 #+END_SRC
+
+- The varaiables list should be encapsulated in parenthesis, even if we define only one variable. Here's the example from above, with one variable, instead of two:
+
+#+BEGIN_SRC emacs-lisp
+(let ((zebra 'stripes))
+       (message "One kind of animal has %s and another is unknown."
+                zebra))
+#+END_SRC
+
+The ~(zebra 'stripes)~ argument is encapuslated in paranthesis.
+*** ~if~ statement
+
+**** ~if-then~
+This is when only if-then is evatluated.
+The template in this case is:
+
+#+BEGIN_SRC emacs-lisp
+   (if TRUE-OR-FALSE-TEST
+         ACTION-TO-CARRY-OUT-IF-THE-TEST-RETURNS-TRUE)
+#+END_SRC
+
+For example:
+
+#+BEGIN_SRC emacs-lisp
+(if (> 5 4)                             ; if-part
+    (message "5 is greater than 4!"))   ; then-part
+#+END_SRC
+
+**** ~if-then-else~
+
+- The word “else” is not written in the Lisp code; the else-part of an
+‘if’ expression comes after the then-part.  
+- It is customary to write the else part in a line of its own, and intending it less than the then-part.
+
+Following is the template:
+
+#+BEGIN_SRC emacs-lisp
+ (if TRUE-OR-FALSE-TEST
+         ACTION-TO-CARRY-OUT-IF-THE-TEST-RETURNS-TRUE
+       ACTION-TO-CARRY-OUT-IF-THE-TEST-RETURNS-FALSE)
+#+END_SRC
+
+And an example:
+#+BEGIN_SRC emacs-lisp
+(if (> 4 5)                               ; if-part
+    (message "4 falsely greater than 5!") ; then-part
+  (message "4 is not greater than 5!"))   ; else-part
+#+END_SRC
+

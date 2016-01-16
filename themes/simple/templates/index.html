@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- <section id="content"> -->
-<!-- {% block content_title %}
-<h2>Posts</h2>
-{% endblock %}
--->
-
 <ul id="post-list">
 	{% for article in articles_page.object_list %}
 	<h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>

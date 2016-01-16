@@ -1,0 +1,27 @@
+#+TITLE:      Get The Current File's Path in Emacs
+#+AUTHOR:	Yaniv
+#+EMAIL:	yanivdll@gmail.com
+#+DATE:     2016-01-04
+#+URI:        
+#+STATUS:   
+#+KEYWORDS:   
+#+TAGS:     emacs, code  
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 
+
+
+Here's a small function I borrowed from [[http://stackoverflow.com/questions/3669511/the-function-to-show-current-files-full-path-in-mini-buffer][this question]] on stack-overflow. It returns the full path of the file I currently edit in the buffer:
+
+#+BEGIN_SRC emacs-lisp
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name))
+  (kill-new (file-truename buffer-file-name))
+)
+(global-set-key "\C-cz" 'show-file-name)
+#+END_SRC
+
+You'll note that this function is bind to ~C-c z~. So when typing it, you should see the path showing in the minibuffer. As a bonus, it stores the path in the kill ring, so ~C-y~ (~CMD-v~ works as well on my mac) will paste the value.
+

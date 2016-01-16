@@ -1,0 +1,80 @@
+#+TITLE:      Should I Keep Using Pelican Or Move To Wordpress
+#+AUTHOR:	Yaniv
+#+EMAIL:	yanivdll@gmail.com
+#+DATE:     2016-01-13
+#+URI:        
+#+STATUS:   draft
+#+KEYWORDS:   
+#+CATEGORY: blogging
+#+TAGS:    pelican, wordpress   
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 
+
+I'm currently using Pelican to power this site. Pelican is a static site generator (SSG) that takes markdown files as an input and generate html pages as an output. No database, no server-side logic. Just simple, static HTML. I've started with Pelican[fn:1] mainly because moving to SSG based blogs was, and still is, a trend among geeky bloggers. Apparently, I follow mostly geeky bloggers, and so I was convinced that that's the right way to go. 
+
+While there are objective benefits to maintain a static site, which I'll list bellow in a sec, I've recently become aware of the fact that I'm spending more time at site administration than on writing. And after I wrote about my attempt to shorten the cycle time from an idea to a live post, I started to question my current workflows, and the tools I use, to make sure they are helping an not detracting my from improvement. And so I've started to get interested at the idea of moving to Wordpress. 
+
+At the moment, moving from SSG to Wordpress means swimming against the current, and so there isn't much written about it. So, following is my assessment of what I like and dislike about Pelican, and what I expect to get (or not) from Wordpress.
+
+*** Things that I like about Pelican
+- The coding experience - when I've started to build this site, I like the idea that I can do it from scratch and run it from my computer. This was a good opportunity to improve my coding skills, and have a pet project that I can grow over time.
+- Writing in markdown - I don't have to mess with html or formatting when writing a post, and can, potentially, concentrate on writing.
+- No database and no server side logic
+ 
+*** Things that I don't like
+- It's slow - every time I'm adding a new post, or editing an existing one, I have to regenerate the site. This process takes time, and it gets longer as I accumulate more posts. [[http://blog.pankajmore.in/static-site-generators-focus-on-the-wrong-thing][Here's a good article]] that describe this pain in details.
+
+- Too much friction - no matter how I automate the process, it is still cumbersome. Take a look at all the touch-points in the publishing workflow:
+
+http://media.prodissues.com/images/2016/01/posting-workflow-with-pelican.png
+
+- No mobile support - since Pelican runs on the desktop, I have no way to write posts on my iPhone and publish directly to my blog. This adds more friction to my writing workflow, and hinders me from writing more spontaneously.
+
+- Maintenance and site administration - I'm spending too much time in the terminal, As it is right now, I spend a too much time in the terminal running ~make~ scripts to regenerate it or push its output to S3, where it is hosted. I rather spend this time writing, instead. 
+
+- It takes a lot of time for me to add new elements of functionality, or make cosmetic changes. Jinja, the template language Pelican uses, is great. It allows me to keep modular and reusable elements of functionality and build new templates like playing with Lego. But still, if I want to display tags with posts, I have to modify not only the template, but do a lot of CSS. And if there is something that I don't like to do, it's writing CSS... 
+
+- Flaky org-mode integration - I write most of my posts in Org-mode, using Emacs. Pelican and org-mode doesn't work very well together. While there's a plugin for Pelican that read org files(org_reader), it's dependent on my Emacs configuration. And since I'm experimenting with Emacs a lot, this plugin constantly breaks. And when that's happens, most of my posts (those that are in org-mode), wont be generated, and disappeared from the site. In addition, the rendering time of the org files takes even more time than usual. More than 2 minutes at the moment, with only 30 posts to run through.
+ 
+And when it comes to Wordpress, here are the goods and the bad:
+
+*** The Goods 
+
+- Centered around writing - starting, writing and publishing a new post is seamless.
+
+- More functionality out of the box - comments, categories and tags filtering, social functionality, and advanced post status management, are all part of the platform. I don't have to spec and develop it from scratch.
+
+- Native commenting system - if you'll read this post, you'll find that I'm not that happy to use disqus as my commenting system. Being able to use Wordpress commenting system is a big plus.
+
+- One dashboard - I'm currently looking at google analytics to monitor engagement with my blog, and disqus dashboard to manage comments. I like the idea of getting all this information in one place. Additionally, I currently don't have a way to manage my posts and drafts, since they are just files in a folder. Having a dashboard where I can take a glimpse and see how my site looks like is another benefit. 
+
+- Community - so far I didn't care much about audience. Recently, though, I've started to get some traffic to my site. The feeling of people caring about the stuff that I write, enough to leave a comment, is exhilarating; it makes me want more of it... and so, I'm getting warmer to the idea of being part of the Wordpress community; of following and get followed by other interesting bloggers, and having my posts distributed across the Wordpress ecosystem.
+
+*** Concerns
+
+- Lack of control - this is my biggest concern. When I left Evernote, I've decided that I will never use proprietary products; that I will keep my information in plain text. I didn't want my knowledge to be reliant on a company that can go bust, or mess up with my data. I'm not sure this is the case with Wordpress, because people seem to not have issues exporting their blogs and moving elsewhere. Wordpress is also open code, so there will always be a way to gain back control if needed. But still, having a black box that I know not how it operates is a little bothering.
+
+- I no longer able to wrap my site with a bunch of markdown files - here's all the code for my current site, living in git. Clone it to wherever you want, open the ~/output/index.html~ file, and there you have it - the entire site. I anticipate it will not be the same with Wordpress. 
+
+- Database and server side logic - in line with the previous point, a Wordpress blog requires special hosting considerations. If I decide to go with a self-hosting, I will have to limit myself to certain vendors.
+
+- Anyway you turn it, hosting a Wordpress blog costs money. We don't talk large sums, but still its a consideration I'll have to take into account, as currently I pay only 0.51$ a month for Amazon S3 storage.
+
+- Performance - again, not a priority, because my site is simple, and I don't anticipate high traffic. Yet, loading time, page sizes and potential security vulnerability are issues other people mention as a reason to leaving Wordpress and moving to static sites.
+
+*** Summary
+ As I'm writing this post, my guts feeling tells me that I've already made a decision, and that I use this post as a way to rationalize the decision to myself. **I'm going to migrate my blog to Wordpress**. 
+
+ But I will do it gradually, and make the cut-off only when I'm sure the benefits out-weight the drawbacks. I opened a blog in Wordpress. It uses the default settings, with the default URL (at the moment [[http://yanivgilad.wordpress.com][yanivgilad.wordpress.com]]). I will post some stuff there, including new posts that I push to pelican, to play around with the system, and see how it feels.  
+
+- Update - Pelican refuses to generate this post. There's probably something wrong with the org-reader plugin, or my Emacs config... but that's an example for the friction and site administration work I'm trying to avoid.
+
+*** Reference
+    - [[http://blog.pankajmore.in/static-site-generators-focus-on-the-wrong-thing][Static site generators focus on the wrong thing]]
+    - [[http://ronn-bundgaard.dk/blog/back-on-wordpress/][Back on WP]]
+    - My post - [[http://prodissues.com/2015/12/thinking-with-words.html][Thinking with words]]
+
+* Footnotes
+
+[fn:1] In fact I started with [[http://middlemanapp.com][middleman]], a ruby based SSG. I moved to Pelican when I learned python and figured that I like it better than ruby.

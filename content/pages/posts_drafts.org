@@ -10,37 +10,36 @@
 #+DESCRIPTION: 
 
 * What's this?
-This is an org mode based file where I draft all my posts. I keep this file and post it because it helps me work on several posts in paralel, and add to drafts as I go. Once I'm done with a post, I move it to a new file, which is then pushed as a stand alone post. 
-# I will need to link for the workflow of how to turn a draft into a final, published article. 
+  This is an org mode based file where I draft all my posts. I keep this file and post it because it helps me work on several posts in paralel, and add to drafts as I go. Once I'm done with a post, I move it to a new file, which is then pushed as a stand alone post. 
+  # I will need to link for the workflow of how to turn a draft into a final, published article. 
 * Emacs
 ** Switching buffer focus
-By default, the keybinding to circle through open buffers is `C-x o`. I couldn't think of a more annoying keybinding, requiring two steps to just switch focus to another buffer. 
+   By default, the keybinding to circle through open buffers is `C-x o`. I couldn't think of a more annoying keybinding, requiring two steps to just switch focus to another buffer. 
 
-I want to change this behavior and define a different keybinding, that fits better with my mental model, which associate ~tab~ with switching between different areas on the screen. That's also an opportunity to establish a workflow for customizing various behaviors of emacs. 
+   I want to change this behavior and define a different keybinding, that fits better with my mental model, which associate ~tab~ with switching between different areas on the screen. That's also an opportunity to establish a workflow for customizing various behaviors of emacs. 
 
-Here's the workflow I came up with:
-- Define what the outcome behavior should be. In this case, I wanted to define a comfortable keybinding to circle through open bufferes.
-# In my case
+   Here's the workflow I came up with:
+   - Define what the outcome behavior should be. In this case, I wanted to define a comfortable keybinding to circle through open bufferes.
+   # In my case
 
-- Is there already a keybinding for that function? if yes, look for the function this keybinding trigger. `C-h k RET [keybinding]` will describe exactly what happens when you run the sequence of keys.
-# In my case
+   - Is there already a keybinding for that function? if yes, look for the function this keybinding trigger. `C-h k RET [keybinding]` will describe exactly what happens when you run the sequence of keys.
+   # In my case
 
-- Locate the function that is triggered when the keybinding used.
-# In my case...
+   - Locate the function that is triggered when the keybinding used.
+   # In my case...
 
-- Go to your init file, where the keybinding of your liking should be configured.
+   - Go to your init file, where the keybinding of your liking should be configured.
 
-- Insert this elips snippet anywhere[fn:1]
-#+BEGIN_SRC emacs-lisp
+   - Insert this elips snippet anywhere[fn:1]
+   #+BEGIN_SRC emacs-lisp
 (global-set-key [(control tab)] 'other-window)
-#+END_SRC
+   #+END_SRC
 
-#+RESULTS:
-: other-window
+   #+RESULTS:
+   : other-window
 
 
-This is a good example for how to start customizing emacs. I first looked for what
-
+   This is a good example for how to start customizing emacs. I first looked for what
 
 
 
@@ -52,70 +51,70 @@ This is a good example for how to start customizing emacs. I first looked for wh
 
 
 ** Dictionary and Thesaurus
-This is a summary of the packages and functions suggested in this reddit thread, and the solution I moved forward with.
+   This is a summary of the packages and functions suggested in this reddit thread, and the solution I moved forward with.
 
-- 
+   - 
 
 ** Draft mode
-One of the reasons I'm using Emacs is that it removes a lot of the distructions I would have otherwise have. Being completely text based, and keyboard driven, my hands are always in a typing position, so I have to concentrait less on stuff that are not writing. 
-Yet, I still get distructed often. For example, I will struggle with spelling a certain word, think of a better way to phrase a sentence I wrote in a previous paragraph, or spend time with finding a better way to say something. Those small distructions, while relevant to writing (it's not that I open a browser and go to reddit or anything, I'm still in writing mode), but they cut the line of thought, and might take my in tangles (link to the post about writing). 
+   One of the reasons I'm using Emacs is that it removes a lot of the distructions I would have otherwise have. Being completely text based, and keyboard driven, my hands are always in a typing position, so I have to concentrait less on stuff that are not writing. 
+   Yet, I still get distructed often. For example, I will struggle with spelling a certain word, think of a better way to phrase a sentence I wrote in a previous paragraph, or spend time with finding a better way to say something. Those small distructions, while relevant to writing (it's not that I open a browser and go to reddit or anything, I'm still in writing mode), but they cut the line of thought, and might take my in tangles (link to the post about writing). 
 
-Long story short, I learned about draft-mode, a minor mode that once enabled let you do nothing but writing. It emulating a typewriter, so all you can do is move forward. No way back, no way to delete, lookup a word or do anything that is not keep typing.
+   Long story short, I learned about draft-mode, a minor mode that once enabled let you do nothing but writing. It emulating a typewriter, so all you can do is move forward. No way back, no way to delete, lookup a word or do anything that is not keep typing.
 
-I found this entriguing, especially as a way to brain dump a though or a first draft. Sure, the outcome is messy to say the least, but being able to consentrait only on squeesing out this thought is invaluable. 
+   I found this entriguing, especially as a way to brain dump a though or a first draft. Sure, the outcome is messy to say the least, but being able to consentrait only on squeesing out this thought is invaluable. 
 
-So, here's what I did, and what I found out:
+   So, here's what I did, and what I found out:
 
 
 ** Adding a dictionary
 
 ** Adding email support to Emacs - part 1
-Couple of days ago I went on a journy to add email support to my Emacs. In this post, I'll detail only the first part of this journey - integrating mu4e with Emacs. I will not detail the specific configurations that I made, nor will I review my experience with it (it's too soon for that anyway). But I still find it worthwhile to document the steps that I had to take, if only for my own future reference.
+   Couple of days ago I went on a journy to add email support to my Emacs. In this post, I'll detail only the first part of this journey - integrating mu4e with Emacs. I will not detail the specific configurations that I made, nor will I review my experience with it (it's too soon for that anyway). But I still find it worthwhile to document the steps that I had to take, if only for my own future reference.
 
 *** Why?
-- Because I (read Emac) can.
-- Because when writing a serious email (one with more than two lines), I usually draft it in an editor first. And now that this edito is Emacs, it's only natural to do the editing /and/ the sending part in it...
-- Because I want org support in my emails
-- And, because the [[https://www.google.com/search?q%3Demacs%2Bemail%255C&client%3Dsafari&rls%3Den&source%3Dlnms&tbm%3Disch&sa%3DX&ved%3D0ahUKEwjSnqe8ys_JAhXH2D4KHYPAD4kQ_AUIBygB&biw%3D1496&bih%3D1003#tbm%3Disch&q%3Demacs%2Bemail][images I looked at]] makes emails look way cooler in Emacs than in any other email client.
+    - Because I (read Emac) can.
+    - Because when writing a serious email (one with more than two lines), I usually draft it in an editor first. And now that this edito is Emacs, it's only natural to do the editing /and/ the sending part in it...
+    - Because I want org support in my emails
+    - And, because the [[https://www.google.com/search?q%3Demacs%2Bemail%255C&client%3Dsafari&rls%3Den&source%3Dlnms&tbm%3Disch&sa%3DX&ved%3D0ahUKEwjSnqe8ys_JAhXH2D4KHYPAD4kQ_AUIBygB&biw%3D1496&bih%3D1003#tbm%3Disch&q%3Demacs%2Bemail][images I looked at]] makes emails look way cooler in Emacs than in any other email client.
 
-Enough reasoning. Let's chose a package.
+    Enough reasoning. Let's chose a package.
 
 *** Chosing an email client
-I went back and forth between mu4e and gnus. Following [[http://codingquark.com/setting-up-gnus-in-emacs/][Dhavan Vaidya]] advise on reddit, I decided to just pick one and move on with it. Unlike him, though, I chose mu4e rather than gnus, mainly because mu4e is all about search.
+    I went back and forth between mu4e and gnus. Following [[http://codingquark.com/setting-up-gnus-in-emacs/][Dhavan Vaidya]] advise on reddit, I decided to just pick one and move on with it. Unlike him, though, I chose mu4e rather than gnus, mainly because mu4e is all about search.
 
-So here we go - implementing mu4e with Emacs. For a quick and dirty, follow the first part. It summaries the steps needed to be made. If your more of a FPS person, and interested in the details, read on through the second part, that journaling the steps, errors and fixes I had to make.
+    So here we go - implementing mu4e with Emacs. For a quick and dirty, follow the first part. It summaries the steps needed to be made. If your more of a FPS person, and interested in the details, read on through the second part, that journaling the steps, errors and fixes I had to make.
 
 
-# Add an assumption that we use [[http://brew.sh][homebrew]].
+    # Add an assumption that we use [[http://brew.sh][homebrew]].
 
 *** The short story
-1. Get ~mu~ from git: https://github.com/djcb/mu
-2. Install ~offlineimap~.
-3. Configure ~offlineimap~ to point to the IMAP server you would like to connect to.
-4. Configure your init file to connect with ~mu4e~ and customize the client
-5. Run ~offlineimap~ for the first time to download your IMAP folder from the remote server
-6. Run ~mu~ to index and load the messages into Emacs
-7. 
+    1. Get ~mu~ from git: https://github.com/djcb/mu
+    2. Install ~offlineimap~.
+    3. Configure ~offlineimap~ to point to the IMAP server you would like to connect to.
+    4. Configure your init file to connect with ~mu4e~ and customize the client
+    5. Run ~offlineimap~ for the first time to download your IMAP folder from the remote server
+    6. Run ~mu~ to index and load the messages into Emacs
+    7. 
 
 *** The gory details
-From the mu4e manual, I understood that it's only a client, or an interface for my emails, and does nothing of the fetching, storing, editing or sending them. 
+    From the mu4e manual, I understood that it's only a client, or an interface for my emails, and does nothing of the fetching, storing, editing or sending them. 
 
-#+BEGIN_QUOTE
-This leaves mu4e to concentrate on what it does best: quickly finding the mails you are looking for, and handle them as efficiently as possible.
-#+END_QUOTE
+    #+BEGIN_QUOTE
+    This leaves mu4e to concentrate on what it does best: quickly finding the mails you are looking for, and handle them as efficiently as possible.
+    #+END_QUOTE
 
-It's therefore needs to be complemented with each of the other components to work. As I'm writing this, I'm still reading the manual, about to install offlineimap. My hope is that installing all those other components won't be too big of a husle, and that I can report at the end of this process that it worth the extra effort... And with that, let's move on to the installation checklist.
+    It's therefore needs to be complemented with each of the other components to work. As I'm writing this, I'm still reading the manual, about to install offlineimap. My hope is that installing all those other components won't be too big of a husle, and that I can report at the end of this process that it worth the extra effort... And with that, let's move on to the installation checklist.
 
-I start with the [[http://www.djcbsoftware.nl/code/mu/mu4e/Installation.html#Installation][mu4e manual]]. It looks very thorough and informative. However, I don't see how should I install ~mu~ and make it available in Emacs. I also learn that I should use something that will manage the IMAP repository for me, and I already getting confused.
+    I start with the [[http://www.djcbsoftware.nl/code/mu/mu4e/Installation.html#Installation][mu4e manual]]. It looks very thorough and informative. However, I don't see how should I install ~mu~ and make it available in Emacs. I also learn that I should use something that will manage the IMAP repository for me, and I already getting confused.
 
-So I search for a blog post for some extra hand holding. I find [[http://blog.developwithpassion.com/2013/05/02/getting-up-and-running-with-a-sane-mutt-setup/][this one]] by Jean-Paul. I learn that I need to install 's advice to install offlineimap from brew, as well as installing sqlite to use as the db for massages states:
+    So I search for a blog post for some extra hand holding. I find [[http://blog.developwithpassion.com/2013/05/02/getting-up-and-running-with-a-sane-mutt-setup/][this one]] by Jean-Paul. I learn that I need to install 's advice to install offlineimap from brew, as well as installing sqlite to use as the db for massages states:
 
-#+BEGIN_SRC bash
+    #+BEGIN_SRC bash
 $ brew install offlineimap
-#+END_SRC
+    #+END_SRC
 
-I did this. I then had to configure the offlineimap configutation file:
-#+BEGIN_SRC bash
+    I did this. I then had to configure the offlineimap configutation file:
+    #+BEGIN_SRC bash
 [general]
 accounts = Gmail
 maxsyncaccounts = 3
@@ -137,32 +136,32 @@ ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 1
 realdelete = no
-#+END_SRC
+    #+END_SRC
 
 
-This ~sslcacertfile~ line, I got from [[http://superuser.com/questions/927632/configuring-offlineimap-for-gmail-ssl-error][this]] stack-overflow answer, after I got an error when trying to load ~offlineimap~.
+    This ~sslcacertfile~ line, I got from [[http://superuser.com/questions/927632/configuring-offlineimap-for-gmail-ssl-error][this]] stack-overflow answer, after I got an error when trying to load ~offlineimap~.
 
-At that point, things still didn't work. Apperantly the folder specified in ~sslcacertfile~ doesn't exist in my computer, and I couldn't get a connection to my gmail account. I spent the next 30 minutes finding a solution, and finally found [[http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html][this]]. Here's what I had to do:
+    At that point, things still didn't work. Apperantly the folder specified in ~sslcacertfile~ doesn't exist in my computer, and I couldn't get a connection to my gmail account. I spent the next 30 minutes finding a solution, and finally found [[http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html][this]]. Here's what I had to do:
 
-1. Download the ca-cert bundle from [[https://downloads.sourceforge.net/project/machomebrew/mirror/%0Acurl-ca-bundle-1.87.tar.bz2][https://downloads.sourceforge.net/project/machomebrew/mirror/curl-ca-bundle-1.87.tar.bz2]]
-2. Copy the ca-bundle.crt file to ~/usr/local/etc/openssl/certs/~
-3. I didn't have to, but if that still doesn't work, run ~/usr/local/opt/openssl/bin/c_rehash~ to make openssl take count of the
-new certs.
+    1. Download the ca-cert bundle from [[https://downloads.sourceforge.net/project/machomebrew/mirror/%0Acurl-ca-bundle-1.87.tar.bz2][https://downloads.sourceforge.net/project/machomebrew/mirror/curl-ca-bundle-1.87.tar.bz2]]
+    2. Copy the ca-bundle.crt file to ~/usr/local/etc/openssl/certs/~
+    3. I didn't have to, but if that still doesn't work, run ~/usr/local/opt/openssl/bin/c_rehash~ to make openssl take count of the
+    new certs.
 
-Ok. Now ~offlineimap~ is working, and downloading my emails. Waiting. I have 45977 massages to sync, so it seems that I'll have to wait for awhile.
+    Ok. Now ~offlineimap~ is working, and downloading my emails. Waiting. I have 45977 massages to sync, so it seems that I'll have to wait for awhile.
 
-I had to kill the process, because it hanged after I closed and reopend the lid. When I tried to run  ~offlineimap~ again, I got an error. Simple fix - just delete the Gmail.lock file:
+    I had to kill the process, because it hanged after I closed and reopend the lid. When I tried to run  ~offlineimap~ again, I got an error. Simple fix - just delete the Gmail.lock file:
 
-#+BEGIN_SRC bash
+    #+BEGIN_SRC bash
 $ rm .offlineimap/Gmail.lock
-#+END_SRC
+    #+END_SRC
 
 
-Ok, my email is syncing again. Meanwhile, I'm moving to set things up in Emacs.
+    Ok, my email is syncing again. Meanwhile, I'm moving to set things up in Emacs.
 
-Here's the code I added to my config file, taken as is from mu4e tutorial:
+    Here's the code I added to my config file, taken as is from mu4e tutorial:
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
 ;; the exact path may differ -- check it
 (add-to-list 'load-path "/usr/local/Cellar/mu/mu4e")
 (setq mu4e-mu-binary (executable-find "/usr/local/Cellar/mu/mu/mu"))
@@ -195,76 +194,77 @@ Here's the code I added to my config file, taken as is from mu4e tutorial:
 
 ;; allow for updating mail using 'U' in the main view:
 (setq mu4e-get-mail-command "offlineimap"
-#+END_SRC
+    #+END_SRC
 
-Didn't work. I had to install mu from git:
+    Didn't work. I had to install mu from git:
 
-#+BEGIN_SRC bash
+    #+BEGIN_SRC bash
 $ git clone https://github.com/djcb/mu.git
-#+END_SRC
+    #+END_SRC
 
-Then, continue to follow the mu manual, and build mu. Only that before that, I had to install ~libtool~ (don't ask me what it is...).
+    Then, continue to follow the mu manual, and build mu. Only that before that, I had to install ~libtool~ (don't ask me what it is...).
 
-#+BEGIN_SRC bash
+    #+BEGIN_SRC bash
 $ brew install libtool
-#+END_SRC
+    #+END_SRC
 
-And now, building mu works:
+    And now, building mu works:
 
-#+BEGIN_SRC bash
+    #+BEGIN_SRC bash
 $ autoreconf -i && ./configure && make
-#+END_SRC
+    #+END_SRC
 
-I hope that's the last stradle... I couldn't make the ~mu4e~ command to work from within Emacs. Did some more digging, and found that I should add the path to the ~mu4e~ folder, which is outside of my ~/.emacs.d~ folder. On top of that, I had to define the excecutable. Anyway, here are two additional lines of code that I added to my config:
-#+BEGIN_SRC emacs-lisp
+    I hope that's the last stradle... I couldn't make the ~mu4e~ command to work from within Emacs. Did some more digging, and found that I should add the path to the ~mu4e~ folder, which is outside of my ~/.emacs.d~ folder. On top of that, I had to define the excecutable. Anyway, here are two additional lines of code that I added to my config:
+    #+BEGIN_SRC emacs-lisp
 (add-to-list 'load-path "/usr/local/Cellar/mu/mu4e")
 (setq mu4e-mu-binary (executable-find "/usr/local/Cellar/mu/mu/mu"))
-#+END_SRC
+    #+END_SRC
 
-And now (drums....):
-#+BEGIN_SRC bash
+    And now (drums....):
+    #+BEGIN_SRC bash
 /usr/local/Cellar/mu/mu/$ ./mu index
-#+END_SRC
+    #+END_SRC
 
-Haleluya! run ~M-x mu4e~ again, and here's what I get:
+    Haleluya! run ~M-x mu4e~ again, and here's what I get:
 
-http://media.prodissues.com/images/2015/12/mu4e_first_screen.png
+    http://media.prodissues.com/images/2015/12/mu4e_first_screen.png
 
 *** Resources
-- [[http://www.djcbsoftware.nl/code/mu/mu4e/index.html#SEC_Contents][Mu4e manual]]
-- Answer for how to make openssl work - http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html
+    - [[http://www.djcbsoftware.nl/code/mu/mu4e/index.html#SEC_Contents][Mu4e manual]]
+    - Answer for how to make openssl work - http://lists.alioth.debian.org/pipermail/offlineimap-project/2014-August/004916.html
+    - [[Http://pragmaticemacs.com/emacs/master-your-inbox-with-mu4e-and-org-mode/][Master Your Inbox With Mu4e And Org-Mode]]
 ** Commands to move between frames
-Now that I've started to use mu4e for my emails, I want to keep my inbox open in a seperate frame, and the documents that I'm working on in another. I'm looking for a simple way to move from one frame to the other.
+   Now that I've started to use mu4e for my emails, I want to keep my inbox open in a seperate frame, and the documents that I'm working on in another. I'm looking for a simple way to move from one frame to the other.
 *** Reference
-https://www.gnu.org/software/emacs/manual/html_node/emacs/Frame-Commands.html
+    https://www.gnu.org/software/emacs/manual/html_node/emacs/Frame-Commands.html
 ** Setting Emacs on Mac for Python
 
 
 *** What do I try to achive with this integration?
-#+DATE: 2015-11-06
+    #+DATE: 2015-11-06
 
-- Python syntax highlighting
-- Auto-complition, including for default and 3rd party packages
-- Evaluate code in a seperate, horizontal buffer (like I did in CodeRunner)
+    - Python syntax highlighting
+    - Auto-complition, including for default and 3rd party packages
+    - Evaluate code in a seperate, horizontal buffer (like I did in CodeRunner)
 
 
-I recently moved all my writing to emacs, and since I do, or should I say - try to do some python coding -  I searched for a tutorial on how to customize emacs as a Python editor. 
+    I recently moved all my writing to emacs, and since I do, or should I say - try to do some python coding -  I searched for a tutorial on how to customize emacs as a Python editor. 
 
-Before emacs, the litle Python I wrote, was done with CodeRunner and Sublime Text, but mostly in the out-of-box IDLE. Each one of these enviornemt lacked something, so I didn't have any strings attached when I decided to move my coding to emacs.
+    Before emacs, the litle Python I wrote, was done with CodeRunner and Sublime Text, but mostly in the out-of-box IDLE. Each one of these enviornemt lacked something, so I didn't have any strings attached when I decided to move my coding to emacs.
 
-I started to google things like "setting emacs for python on mac", but I didn't find one tutorial that could walk me through the entire configuration. I did find some useful sprinkles of tips and information. 
+    I started to google things like "setting emacs for python on mac", but I didn't find one tutorial that could walk me through the entire configuration. I did find some useful sprinkles of tips and information. 
 
-# Give an exapmles for useful posts. Jesika is one, the video of the Japanese guy is another.
+    # Give an exapmles for useful posts. Jesika is one, the video of the Japanese guy is another.
 
- anything relevant. So instead of keep looking, I decided to figure it out myself, and write a tutorial on it, so other in my position have a better start than I had. 
+    anything relevant. So instead of keep looking, I decided to figure it out myself, and write a tutorial on it, so other in my position have a better start than I had. 
 ** Load dired-x by default                                            :emacs:
-There are times when I want to take a peek at a file's underlying folder. I might want to open another file from that folder, do a quick rename or just get myself oriented about where the file I'm working on lives.
+   There are times when I want to take a peek at a file's underlying folder. I might want to open another file from that folder, do a quick rename or just get myself oriented about where the file I'm working on lives.
 
-I learned that there is a [[http://www.cs.washington.edu/acm/tutorials/editors/dired-refcard.gnu.pdf][keybinding]] for it, but that I can use this keybinding only if I have dired-x enabled. 
+   I learned that there is a [[http://www.cs.washington.edu/acm/tutorials/editors/dired-refcard.gnu.pdf][keybinding]] for it, but that I can use this keybinding only if I have dired-x enabled. 
 
-After some googling I learned that dired-x is part of emacs, and there is no need to install anything. I needed, however, to enable it somehow[fn:2]. A little more digging till I found in the [[http://www.gnu.org/software/emacs/manual/html_node/dired-x/Optional-Installation-Dired-Jump.html][dired manual]] the following code snippet that will auto load the package:
+   After some googling I learned that dired-x is part of emacs, and there is no need to install anything. I needed, however, to enable it somehow[fn:2]. A little more digging till I found in the [[http://www.gnu.org/software/emacs/manual/html_node/dired-x/Optional-Installation-Dired-Jump.html][dired manual]] the following code snippet that will auto load the package:
 
-#+BEGIN_SRC emacs-lisp
+   #+BEGIN_SRC emacs-lisp
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
 
@@ -273,147 +273,147 @@ After some googling I learned that dired-x is part of emacs, and there is no nee
 
 (define-key global-map "\C-x\C-j" 'dired-jump)
 (define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
-#+END_SRC  
+   #+END_SRC  
 
-And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
+   And now, ~C-x C-j~ will open the folder of the current file. ~C-x 4 C-j~ will open the folder in a different window.
 
 
 ** Bidirectional Editing
-I rarly write in hebrew, but now that I've started to use emacs for emails, sometime I'll have to answer an email in my native language. Writing in Hebrew is a challange because of its right-to-left nature that tend to break everything... for years I couldn't use mac for that reason.
+   I rarly write in hebrew, but now that I've started to use emacs for emails, sometime I'll have to answer an email in my native language. Writing in Hebrew is a challange because of its right-to-left nature that tend to break everything... for years I couldn't use mac for that reason.
 
-It turned out to be an easy enought to set Emacs to respect my Hebrew, and even to make it play nice when it's surrounded by other languages.
+   It turned out to be an easy enought to set Emacs to respect my Hebrew, and even to make it play nice when it's surrounded by other languages.
 
 *** References
-- Emacs manual - https://www.gnu.org/software/emacs/manual/html_node/emacs/Bidirectional-Editing.html
-- 
+    - Emacs manual - https://www.gnu.org/software/emacs/manual/html_node/emacs/Bidirectional-Editing.html
+    - 
 ** Orgmode
 *** Pelican + Orgmode                                       :orgmode:pelican:
-For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
-1. The source should be in a text based format, so text, markdown or org, each will be good.
-2. I would like to be able to manage and edit from one folder, preferable the folder where I have all my notes.
+    For awhile now I'm trying to create a workflow for writing and publishing a blog post. Here is a list of my requirments:
+    1. The source should be in a text based format, so text, markdown or org, each will be good.
+    2. I would like to be able to manage and edit from one folder, preferable the folder where I have all my notes.
 
-Until recently, I wrote my articles in markdown. When I was done with the article, I copied it to the content folder in my pelicon based blog. I then run `make html` to process the source into a static html, and when I was sutisfied with the piece, I would have pushed the pelican output folder to aws, where my blog is hosted.
+    Until recently, I wrote my articles in markdown. When I was done with the article, I copied it to the content folder in my pelicon based blog. I then run `make html` to process the source into a static html, and when I was sutisfied with the piece, I would have pushed the pelican output folder to aws, where my blog is hosted.
 
-Rarely was I satisfied with the piece when copying it to the pelican folder. Many times I had to do some final editing. Since I edited my original text in a a markdown editor, and the code for the site in Sublime Text, I was inclined to the open the article in Sublime, cause mose of the times I was already there, messing with other code, and do the changes on the spot. In that broken workflow, I was left with two copies for each of my posts. Most of the times these copies weren't identicle. So, once copying a post into pelican, I couldn't trust that I can edit the original post, but had to go back to the content folder, and open the post there. That turned my central note folder useless when it came to managing my posts. 
+    Rarely was I satisfied with the piece when copying it to the pelican folder. Many times I had to do some final editing. Since I edited my original text in a a markdown editor, and the code for the site in Sublime Text, I was inclined to the open the article in Sublime, cause mose of the times I was already there, messing with other code, and do the changes on the spot. In that broken workflow, I was left with two copies for each of my posts. Most of the times these copies weren't identicle. So, once copying a post into pelican, I couldn't trust that I can edit the original post, but had to go back to the content folder, and open the post there. That turned my central note folder useless when it came to managing my posts. 
 
-I recently started to work with emacs, and move a lot of my text based activities to it. And so working on the site and on articles are done at the same place. 
+    I recently started to work with emacs, and move a lot of my text based activities to it. And so working on the site and on articles are done at the same place. 
 
-I still want to keep a version of my posts in dropbox though, so I still want to have some kind of export workflow in place. This is also true since I want to start writing my posts in org, which isn't supported out of the box by pelican.
+    I still want to keep a version of my posts in dropbox though, so I still want to have some kind of export workflow in place. This is also true since I want to start writing my posts in org, which isn't supported out of the box by pelican.
 
-So after a long introduction, the problem I'm trying to solve is 
+    So after a long introduction, the problem I'm trying to solve is 
 
 ***** How to export a post from my dropbox folder to the content folder in Pelican?
-I want to have the editable format of the article available only in one place. What I've experienced so far was that I started an article in my notes folder, at first through nvAlt and then moved to emacs and deft. When I thought I was done and moved the article to the content 
+      I want to have the editable format of the article available only in one place. What I've experienced so far was that I started an article in my notes folder, at first through nvAlt and then moved to emacs and deft. When I thought I was done and moved the article to the content 
 **** Configure Org mode to publish (in general)
-This is a straight forward customization. I had to follow the tutorial.
+     This is a straight forward customization. I had to follow the tutorial.
 
 **** Configure the html export to pelican
 **** Importing html file into Pelican
-It turns out importing to pelican is harder than I expected.
+     It turns out importing to pelican is harder than I expected.
 
-But, the export doesn't work as I thought it will. The problem was that the header that Pelican expect, wasn't translated in a way it can work with. So as a result, the file that was created in the Pelican content folder wasn't compiled to the output.
+     But, the export doesn't work as I thought it will. The problem was that the header that Pelican expect, wasn't translated in a way it can work with. So as a result, the file that was created in the Pelican content folder wasn't compiled to the output.
 
 **** Trying an import to markdown
-HTML publishing didn't work for now. Before trying to work on the main problem, which is the header of the file, I'll try to do a markdown export and see that it works. If it does, I might keep it like that and work with org to markdown.
+     HTML publishing didn't work for now. Before trying to work on the main problem, which is the header of the file, I'll try to do a markdown export and see that it works. If it does, I might keep it like that and work with org to markdown.
 
-Markdown export doesn't work well also. Two issues that I had:
-- Org add the outline of the post on top. This is annoying, but I'm sure I can find the solution easily, but not at the moment.
-- The bigger issue is that I can't seem to be able to pass the head meta tags that Pelican expects to get and process.
+     Markdown export doesn't work well also. Two issues that I had:
+     - Org add the outline of the post on top. This is annoying, but I'm sure I can find the solution easily, but not at the moment.
+     - The bigger issue is that I can't seem to be able to pass the head meta tags that Pelican expects to get and process.
 
-Hitting the wall. Markdown export doesn't work either.
+     Hitting the wall. Markdown export doesn't work either.
 
 **** Trying the org-export
-I tried to follow [[http://nhoffman.github.io/borborygmi/getting-started.html][this article]] but wasn't able to make it work. I cloned [[https://github.com/nhoffman/org-export][the repository]] and made the export. But still, the header meta wasn't included in the output HTML. Now the post mentioned another utility that was "easily" created to do that, but it's not included, so what's the point in the article...?
+     I tried to follow [[http://nhoffman.github.io/borborygmi/getting-started.html][this article]] but wasn't able to make it work. I cloned [[https://github.com/nhoffman/org-export][the repository]] and made the export. But still, the header meta wasn't included in the output HTML. Now the post mentioned another utility that was "easily" created to do that, but it's not included, so what's the point in the article...?
 
 
-So, just as I'm about to give up, I found a way that allows me to pass header parameters to the html output. Now, I can have org communicate with pelican. I don't like this solution that much, because it clatters my org file with markup, but this is something I can live with.
+     So, just as I'm about to give up, I found a way that allows me to pass header parameters to the html output. Now, I can have org communicate with pelican. I don't like this solution that much, because it clatters my org file with markup, but this is something I can live with.
 
-[[https://github.com/fniessen/org-html-themes/blob/328260286c89aa0b8a4f3bd6be902de50da696bf/setup/theme-bigblow-local.setup][reference to how the header tag looks like]]
+     [[https://github.com/fniessen/org-html-themes/blob/328260286c89aa0b8a4f3bd6be902de50da696bf/setup/theme-bigblow-local.setup][reference to how the header tag looks like]]
 
-Now, I'm only missing the syntax highlighting in the output file, the one that goes to the site.
-Found a solution for that. I had to include htmlize, and now I can export or files into html! yay.
+     Now, I'm only missing the syntax highlighting in the output file, the one that goes to the site.
+     Found a solution for that. I had to include htmlize, and now I can export or files into html! yay.
 
-Next problem to solve:
-Footnotes are shown awkwardly. I've looked for a setting that will allow me to remove the footnote header. Found this variable "Org Footnote Section" and removed the "Collect footnotes under heading" to nil. I'm going to restart emacs and see what happens. Finger crossed...
+     Next problem to solve:
+     Footnotes are shown awkwardly. I've looked for a setting that will allow me to remove the footnote header. Found this variable "Org Footnote Section" and removed the "Collect footnotes under heading" to nil. I'm going to restart emacs and see what happens. Finger crossed...
 
-Oh wow. I found the tresure! I went to emacs settings and searched for "org html export". I found that I can control evry element of the export, including how the footnotes section will be formated. But I'm greedy, and now looking for header construction, in a way that I can include tags or meta headers in markdown or org format, and have them translate into header tags. This way I won't have to include ugly markups in my source files.
+     Oh wow. I found the tresure! I went to emacs settings and searched for "org html export". I found that I can control evry element of the export, including how the footnotes section will be formated. But I'm greedy, and now looking for header construction, in a way that I can include tags or meta headers in markdown or org format, and have them translate into header tags. This way I won't have to include ugly markups in my source files.
 
-Found [[https://pavpanchekha.com/blog/org-mode-publish.html][another article]] that was helpful in understanding how ord export works, and include some tips on setting up the publishing hook for git - export the site whenever I do a commit. I might get back to it at some point.
+     Found [[https://pavpanchekha.com/blog/org-mode-publish.html][another article]] that was helpful in understanding how ord export works, and include some tips on setting up the publishing hook for git - export the site whenever I do a commit. I might get back to it at some point.
  
 
-Ok, I think I got to the end of the journey. I found out that after all the trubles that I went through, there is a [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][plugin for pelican]]. How stupid am I not to figure it out. And more than that - the plugin set in my computer all this time... so reading [[http://msnyder.info/posts/2013/12/introducing-pelicorg/][this post]] walked me through the setup, and now I can have my org files directly in my pelican content directory. Halelluya!!!
+     Ok, I think I got to the end of the journey. I found out that after all the trubles that I went through, there is a [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][plugin for pelican]]. How stupid am I not to figure it out. And more than that - the plugin set in my computer all this time... so reading [[http://msnyder.info/posts/2013/12/introducing-pelicorg/][this post]] walked me through the setup, and now I can have my org files directly in my pelican content directory. Halelluya!!!
 
-One last obsecal. That damn syntaxy highlighting thing went away again. I think the first article I read had a solution for that. I'll go check it out again.
+     One last obsecal. That damn syntaxy highlighting thing went away again. I think the first article I read had a solution for that. I'll go check it out again.
 
-Yes, Yes, Yes! adding this simple  (require 'color-theme-github) did the trick, and now my implementation is done.
+     Yes, Yes, Yes! adding this simple  (require 'color-theme-github) did the trick, and now my implementation is done.
 
-And now that I can have my org files directly in pelican, I can actually save also this pipeline posts file there, only in dradt mode.
+     And now that I can have my org files directly in pelican, I can actually save also this pipeline posts file there, only in dradt mode.
 
 **** References
-- [[http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing orgmode files to HTML]]
-- [[http://orgmode.org/worg/org-tutorials/org-jekyll.html][Using org with Jekyll]] - This is a good reference to setup the publishing of the org files to the content folder in Jekyll. It seems that with pelican, the setup will be very similar.
+     - [[http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing orgmode files to HTML]]
+     - [[http://orgmode.org/worg/org-tutorials/org-jekyll.html][Using org with Jekyll]] - This is a good reference to setup the publishing of the org files to the content folder in Jekyll. It seems that with pelican, the setup will be very similar.
 
-- mention the good tutorial [here](http://nhoffman.github.io/borborygmi/getting-started.html)
+     - mention the good tutorial [here](http://nhoffman.github.io/borborygmi/getting-started.html)
 **** Merging Drafts Into One Orgmode File
-Up until now my writing workflow included creating new file for each post I started to write. I gave those drafts a file name starting with "post -". This way it was easy to sift through my posts ideas in nvAlt. 
+     Up until now my writing workflow included creating new file for each post I started to write. I gave those drafts a file name starting with "post -". This way it was easy to sift through my posts ideas in nvAlt. 
 
-Recentely, I moved to emacs, and was drawn into orgmode. I now write everything in org. Org is the best outliner I worked with, and so when I read [Sacha's]() tip on managing all her posts-to-be in one org outline, I got curious. I started by outlining several new ideas that I had, and eventually decided to merge my entire collection of drafts into one org file.
+     Recentely, I moved to emacs, and was drawn into orgmode. I now write everything in org. Org is the best outliner I worked with, and so when I read [Sacha's]() tip on managing all her posts-to-be in one org outline, I got curious. I started by outlining several new ideas that I had, and eventually decided to merge my entire collection of drafts into one org file.
 
 **** Why is it a good idea?
 
-I started to do it, but realised quickly that it will be lame to manually copy and paste the content of some 30 files into one file. Inspired by the "Automate The Boring Stuff With Python" that I read couple of months ago, I thought this might be a good opportunity to implement what I learned. And so I went ahead and wrote the following script that scan my draft files, create a new outline header from the filename (minuse the "post - "prefix) and append the content of each file under the relevant header.
+     I started to do it, but realised quickly that it will be lame to manually copy and paste the content of some 30 files into one file. Inspired by the "Automate The Boring Stuff With Python" that I read couple of months ago, I thought this might be a good opportunity to implement what I learned. And so I went ahead and wrote the following script that scan my draft files, create a new outline header from the filename (minuse the "post - "prefix) and append the content of each file under the relevant header.
 
 **** Exporting a post from org mode to pelican
-I'm trying to move my blog posts from markdown to org.
+     I'm trying to move my blog posts from markdown to org.
 
-Starting with an outline that is part of a bigger org file that holds all my drafts.
-In my Dropbox folder, I keep all my notes in a Notes/ folder. In that folder I created a sub-folder for all my posts. 
+     Starting with an outline that is part of a bigger org file that holds all my drafts.
+     In my Dropbox folder, I keep all my notes in a Notes/ folder. In that folder I created a sub-folder for all my posts. 
 
-I then killed the sub-tree that held my draft and yanked it into a new org file in the post folder. 
+     I then killed the sub-tree that held my draft and yanked it into a new org file in the post folder. 
 
-Now, before exporting this post to an HTML in the pelican folder, I needed to add some meta data, especially date, which pelican is finicky about. 
+     Now, before exporting this post to an HTML in the pelican folder, I needed to add some meta data, especially date, which pelican is finicky about. 
 
-Ok, reporting failure on that for now. I didn't find a good reference to how I do the export to HTML, and what org headers I need to use to make the transition. And so I did for now, an export to markdown, saved the markdown in the Pelicon content folder and published from there.
+     Ok, reporting failure on that for now. I didn't find a good reference to how I do the export to HTML, and what org headers I need to use to make the transition. And so I did for now, an export to markdown, saved the markdown in the Pelicon content folder and published from there.
 
-This is a bad compromise, because I had to do some modifications to the markdown document, such as adding 
+     This is a bad compromise, because I had to do some modifications to the markdown document, such as adding 
 *** Link to a specific subtree in another org file
 
 *** Refile a Subtree to a New Org File
-I manage all my drafts for new posts in one file. This is an insperation from Sacha.
-So now, what I want to be able to do is refiling a subtree, which represent post's draft, to a new file that will turn to the final post.
+    I manage all my drafts for new posts in one file. This is an insperation from Sacha.
+    So now, what I want to be able to do is refiling a subtree, which represent post's draft, to a new file that will turn to the final post.
 
-I googled it, and [[http://superuser.com/questions/373617/re-file-outline-tree-into-new-org-mode-file][here]] is the result I got. Reading through it makes me think that like integrating org with pelican, this isn't going to be a quick configuration, but will require some more involvemnt. I will therefore stash this modification, cause I have some more important things to work on at the moment...
+    I googled it, and [[http://superuser.com/questions/373617/re-file-outline-tree-into-new-org-mode-file][here]] is the result I got. Reading through it makes me think that like integrating org with pelican, this isn't going to be a quick configuration, but will require some more involvemnt. I will therefore stash this modification, cause I have some more important things to work on at the moment...
 *** Pass Org Header Parameters to Pelican
-After a long process of trying to integrate Org with Pelican, I landed on Pelican's [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]. It works well and allows me to write my posts in orgmode. But as I gain more posts, I want to categorize and orginize them better. 
+    After a long process of trying to integrate Org with Pelican, I landed on Pelican's [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]. It works well and allows me to write my posts in orgmode. But as I gain more posts, I want to categorize and orginize them better. 
 
-Org_reader is quit limiting in the amount of header properties it allows to map. In fact it support only the ~title~, ~category~, ~date~ and ~author~. In fact, it maps org's ~category~ to pelican's ~tags~, while both org and pelican has the accurate property names for both tags and category.
+    Org_reader is quit limiting in the amount of header properties it allows to map. In fact it support only the ~title~, ~category~, ~date~ and ~author~. In fact, it maps org's ~category~ to pelican's ~tags~, while both org and pelican has the accurate property names for both tags and category.
 
-So, I decided to expand this plugin to support more properties (maybe all?). I don't know yet how to do it, whether I should simply change the package localy on my computer and risk breaking it when an update to this plugin is available, or do it the proper way - forking (either to add the missing functionality and then making a pull request, or use it as a starting point to an alternative version of the plugin).
+    So, I decided to expand this plugin to support more properties (maybe all?). I don't know yet how to do it, whether I should simply change the package localy on my computer and risk breaking it when an update to this plugin is available, or do it the proper way - forking (either to add the missing functionality and then making a pull request, or use it as a starting point to an alternative version of the plugin).
 
-While the second route makes much more sence, it also mean that a quick and dirty solution isn't an option. And that means I have to learn, at least some, elisp. I'm not sure I'm ready for it at the moment.
+    While the second route makes much more sence, it also mean that a quick and dirty solution isn't an option. And that means I have to learn, at least some, elisp. I'm not sure I'm ready for it at the moment.
 
-So, I'll put that project on a hold for now, and I'll start by setting my emacs environment to work with elisp - development and debugging. Yeah, I already see how I'm going to be sucked into learning elisp in no time... 
+    So, I'll put that project on a hold for now, and I'll start by setting my emacs environment to work with elisp - development and debugging. Yeah, I already see how I'm going to be sucked into learning elisp in no time... 
 
-*10 minutes later:*
-I forked the org_reader repository...
+    *10 minutes later:*
+    I forked the org_reader repository...
 
-*2 hours later:*
-Started to read [[https://github.com/hypernumbers/learn_elisp_the_hard_way]["Learning Elisp the Hard Way"]].
+    *2 hours later:*
+    Started to read [[https://github.com/hypernumbers/learn_elisp_the_hard_way]["Learning Elisp the Hard Way"]].
 
 *** Links in orgmode
 
 **** Create an external link
-The format for a link in org is:
-#+BEGIN_SRC 
+     The format for a link in org is:
+     #+BEGIN_SRC 
 [[link_url][description]]
-#+END_SRC
+     #+END_SRC
 
-I found it tricky to use this convention. The way I inclined to create links is to first construct he governing brackets, so to get something like [[][]][fn:4]. I'll then go and add the description and lastly the url. 
+     I found it tricky to use this convention. The way I inclined to create links is to first construct he governing brackets, so to get something like [[][]][fn:4]. I'll then go and add the description and lastly the url. 
 
-The problem is that when I enter the description part, and move the point outside the description's enclosed paranthesees, the link changes, and all I can see is the description. In that view I can't modify the url part of the link.
+     The problem is that when I enter the description part, and move the point outside the description's enclosed paranthesees, the link changes, and all I can see is the description. In that view I can't modify the url part of the link.
 
-I found the answer in [[http://orgmode.org/guide/Link-format.html#Link-format][Org Mode Compact Guide]] 
-#+BEGIN_QUOTE
+     I found the answer in [[http://orgmode.org/guide/Link-format.html#Link-format][Org Mode Compact Guide]] 
+     #+BEGIN_QUOTE
 
 Org will recognize plain URL-like links and activate them as clickable
 links. The general link format, however, looks like this: 
@@ -426,14 +426,14 @@ Once a link in the buffer is complete (all brackets present), Org will change th
 displayed instead of ‘[[link]]’. To edit the invisible ‘link’ part, use
 C-c C-l with the cursor on the link.
 
-#+END_QUOTE
+     #+END_QUOTE
 
-So now, instead of constructing the markup for a link, I simply type 'C-c C-l RET' at the point where I want the reference link to be inserted. In the prompt that shows in the mini-buffer, I enter the link's url and the description. I 
+     So now, instead of constructing the markup for a link, I simply type 'C-c C-l RET' at the point where I want the reference link to be inserted. In the prompt that shows in the mini-buffer, I enter the link's url and the description. I 
 
 **** Remove a link
-I created a link, but want to remove the link, and keep only the description. Here's a function that I'll have to add to my init file. 
+     I created a link, but want to remove the link, and keep only the description. Here's a function that I'll have to add to my init file. 
 
-#+BEGIN_SRC emacs-lisp
+     #+BEGIN_SRC emacs-lisp
 (defun afs/org-replace-link-by-link-description ()
     "Replace an org link by its description or if empty its address"
   (interactive)
@@ -444,30 +444,30 @@ I created a link, but want to remove the link, and keep only the description. He
                  (org-match-string-no-properties 1))))
     (apply 'delete-region remove)
     (insert description))))
-#+END_SRC
+     #+END_SRC
 
-I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
+     I got this script from an answer in [[http://emacs.stackexchange.com/a/10714][stack-overflow]].
 ***** The want:
-I have a link that I've defined. Now I want to remove the link part, and remain only with the link's lable. So for example, if I have [[http://google.com][google]] linke, and I want to remove the underline url, but still keep the string google. 
+      I have a link that I've defined. Now I want to remove the link part, and remain only with the link's lable. So for example, if I have [[http://google.com][google]] linke, and I want to remove the underline url, but still keep the string google. 
 
 ****** Solution
-I bumped into a function that's doing it in the past. I'm not sure if I documented it or not, but I should return\search for it and grab the code...
+       I bumped into a function that's doing it in the past. I'm not sure if I documented it or not, but I should return\search for it and grab the code...
 
 
 *** Forking the org_reader plugin
-The goal is to be able to export org files simlessly to pelican. I want to have all the meta tags that Pelican allows, synced from org in Emacs.
-I will build on top of the org_reader plugin, and then decide if I make a pull request, or add my own version with attribution to the other plugin.
+    The goal is to be able to export org files simlessly to pelican. I want to have all the meta tags that Pelican allows, synced from org in Emacs.
+    I will build on top of the org_reader plugin, and then decide if I make a pull request, or add my own version with attribution to the other plugin.
 
-Here's what I did:
+    Here's what I did:
 **** Forked the org_reader plugin
 **** Copied the plugin to a new folder - ort_to_pelican
 **** Created a test blog in pelican
-I don't want to make changes that harm my current implementation. Want to create a clean environment to experimintations.
+     I don't want to make changes that harm my current implementation. Want to create a clean environment to experimintations.
 **** Find the touching point with org meta
-I found the part of the code where the plug in connect with the org export meta data. I switched the json to get static values, just to make sure I'm touching the right spot.
+     I found the part of the code where the plug in connect with the org export meta data. I switched the json to get static values, just to make sure I'm touching the right spot.
 
-Here's the before:
-#+BEGIN_SRC python
+     Here's the before:
+     #+BEGIN_SRC python
 ...
 metadata = {'title': 'json_output['title']',
                     'tags': json_output['category'] or '',
@@ -480,11 +480,11 @@ metadata = {'title': 'json_output['title']',
             parsed[key] = self.process_metadata(key, value)
 
         return json_output['post'], parsed
-#+END_SRC
+     #+END_SRC
 
-And the after:
+     And the after:
 
-#+BEGIN_SRC python
+     #+BEGIN_SRC python
 ...
  metadata = {'title': 'TITLE - This is a test of a static json',
                     'tags': 'emacs',
@@ -498,188 +498,189 @@ And the after:
 
         return json_output['post'], parsed
 
-#+END_SRC
+     #+END_SRC
 
-I changed the attributes of the json that probably feeds the pelican with static values. The resulted article showed those static attributes.
+     I changed the attributes of the json that probably feeds the pelican with static values. The resulted article showed those static attributes.
 
-Next.
+     Next.
 
 **** Read the meta tags from the org post
-Instead of waiting for the meta tags to be exported from org, I'll go ahead and fetch them directly from the org file. The reason for going around the org export is that it's apis only expost subset of entities, while I want to support more properties.
+     Instead of waiting for the meta tags to be exported from org, I'll go ahead and fetch them directly from the org file. The reason for going around the org export is that it's apis only expost subset of entities, while I want to support more properties.
 
 **** Implemented the parsing method
-This method read the org file.
-It read lines and if a line is a property line, it breaks it into a dictionaty.
+     This method read the org file.
+     It read lines and if a line is a property line, it breaks it into a dictionaty.
 
 **** Need to map the resulting dictionary with the pelicon terminology.
 **** Resources
-- Pelican documentation
-  - [[https://github.com/getpelican/pelican-plugins/blob/master/Contributing.rst][Contributing a plugin]]
-  - [[http://docs.getpelican.com/en/latest/contribute.html#using-git-and-github][Contributing guidelines]] and Contribution quality standards
-- A blog post about [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][pelican plugin tests]] 
-- Documentation for the [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]
-- [[http://nhoffman.github.io/borborygmi/getting-started.html#sec-1-1][Creating a site with Pelican and org-mode]]
+     - Pelican documentation
+       - [[https://github.com/getpelican/pelican-plugins/blob/master/Contributing.rst][Contributing a plugin]]
+       - [[http://docs.getpelican.com/en/latest/contribute.html#using-git-and-github][Contributing guidelines]] and Contribution quality standards
+     - A blog post about [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][pelican plugin tests]] 
+     - Documentation for the [[https://github.com/getpelican/pelican-plugins/tree/master/org_reader][org_reader plugin]]
+     - [[http://nhoffman.github.io/borborygmi/getting-started.html#sec-1-1][Creating a site with Pelican and org-mode]]
 *** Inserting an inline image with org
-I'm trying to add an image from a url that will show inline (and not as a link). What I found in the org manual is how to do it with a local file, but it seems to not work with remote file, or with using ~http:~ instead of ~file:~.
+    I'm trying to add an image from a url that will show inline (and not as a link). What I found in the org manual is how to do it with a local file, but it seems to not work with remote file, or with using ~http:~ instead of ~file:~.
 
-Here's what I found so far:
+    Here's what I found so far:
 
 
-Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
+    Ok, I found this answer in [[http://stackoverflow.com/questions/9639425/org-mode-export-as-html-inline-images-displayed-and-linked][stack-overflow]] that worked for me. I think I made the wrong search, and the information that I got was about how to show images inline in an org file. While this might be useful, it wasn't exactly what I needed. I will explore the inline image display later on.
 *** Orgmode - Presentation With Reavel
-I want to be able to write my presentation with text. I don't like doing my presentation with any of the ordinary apps because I end up spending most of my time on the look and feel rather than on the content, and on what I want to achive from the presentation.
+    I want to be able to write my presentation with text. I don't like doing my presentation with any of the ordinary apps because I end up spending most of my time on the look and feel rather than on the content, and on what I want to achive from the presentation.
 
-As I move more and more parts of my life to org, running presentations using it sounded like a good idea. I looked for plugins that I can use for that task. I used landslide with markdown before, the experience was ok. What I found for org, which work also with markdown, is Reveal. So I decided to give it a try.
+    As I move more and more parts of my life to org, running presentations using it sounded like a good idea. I looked for plugins that I can use for that task. I used landslide with markdown before, the experience was ok. What I found for org, which work also with markdown, is Reveal. So I decided to give it a try.
 
 **** Installation and configuration
-- Clone reveal into ~/dev/reveal. Here's a [[https://github.com/hakimel/reveal.js/releases/latest][link to the latest version]].
-- Configure org-reveal package in Emacs
-  - First try: Add the following to my init file
-   #+BEGIN_SRC emacs-lisp
-   (use-package ox-reveal
-   :ensure t
-   :config
-   (setq org-reveal-root "~/dev/reveal/reveal.js"))
-   #+END_SRC
-  
-   That didn't work. When evaluating my init file, it complained that the package isn't available.
+     - Clone reveal into ~/dev/reveal. Here's a [[https://github.com/hakimel/reveal.js/releases/latest][link to the latest version]].
+     - Configure org-reveal package in Emacs
+       - First try: Add the following to my init file
+	 #+BEGIN_SRC emacs-lisp
+	(use-package ox-reveal
+	:ensure t
+	:config
+	(setq org-reveal-root "~/dev/reveal/reveal.js"))
+	 #+END_SRC
 
-  - Second try: Clone the org-reveal repository into my ~/.emacs.d/lisp/ folder  (that's were I place packages that I downloaded manually, i.e. not from one of the  package hubs). That didn't work either. My init loaded without problem, but the  org-reveal package didn't.
+	 That didn't work. When evaluating my init file, it complained that the package isn't available.
 
-  - Third try: I commented the use-package config, and used the ordinary require:
-       #+BEGIN_SRC emacs-lisp
-         (require 'ox-reveal)
+       - Second try: Clone the org-reveal repository into my ~/.emacs.d/lisp/ folder  (that's were I place packages that I downloaded manually, i.e. not from one of the  package hubs). That didn't work either. My init loaded without problem, but the  org-reveal package didn't.
+
+       - Third try: I commented the use-package config, and used the ordinary require:
+	 #+BEGIN_SRC emacs-lisp
+	      (require 'ox-reveal)
+	 #+END_SRC
+	 This time it worked.
+
+     - Try it out - Seems that the package is now loading. So I created a test presentation, like this one:
+       #+BEGIN_SRC org
+	 * Slide 1
+	 * Slide 2 
+	 ** Slide 2.1
+	 ** Slide 2.2
+	 * Slide 3
        #+END_SRC
-       This time it worked.
 
-- Try it out - Seems that the package is now loading. So I created a test presentation, like this one:
-  #+BEGIN_SRC org
-    * Slide 1
-    * Slide 2 
-    ** Slide 2.1
-    ** Slide 2.2
-    * Slide 3
-  #+END_SRC
-
-I then called ~org-reveal-export-to-html~, but got an error ~Symbol's function definition is void: org-export-get-referenc~. Not sure why... Taking a step backward, to read the documentation again, and see where did I take the wrong step.
+     I then called ~org-reveal-export-to-html~, but got an error ~Symbol's function definition is void: org-export-get-referenc~. Not sure why... Taking a step backward, to read the documentation again, and see where did I take the wrong step.
 
 
 
 **** Reference 
-- [[http://jr0cket.co.uk/2013/10/create-html5-presentations-emacs-revealjs.html.html][Create HTML5 Presentations Easily With Emacs and Reveal.js]]
+     - [[http://jr0cket.co.uk/2013/10/create-html5-presentations-emacs-revealjs.html.html][Create HTML5 Presentations Easily With Emacs and Reveal.js]]
 *** Add footnote within the same section
-This way I can add footnotes to a post while still in draft stage and page.
+    This way I can add footnotes to a post while still in draft stage and page.
 
 ** Themes
 *** Flip between light and dark themes
-I want to creat a function that flip between light and dark thems.
-- Choose the themes I want to flip through.
-- Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
+    I want to creat a function that flip between light and dark thems.
+    - Choose the themes I want to flip through.
+    - Create a variable that will hold the name of the current theme, so I can switch it with a keybinding. 
 *** Add Solarized theme to emacs
-I fell in love with that theme. 
-I installed the solarized theme from elpa (github repo [[https://github.com/bbatsov/solarized-emacs][here]])
-This was very easy, but the problem was that the headers in org mode didn't adhear to the theme.
-I tried this package: https://github.com/sellout/emacs-color-theme-solarized, but couldn't make init to load the theme correctly. I also didn't want to change my path to themes to that theme's folder, because I might want to add more themes to that path, and the ~custom-theme-directory~ doesn't seem to be a list.
+    I fell in love with that theme. 
+    I installed the solarized theme from elpa (github repo [[https://github.com/bbatsov/solarized-emacs][here]])
+    This was very easy, but the problem was that the headers in org mode didn't adhear to the theme.
+    I tried this package: https://github.com/sellout/emacs-color-theme-solarized, but couldn't make init to load the theme correctly. I also didn't want to change my path to themes to that theme's folder, because I might want to add more themes to that path, and the ~custom-theme-directory~ doesn't seem to be a list.
 
-So now I found this post - https://blog.sleeplessbeastie.eu/2014/06/09/how-to-use-solarized-theme-in-emacs/.
-I hope this article will be helpful. It wasn't.
+    So now I found this post - https://blog.sleeplessbeastie.eu/2014/06/09/how-to-use-solarized-theme-in-emacs/.
+    I hope this article will be helpful. It wasn't.
 
-Both Sacha's configuration, and the article I read didn't help. It seemed that I have a cumborsum variable of the header that inherited it's value, and overriden the theme.
+    Both Sacha's configuration, and the article I read didn't help. It seemed that I have a cumborsum variable of the header that inherited it's value, and overriden the theme.
 
-Eventually, like many other questions, I found a solution in an answer at [[http://emacs.stackexchange.com/a/16873/10150][stack-overflow]]. I had to use the first repo, and add this line to the init:
+    Eventually, like many other questions, I found a solution in an answer at [[http://emacs.stackexchange.com/a/16873/10150][stack-overflow]]. I had to use the first repo, and add this line to the init:
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
 (setq solarized-scale-org-headlines nil)
-#+END_SRC
+    #+END_SRC
 ** Experimitation with Spacemacs
    - Note taken on [2015-11-16 Mon 14:45] \\
      Start
 
-The other day I added @melpa_emacs to my emacs twitter list, so now I can see every new package or update that is submitted to melpa.
+   The other day I added @melpa_emacs to my emacs twitter list, so now I can see every new package or update that is submitted to melpa.
 
-One of those packages is [[https://github.com/TheBB/spaceline][spaceline]]. I didn't know what it is, but saw that it has many downloads (relatively). I was intrigued to learn more. Realized it a package that imitates the look and feel of spacemacs mode-line. Hmmm... Spacemacs. Should I try it? afterall it aims to combine the benefites of vim and emacs. Since I use Evil mode, I thought it might be a good idea to take spacemacs for a spin. 
+   One of those packages is [[https://github.com/TheBB/spaceline][spaceline]]. I didn't know what it is, but saw that it has many downloads (relatively). I was intrigued to learn more. Realized it a package that imitates the look and feel of spacemacs mode-line. Hmmm... Spacemacs. Should I try it? afterall it aims to combine the benefites of vim and emacs. Since I use Evil mode, I thought it might be a good idea to take spacemacs for a spin. 
 
-I was relactunt to do it in the past, because spacemacs is known for the amount of packages it adds by default, and I liked the idea of controling and growing the emacs installation and customization with me. My curiosity won, and I cloned spacemacs. 
+   I was relactunt to do it in the past, because spacemacs is known for the amount of packages it adds by default, and I liked the idea of controling and growing the emacs installation and customization with me. My curiosity won, and I cloned spacemacs. 
 
-I loaded it, but figured it will ential another phase of learning completly new product, and decided it's not the right time for me to start that journey. Especially as I'm starting to feel more comfortable with emacs "vanilla".
+   I loaded it, but figured it will ential another phase of learning completly new product, and decided it's not the right time for me to start that journey. Especially as I'm starting to feel more comfortable with emacs "vanilla".
 
-So, I backed up the spacemacs folder and stashed it for now. I'll probably want to get back to it at some point in the future. I hope that by then I'll have more capacity to learn new things, and be even more proficient with emacs.
+   So, I backed up the spacemacs folder and stashed it for now. I'll probably want to get back to it at some point in the future. I hope that by then I'll have more capacity to learn new things, and be even more proficient with emacs.
  
 ** Add several folders to deft
 *** Question
-- How do I pass a list of folders so deft search in them?
+    - How do I pass a list of folders so deft search in them?
 
 
 *** Answer
-There is no way to specify more than one folder. The variable name hint to that - it called setq deft-directory - note directory in singular rather than plural[fn:3]
+    There is no way to specify more than one folder. The variable name hint to that - it called setq deft-directory - note directory in singular rather than plural[fn:3]
 *** Reference
-- [[http://jblevins.org/projects/deft/][Deft documentation page]]
+    - [[http://jblevins.org/projects/deft/][Deft documentation page]]
 ** TODO Undo tree mode
-Copied the setting from Sacha's config file - http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline158
-Need to learn a little more how to use it.
+   Copied the setting from Sacha's config file - http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline158
+   Need to learn a little more how to use it.
 
 ** How to modify emacs window so the buffer have right and left margins
    There is the set-left-margin, but this modify the actual text in the buffer. I want to change the window, so it will not affect the actual text within the buffer.
 
 * Prodissues
 ** Adding a tag cloud
-- There's a plugin for that
-- [[http://www.stevenmaude.co.uk/posts/restoring-a-tag-cloud-dispersed-by-pelican-360][Here's a post about how to use the plugin]]
+   - There's a plugin for that
+   - [[http://www.stevenmaude.co.uk/posts/restoring-a-tag-cloud-dispersed-by-pelican-360][Here's a post about how to use the plugin]]
 ** Add inline footnotes
-Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/11/developer_for_a_day.html][this post]]. Her feedback was that she would have liked to be able to read the footnotes inline, instead of having to scroll all the way down the article. That's a good feedback, and I want to think of ways to adderss it. One way will be to add a tooltip to the footnote reference.
+   Yesterday I got a feedback from a friend who read [[http://prodissues.com/2015/11/developer_for_a_day.html][this post]]. Her feedback was that she would have liked to be able to read the footnotes inline, instead of having to scroll all the way down the article. That's a good feedback, and I want to think of ways to adderss it. One way will be to add a tooltip to the footnote reference.
 
 *** Reference
-- [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Tooltips using jQuery]] -  - this article describes the use of only tooltips, not together with footnotes.
-- [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Footnote Tooltips using jQuery]]
- 
+    - [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Tooltips using jQuery]] -  - this article describes the use of only tooltips, not together with footnotes.
+    - [[http://syeong.jcsg.com/2012/07/07/footnote-tooltips/][Footnote Tooltips using jQuery]]
+
+
 * Code
 ** Integrating Sphere with Alfred
-We have a hackathon
+   We have a hackathon
 ** Adding scheduled job in mac
-I want to run the ~offlineimap~ every x minutes. For that I can use either keyboard maestro or LaunchAgent. Need to decide on an approach.
+   I want to run the ~offlineimap~ every x minutes. For that I can use either keyboard maestro or LaunchAgent. Need to decide on an approach.
 ** How to figure out the size of a folder from terminal
-Here's a quick way to find the size of a folder, via terminal
+   Here's a quick way to find the size of a folder, via terminal
 
 
-#+BEGIN_QUOTE
-The command ~du~ "summarizes disk usage of each FILE, recursively for directories," e.g.,
+   #+BEGIN_QUOTE
+   The command ~du~ "summarizes disk usage of each FILE, recursively for directories," e.g.,
 
-#+BEGIN_SRC sh 
+   #+BEGIN_SRC sh 
 du -hs /path/to/directory
-#+END_SRC
+   #+END_SRC
 
-- ~-h~ is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes)
-- ~-s~ is for summary 
+   - ~-h~ is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes)
+   - ~-s~ is for summary 
 
-(otherwise you'll get not only the size of the folder but also for everything in the folder separately)
-#+END_QUOTE
+   (otherwise you'll get not only the size of the folder but also for everything in the folder separately)
+   #+END_QUOTE
 
-[[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
+   [[http://askubuntu.com/a/1226][source]] to the answer in stack-overflow.
 
 ** Writing a python script for Lorem Ipsum
-I want to be able to get a Lorem Ipsum text in varying length. I think I can write a small script to do it. I will be able to run it using alfred, with an argument for the number of words I would like to get.
+   I want to be able to get a Lorem Ipsum text in varying length. I think I can write a small script to do it. I will be able to run it using alfred, with an argument for the number of words I would like to get.
 
 * Work
 ** Elastic Search is amazing
 
 *** Fraking
-Few years ago, gas prices went beserk, to well over 150$ a barrle. It seemed as if oil will be over in just a few years. Might be good news for some, but that's not the argument I'm trying to get at.
+    Few years ago, gas prices went beserk, to well over 150$ a barrle. It seemed as if oil will be over in just a few years. Might be good news for some, but that's not the argument I'm trying to get at.
 
-Anyway, just as it seemed that we are forced into a oil-less economy, and started to think of sustainable energy resources, fraking started to cought out steam as a way to access deep layers of pockets of gas and oil. Suddenly oil resovoure quadrupled(?)
+    Anyway, just as it seemed that we are forced into a oil-less economy, and started to think of sustainable energy resources, fraking started to cought out steam as a way to access deep layers of pockets of gas and oil. Suddenly oil resovoure quadrupled(?)
 
-# oil reservoir with and without fracking - what's the differenct?
+    # oil reservoir with and without fracking - what's the differenct?
 
-Again, I'm not an anti inviormentalist, so get of my back. What I'm trying to get at is that Elastic Search is like fraking, just without all the bad things that comes with it. Let me share with you how ES feels like from a product point of view.
+    Again, I'm not an anti inviormentalist, so get of my back. What I'm trying to get at is that Elastic Search is like fraking, just without all the bad things that comes with it. Let me share with you how ES feels like from a product point of view.
 
 *** It took us almost a month to drill a report
 
 *** It took us a year to create a pool of content, and it's very limited.
 
 *** Elastic search brings all though resources to the ground level
-Now, with easy to use interface, even non-technocal people can dig the data and play with it. Suddenly we have milions of documents at the tip of our finger, and I can search for documents in with any filter I'm interested in, just like I can do with Google, only that I know that I will get content in return.
+    Now, with easy to use interface, even non-technocal people can dig the data and play with it. Suddenly we have milions of documents at the tip of our finger, and I can search for documents in with any filter I'm interested in, just like I can do with Google, only that I know that I will get content in return.
 
 
-#+BEGIN_SRC js 
+    #+BEGIN_SRC js 
 {
   "size": 75,
   "query": {
@@ -699,147 +700,95 @@ Now, with easy to use interface, even non-technocal people can dig the data and 
     }
   }
 }
-#+END_SRC
+    #+END_SRC
 
 ** Getting Feedback from users and customers
 *** Intro
-A friend of mine asked me the other day how do we collect feedback from clienct, and how do we incorporate this feedback in our product roadmap. My immediate response was that we do collect feedback. This feedback includes not only meetings with clients, but mainly ....
+    A friend of mine asked me the other day how do we collect feedback from clienct, and how do we incorporate this feedback in our product roadmap. My immediate response was that we do collect feedback. This feedback includes not only meetings with clients, but mainly ....
 
-But my answer got me thinking. Do we really don't collect feedback? are we really driven only by a vision, thinking that we have all the answers, and only building something with the hope that everyone will understand it at the end of the day? and when I thought about it deeper, the answer become No. Absolutly not. 
+    But my answer got me thinking. Do we really don't collect feedback? are we really driven only by a vision, thinking that we have all the answers, and only building something with the hope that everyone will understand it at the end of the day? and when I thought about it deeper, the answer become No. Absolutly not. 
 
 
 *** Feedback /is/ part of our process, even if we don't think of it as such
-A feedback loop is essential to everything I do, whether it's through direct partners' feedback, user testings, a\b testing or data analysis. Here are just few examples for the type of feedback we collected, what we learned from it, and how it influenced our product.
+    A feedback loop is essential to everything I do, whether it's through direct partners' feedback, user testings, a\b testing or data analysis. Here are just few examples for the type of feedback we collected, what we learned from it, and how it influenced our product.
 
 *** Examples
 **** Direct to consumers first
-We started with direct to consumer products, such as a Firefox and chrome extensions. While the initial UI\UX were driven by our experience working with publishers, we quickly revised it after gathering data from user feedback that was collected through user testing, engagement data (mainly google analytics) and a\b testing.
+     We started with direct to consumer products, such as a Firefox and chrome extensions. While the initial UI\UX were driven by our experience working with publishers, we quickly revised it after gathering data from user feedback that was collected through user testing, engagement data (mainly google analytics) and a\b testing.
 
-The feedback we gathered showed us a mixed picture. On the one hand, we satisfied a (small) segment of the users we saw. On the other hand, data showed that our building a d2c from scratch will not be sustainable. Our cost per user was way over the LTV.
+     The feedback we gathered showed us a mixed picture. On the one hand, we satisfied a (small) segment of the users we saw. On the other hand, data showed that our building a d2c from scratch will not be sustainable. Our cost per user was way over the LTV.
 
 **** NTDs
-That led us to two main decisions. 1) We should build our distribution first and a destination second and 2) everything we build should be reusable (i.e. API driven). With that decision, we had to first chose the types of partners that will see the value in what we're building. After numerous meetings with different partners that have different goals, we selected partners who care mostly about engagement and audience growth (rather than pure monetization). Our initial partners were companies, usually technology driven, that don't produce their own content, but want to use content to drive engagement and retention. 
+     That led us to two main decisions. 1) We should build our distribution first and a destination second and 2) everything we build should be reusable (i.e. API driven). With that decision, we had to first chose the types of partners that will see the value in what we're building. After numerous meetings with different partners that have different goals, we selected partners who care mostly about engagement and audience growth (rather than pure monetization). Our initial partners were companies, usually technology driven, that don't produce their own content, but want to use content to drive engagement and retention. 
 
-Working with those partners, we learned about the KPIs they're interested in, and capabilities they would like to have. For example, one partner wanted to create an on-boarding experience to a content hub they were planning to build inside their app. They wanted to leverage our platform to power the content, but also to allow users to control the sites and categories of content they being recommended with. This request led us to expand our platform and expose a set of APIs that enable this functionality. Today, those APIs play an important role in our story.
+     Working with those partners, we learned about the KPIs they're interested in, and capabilities they would like to have. For example, one partner wanted to create an on-boarding experience to a content hub they were planning to build inside their app. They wanted to leverage our platform to power the content, but also to allow users to control the sites and categories of content they being recommended with. This request led us to expand our platform and expose a set of APIs that enable this functionality. Today, those APIs play an important role in our story.
 
 **** Back to publishers
-As we've started to scale our pilot with partners, we found that our vision and the platform we've built aligns well also with a certain segment of publishers - small, "high brow" publishers that produce premium content for niche audience. Meetings and brainstorming with such partners, we learned that taking an API route isn't practical, because they usually don't have the technical capabilities to integrate with our platform through an API. That led us to work on a JS based solution, with the goal of minimizing time to deployment, and the required technical skills to work with us.
+     As we've started to scale our pilot with partners, we found that our vision and the platform we've built aligns well also with a certain segment of publishers - small, "high brow" publishers that produce premium content for niche audience. Meetings and brainstorming with such partners, we learned that taking an API route isn't practical, because they usually don't have the technical capabilities to integrate with our platform through an API. That led us to work on a JS based solution, with the goal of minimizing time to deployment, and the required technical skills to work with us.
 
-We launched that new product couple of weeks ago. You can take a look at [[http://firstround.com/review/slacks-first-product-manager-on-how-to-make-a-firehose-of-feedback-useful/][that article]] from First Round Review for an example how this product looks like (see the recommendation units on the sides and bottom of the article).
+     We launched that new product couple of weeks ago. You can take a look at [[http://firstround.com/review/slacks-first-product-manager-on-how-to-make-a-firehose-of-feedback-useful/][that article]] from First Round Review for an example how this product looks like (see the recommendation units on the sides and bottom of the article).
 
 **** The hackathon as a feedback loop
-The development hub that I showed briefly yesterday, was driven by tons of user testings, spec reviews and demos we presented to partners. Last week, we conducted a dry run for that platform, in a hackathon we organized in our office. We invited external teams to hack and build with our APIs. The goal was to test how "self-servised" and self-explanatory the work with our platform and documentation is. 
+     The development hub that I showed briefly yesterday, was driven by tons of user testings, spec reviews and demos we presented to partners. Last week, we conducted a dry run for that platform, in a hackathon we organized in our office. We invited external teams to hack and build with our APIs. The goal was to test how "self-servised" and self-explanatory the work with our platform and documentation is. 
 
-You can take a look at [[http://prodissues.com/2015/11/developer_for_a_day.html][that blog post]] for my personal lessons. But we had another, bigger and surprising take-away. Most of the teams in the hackathon chose to use one certain API, that we made available the night before the hackathon, just as a through away and as an afterthought, without knowing how it can really be leveraged. That was a unique way to learn about how our partners *really* want to use our platform, and where we might want to grow it.
+     You can take a look at [[http://prodissues.com/2015/11/developer_for_a_day.html][that blog post]] for my personal lessons. But we had another, bigger and surprising take-away. Most of the teams in the hackathon chose to use one certain API, that we made available the night before the hackathon, just as a through away and as an afterthought, without knowing how it can really be leveraged. That was a unique way to learn about how our partners *really* want to use our platform, and where we might want to grow it.
 
 *** Summary
  
 * Workflows
-** My Post-Evernote Life
-Few months ago I wrote about my decision to move away from Evernote. In that article, I didn't mention what was the alternative, and recently I got eamils from several readers who asked whether I actually stoped using Evernote, and if I did, what's my alternative solution. 
-
-Thanks for reading my post. Happy that you liked it; less happy that we
-both had to leave Evernote... it used to be a life saver app. But hey,
-we're [[http://techcrunch.com/2015/11/14/evernotes-freshly-minted-coo-linda-kozlowski-is-leaving-the-company/][not the only one leaving]]...
-
-So yes, I left. I still have it installed, because I didn't migrated my notes somewhere else, and so every now and then I have a note that I have to pull out, usually a password or a certain id number.
-
-I have an alternative solution, or should I say many smaller, but more focused solutions. I'm not sure of your technical acumen, so I'll just throw some of the apps I use, and I'm happy to follow up if you'll want clarifications.
-
-*** Note taking[footnote, talk about my recent move to emacs]
-- I store all my notes in plain text based
-- All of my notes are stored in a dropbox folder (~/Dropbox/Notes). 
-- I use several apps to create, edit, search and manage my notes, depending on the platform I'm on.
-**** iOS
-- I strart almost every new notes in Drafts. This is also the terminal, from which my notes take the right track.
-- Editorial is the app I use to edit existing notes. 
-**** Mac
-- I use an app called [[http://brettterpstra.com/projects/nvalt/][nvAlt]] to manage those notes. I use it to both search for notes (it has great searching capabilities) and to start taking new notes.
-
-*** Bookmarks and references
-- I use [[https://pinboard.in/u:yanivdll][Pinboard]] as my bookmarks manager. It's a paid service, offering a simple, no fluff service. 11$ a year and it has you covered.
-
-*** Scans
-- I use a service called [[https://filethis.com][FileThis]] to download invoices and store them in a another dropbox folder. This service connects to providers, such as your cable company, bank account etc, and download your invoices every month.
-- I still use one of Evernotes mobile apps - scannable. I love it, and use it for quick scans of documents. Usually I share those scans via email, or save them to the dropbox folder.
-
-*** Passwords and secure notes
-- I use an app called [[https://agilebits.com/onepassword][1password]]. 
-
-*** Image annotations
-Sometimes I need to take a screengrab and add some annotation on it. I don't do it that often, therefore didn't look for an alternative to Evernote's skitch, and so I still use it. When I annotate an image in Skitch, it's still save it to Evernote, but I don't care about it. I save the image in Dropbox if I need it for future use.
-
-*** List and Todos
-I never used evernote for those. Todo lists were never Evernote's strength. In addition, todos and GTD is a seperate workflow, and may I say different universe, with its own set of workflows and tools. Let me know if you're interested, and I'll expand on that on a seperate post. But in essense, here are the tools I use to manage my todos and lists:
-- Reminders - that's my repository for everything that has a date, and is not more than one atomic task - I can add a reminder from my mac, ipad and iphone, as well as from 3rd party apps, such as [[https://flexibits.com/fantastical][Fantastical]].
-- Projets and todos - taskpaper - simple, yet robust, text based task manager. It can hold huge amount of data, and has powerful search capabilities. Here's a[[http://www.macdrifter.com/2014/02/the-taskpaper-rd-notebook.html][ good review]] of that tool.
-
-*** Images
-I used to store select images in Evernote. Kind of like a journal. I didn't find a solution to that yet. But it is also not a priority.
-
-*** Journal\diary
-I used to through some journaling notes into evernote. Today I have one file in my Dropbox notes folder, to which I append enteries.
-
-I think that covers most of what I used Evernote for. Let me know if you used Evernote for more stuff. 
-
-Hope this is helpful.
-
-Thanks. Yaniv
-
-
 ** Remove HTML Files With Hazel
-Here's a simple Hazel rule I created in order to deal with superflous html files that are created whenever I do a file export from my ~\~/Dropbox/Notes~ folder.
+   Here's a simple Hazel rule I created in order to deal with superflous html files that are created whenever I do a file export from my ~\~/Dropbox/Notes~ folder.
 
-- [ ] I need to see how I set the rule so it monitor both files within the folder and within sub-folder in that folder.
-  - Read through the hazel forum here: [[https://www.noodlesoft.com/forums/viewtopic.php?f%3D4&t%3D470][How to get Hazel to go into subfolders]]
+   - [ ] I need to see how I set the rule so it monitor both files within the folder and within sub-folder in that folder.
+     - Read through the hazel forum here: [[https://www.noodlesoft.com/forums/viewtopic.php?f%3D4&t%3D470][How to get Hazel to go into subfolders]]
 * Other
 ** No Exuse to Blogging
-Few weeks ago I wrote about my experience learning to touch type. As part of the reading I did while writing it, I found [[http://sachachua.com/blog/2011/09/deliberate-practice-typing-faster-and-emacs/][this article]] by Sacha Chua. This was a good article that helped me cristilize /why/ it is important that I learn touch typing[fn:5]. I ended up spending almost an hour browsing in her site. The amount of resources, posts, tips and tutorials that she shares is humangous! 
+   Few weeks ago I wrote about my experience learning to touch type. As part of the reading I did while writing it, I found [[http://sachachua.com/blog/2011/09/deliberate-practice-typing-faster-and-emacs/][this article]] by Sacha Chua. This was a good article that helped me cristilize /why/ it is important that I learn touch typing[fn:5]. I ended up spending almost an hour browsing in her site. The amount of resources, posts, tips and tutorials that she shares is humangous! 
 
-Now, it's not that I wouldn't have landed on her blog very soon after, even if I wouldn't have looked for touch type related articles. I would of because just a few days earlier, I started to look seriously at Emacs. And as it turned out, Sacha writes /alot/ about Emacs, and super involved in the Emacs community. So now I had two reasons to listen to what she has to say.
+   Now, it's not that I wouldn't have landed on her blog very soon after, even if I wouldn't have looked for touch type related articles. I would of because just a few days earlier, I started to look seriously at Emacs. And as it turned out, Sacha writes /alot/ about Emacs, and super involved in the Emacs community. So now I had two reasons to listen to what she has to say.
 
-And I'm happy that I did, because Sacha had an even more pivotal role in even more important aspect of what I do - writing. I found one in particular mode inspiring - the no excuses for blogging. 
+   And I'm happy that I did, because Sacha had an even more pivotal role in even more important aspect of what I do - writing. I found one in particular mode inspiring - the no excuses for blogging. 
 
 
-So here's how I felt after reading just a couple of insights from Sacha's ebook:
+   So here's how I felt after reading just a couple of insights from Sacha's ebook:
 
 
 *** What is the question I would like to answer?
-- Which excuse are you working on first, or are there other things that
-are getting in your way?
+    - Which excuse are you working on first, or are there other things that
+    are getting in your way?
 
 *** Answer
-- I like a lot the write as you learn
-- Answer a question. This one is helpful in particular, because not only it helps with writing, but it also helps a lot to focus, and prioritize what I'm going to learn and write about. I simply have to come up with answers.j
-- Write about the stuff that you google for and find now satisfactory answer
-- Write for yourself, as a documentation or note to self
+    - I like a lot the write as you learn
+    - Answer a question. This one is helpful in particular, because not only it helps with writing, but it also helps a lot to focus, and prioritize what I'm going to learn and write about. I simply have to come up with answers.j
+    - Write about the stuff that you google for and find now satisfactory answer
+    - Write for yourself, as a documentation or note to self
 
-Other things to mention -
-- I create an entry for any new thing I want to learn, explore or do. Doing so keeps me very focused, and goal oriented. It also force me to document the path that I take, so I don't loose myself and drift away without a destination. Best of all, it is all ready to be posted. Actually, it's already posted - I keep my draft file under the wip category in this blog, so everything that I work on, learn or write about is there. So when I'm done writing, all I have to do is move the relevant post to it's own page.
+    Other things to mention -
+    - I create an entry for any new thing I want to learn, explore or do. Doing so keeps me very focused, and goal oriented. It also force me to document the path that I take, so I don't loose myself and drift away without a destination. Best of all, it is all ready to be posted. Actually, it's already posted - I keep my draft file under the wip category in this blog, so everything that I work on, learn or write about is there. So when I'm done writing, all I have to do is move the relevant post to it's own page.
 
-This new workflow doesn't only produce tons of ideas to write about, it also make me write as I go, and be ready to publish when I'm done.
+    This new workflow doesn't only produce tons of ideas to write about, it also make me write as I go, and be ready to publish when I'm done.
 
-I only ready few tips in Sacha's book. I coudn't move forward, not because it was boring, or not relevant. The oposite! the simple, yet so sharp and percise, that my brain was like:
+    I only ready few tips in Sacha's book. I coudn't move forward, not because it was boring, or not relevant. The oposite! the simple, yet so sharp and percise, that my brain was like:
   
-#+begin_html
-<img src="http://media.prodissues.com/images/2015/11/V64Vgdw_-_Imgur.gif" style="width:304px;height:228px;">
-#+end_html
+    #+begin_html
+    <img src="http://media.prodissues.com/images/2015/11/V64Vgdw_-_Imgur.gif" style="width:304px;height:228px;">
+    #+end_html
 
-Those tips just poped up my brain, and let all my thoughts and ideas jusf flow into the page
+    Those tips just poped up my brain, and let all my thoughts and ideas jusf flow into the page
 
-So do yourself a favor, and make sure to read that short ebook. If you're aspiring to write anything, it will probably be the most effective thing you'll read. Oh, and don't be as cheap as I was. I worth well over the 3$ I contributed to it...[fn:6]
+    So do yourself a favor, and make sure to read that short ebook. If you're aspiring to write anything, it will probably be the most effective thing you'll read. Oh, and don't be as cheap as I was. I worth well over the 3$ I contributed to it...[fn:6]
 
 ** Don't Build a Dominos Pizza Company
    - Note taken on [2015-11-16 Mon 15:45] \\
      started writing this
 
-I want to follow up on my discussion with Elad today. I want to say something about us being the wrong people at the wrong phase of the company. But I also want to say that the company's going astray. I want to make a metaphor to Domino's pizza. I want to say that about 20 years ago dominoes was all about the pizza about making it the best pizza for their customers.
-The van over the years dominoes look for other ways to make revenue. Pizza wasn't necessarily the only thing they wanted to do in order to grow. So, new people who join dominoes wearing to miss surly passionate about pizza but passionate about making money. People probably join from McDonald's and brought with them the best way to do burgers in people join from K FC with recipes for chicken wings. So little by little those old people who cared about pizza is where less and less relevant. Not only that he cared about one thing but they were people of the past.
+   I want to follow up on my discussion with Elad today. I want to say something about us being the wrong people at the wrong phase of the company. But I also want to say that the company's going astray. I want to make a metaphor to Domino's pizza. I want to say that about 20 years ago dominoes was all about the pizza about making it the best pizza for their customers.
+   The van over the years dominoes look for other ways to make revenue. Pizza wasn't necessarily the only thing they wanted to do in order to grow. So, new people who join dominoes wearing to miss surly passionate about pizza but passionate about making money. People probably join from McDonald's and brought with them the best way to do burgers in people join from K FC with recipes for chicken wings. So little by little those old people who cared about pizza is where less and less relevant. Not only that he cared about one thing but they were people of the past.
 
-What I want to say, is that those people might be the people of the past. It might be that Domino's is no longer at pizza place. But as a customer I don't know the hell what Domino's is you have no identity and it's not here to stay.
+   What I want to say, is that those people might be the people of the past. It might be that Domino's is no longer at pizza place. But as a customer I don't know the hell what Domino's is you have no identity and it's not here to stay.
 
 *** When Domino's pizza just started
-I'm sure they were all about the pizza. How to bake the best pizza, that will take over the world
+    I'm sure they were all about the pizza. How to bake the best pizza, that will take over the world
 
 
 *** At some point, pizza didn't take over the world
@@ -847,21 +796,21 @@ I'm sure they were all about the pizza. How to bake the best pizza, that will ta
 *** Domino's moved to another mode
 
 *** Bring new people, who were more adapt to the new company
-But those people didn't have the initial dna of the early dominos days. They weren't passionate about the pizza, but about the business and about fixing this company.
+    But those people didn't have the initial dna of the early dominos days. They weren't passionate about the pizza, but about the business and about fixing this company.
 
 *** From kfc, and macdonald
-Dominos hired people "who already did it". Some from KFC, some from macdonald. The early employees of dominos now were part of the past. They were naive, and didn't "grow" with the business. Sell only pizza is so 60s.
+    Dominos hired people "who already did it". Some from KFC, some from macdonald. The early employees of dominos now were part of the past. They were naive, and didn't "grow" with the business. Sell only pizza is so 60s.
 
 ** Webarchive
-Just a reminder about this tool.
+   Just a reminder about this tool.
 
-Many times I find a link that seemed to be dead. I sigh disappointed and look for a new resource. Sometimes I recall this amazing site, tha
+   Many times I find a link that seemed to be dead. I sigh disappointed and look for a new resource. Sometimes I recall this amazing site, tha
 
 ** It's not about you. It's about the topic.
 
-Recently I spend more and more time in social networks other than the ones like Twitter and FB, though I rarely used FB. But my point is that my attention shifted to other channels. 
+   Recently I spend more and more time in social networks other than the ones like Twitter and FB, though I rarely used FB. But my point is that my attention shifted to other channels. 
 
-The results of that narcissism:
+   The results of that narcissism:
    - I started to use Reddit more, because I was interested in the topic.
    - I found it more and more engaging. I liked it, because it didn't feel like a waste of time. It's knowledge about the things I'm interested in. (Emacs, product management, writing).
    - Engagment led to participation.
@@ -869,31 +818,39 @@ The results of that narcissism:
    - Than, few long days went by without me posting anything. Stat flattens. And suddenly I have less interest opening the app. No point, no one commented on what I said.
 
 *** So what's the point I'm trying to make?
-Is it the obsession with self centric attention? Is it the tension between narcissism and essence
+    Is it the obsession with self centric attention? Is it the tension between narcissism and essence
 
+** Mechanical Keybords
+*** Fixing the Apple Extended 2
+**** Reference
+     - [[https://mechanicalkeyboards.com/shop/index.php?l%3Dproduct_detail&p%3D483][Matias Standard Clicky Mechanical Switch - 5 Pack (Matias )]]
+     - [[https://68kmla.org/forums/index.php?/topic/13901-how-to-repair-an-alps-keyswitch-in-15-steps/][How to repair an ALPS Keyswitch - In 15 Steps!]]
+     - [[https://geekhack.org/index.php?topic%3D47674.0][Topic: Replacement Alps Switches? (geekhack.org)]]
+     - [[https://www.youtube.com/watch?v%3DVoEMcT2KUDU][Replacing an alps switches (video)]]
+** POST - how to make yourself look dumb
 
-** Post - how to make yourself look dumb
+   So here's a very effective tip to how to expedite the first impression your communicating, down hill.
 
-So here's a very effective tip to how to expedite the first impression your communicating, down hill.
+   Earlier today I met with several executives from a company that do mobile development. The goal of the meeting was to brainstorm ideas and ways we can collaborate.
 
-Earlier today I met with several executives from a company that do mobile development. The goal of the meeting was to brainstorm ideas and ways we can collaborate.
+   After some chitchat we started the meeting. Before any of the participants introduced themselves, let alone giving some context to the meeting, one of the executive said something like: 
 
-After some chitchat we started the meeting. Before any of the participants introduced themselves, let alone giving some context to the meeting, one of the executive said something like: 
+   "So let me guess, your challenge in mobile is that you didn't figure out the creative to drive the monetization your partners are looking to drive"
 
-"So let me guess, your challenge in mobile is that you didn't figure out the creative to drive the monetization your partners are looking to drive"
+   My respond was simple, yet somewhat blunt:
+   "Wrong guess. Do you want to try again, or do you prefer I give some background and context?"
 
-My respond was simple, yet somewhat blunt:
-"Wrong guess. Do you want to try again, or do you prefer I give some background and context?"
+   From that moment on, I couldn't make myself listens and take things that came out from that guy's mouth seriously. Instinctively I shut my ears to his comments, filtering them and waiting for him to go silent and let other people talk.
 
-From that moment on, I couldn't make myself listens and take things that came out from that guy's mouth seriously. Instinctively I shut my ears to his comments, filtering them and waiting for him to go silent and let other people talk.
+   The takeaway:
+   What a bad strategy it is to come to a discussion with prior conviction, and blah your assumption on the table, before hearing something or looking for clues from the other side. The stacks are too high. It's like sitting in the blackjack table and asking "hit me" before being felt for the first card.
 
-The takeaway:
-What a bad strategy it is to come to a discussion with prior conviction, and blah your assumption on the table, before hearing something or looking for clues from the other side. The stacks are too high. It's like sitting in the blackjack table and asking "hit me" before being felt for the first card.
-
-But this goes well beyond discussions. How many times did you see managers falling into this trap? Starting a new role with decisions and actions, before taking the time to learn and listen. 
-[add my essay to business school?]
+   But this goes well beyond discussions. How many times did you see managers falling into this trap? Starting a new role with decisions and actions, before taking the time to learn and listen. 
+   [add my essay to business school?]
 
 * Footnotes
+
+[fn:7] 
 
 [fn:1] Just make sure you don't stepping inside of another decleration. 
 # how can I make sure I'm not doing that?
