@@ -1,9 +1,9 @@
-Title: On KPIs and Building Blocks
-Date: 2015-10-06 05:00
+Title: KPIs and Building Blocks
+Date: 2015-06-10 06:17
 Author: yaniv
 Category: Uncategorized
 Tags: building-blocks, kpi
-Slug: on-kpis-and-building-blocks
+Slug: on-kpis-and-building-blocks-2
 Status: published
 
 Few days ago I presented our product vision and roadmap to our R&D
@@ -43,4 +43,3 @@ it immediately, since it's reusable.
 Use KPIs to make sure you're going in the right direction towards your
 vision. Insist on developing building blocks and you'll get there at the
 fastest and most efficient way.
-

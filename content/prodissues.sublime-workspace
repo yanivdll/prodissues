@@ -1,0 +1,1469 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"readdir",
+				"fs.readdir"
+			],
+			[
+				"conf",
+				"confirmation_id\tstatement"
+			],
+			[
+				"user",
+				"user_exists\tstatement"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"get",
+				"getsize\tfunction"
+			],
+			[
+				"fi",
+				"fileInfo"
+			],
+			[
+				"backup",
+				"backupZip\tstatement"
+			],
+			[
+				"zipfile",
+				"ZipFile\tclass"
+			],
+			[
+				"p",
+				"path\tmodule"
+			],
+			[
+				"month",
+				"monthPart\tstatement"
+			],
+			[
+				"working",
+				"workingDir\tstatement"
+			],
+			[
+				"after",
+				"afterPart\tstatement"
+			],
+			[
+				"year",
+				"yearPart\tstatement"
+			],
+			[
+				"day",
+				"dayPart\tstatement"
+			],
+			[
+				"before",
+				"befoePart\tstatement"
+			],
+			[
+				"c",
+				"compile\tfunction"
+			],
+			[
+				"tex",
+				"text-top"
+			],
+			[
+				"dec",
+				"text-decoration"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"spa",
+				"span-columns"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"modular",
+				"Modular-scale"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"colo",
+				"color-3"
+			],
+			[
+				"base",
+				"base-padding"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"bas",
+				"base-padding"
+			],
+			[
+				"basd",
+				"base-heading-font-family"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"mo",
+				"mobile-size"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"col",
+				"color_schemes"
+			],
+			[
+				"athe",
+				"athens-gray"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tes",
+				"text-decoration-style"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"lo",
+				"lowercase"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"blo",
+				"blog-title"
+			],
+			[
+				"re",
+				"reddish"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"ligh",
+				"light-gray"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"si",
+				"sidebar"
+			],
+			[
+				"pa",
+				"partials"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "some-illustration-fun.md",
+			"settings":
+			{
+				"buffer_size": 832,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Title: Some Illustration Fun"
+			}
+		},
+		{
+			"file": "recape-of-the-last-couple-of-months.md",
+			"settings":
+			{
+				"buffer_size": 11976,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Title: What I've Been Working On Lately? Recap"
+			}
+		},
+		{
+			"file": "have-we-met-before.md",
+			"settings":
+			{
+				"buffer_size": 1356,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Title: Have We Met Before?"
+			}
+		},
+		{
+			"file": "aim-away-from-the-target.md",
+			"settings":
+			{
+				"buffer_size": 1265,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 272.0,
+		"last_filter": "preview",
+		"selected_items":
+		[
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"notes",
+				"Set Syntax: Notes"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"jrn",
+				"jrnl: List…"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"pret",
+				"Pretty JSON: Validate"
+			],
+			[
+				"het",
+				"Set Syntax: HTML (Erlang)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"xm",
+				"Set Syntax: XML"
+			],
+			[
+				"liv",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"beter",
+				"SublimeREPL: Tower Console"
+			],
+			[
+				"git lo",
+				"Git: Log All"
+			],
+			[
+				"colla",
+				"Code Folding: Unfold All"
+			],
+			[
+				"auto",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"Schemr",
+				"Schemr: List all schemes"
+			],
+			[
+				"th",
+				"Themr: Next theme"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"fold",
+				"MarkdownEditing: Fold Level 1 Sections"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"syn jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"vim",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"bran",
+				"Git: New Branch"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"b",
+				"Git: Change Branch"
+			],
+			[
+				"br",
+				"Git: Change Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python3"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"python",
+				"Set Syntax: Python3"
+			],
+			[
+				"git",
+				"Git: Graph All"
+			],
+			[
+				"chang",
+				"Git: Change Branch"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"defini",
+				"Coffee: Goto Definition"
+			],
+			[
+				"git:bran",
+				"Git: New Branch"
+			],
+			[
+				"bra",
+				"Git: Change Branch"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"con",
+				"Convert Case: Lower Case"
+			],
+			[
+				"mer",
+				"Git: Merge Branch"
+			],
+			[
+				"ad",
+				"Git: Add All"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"comi",
+				"Git: Commit"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"dif",
+				"Git: Diff Current File"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"ame",
+				"Git: Amend Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git add a",
+				"Git: Add All"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git me",
+				"Git: Merge Branch"
+			],
+			[
+				"git:c",
+				"Git: Change Branch"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Add All"
+			],
+			[
+				"git:sta",
+				"Git: Status"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"uperca",
+				"Convert Case: Upper Case"
+			],
+			[
+				"jinja",
+				"Set Syntax: Jinja2"
+			],
+			[
+				"tit",
+				"Convert Case: Title Case"
+			],
+			[
+				"di",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"paca",
+				"Package Control: Disable Package"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"cs",
+				"Set Syntax: CSS"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pand",
+				"Pandoc: Render Markdown to temp HTML and View"
+			],
+			[
+				"pamd",
+				"Pandoc: Render Markdown DocX"
+			],
+			[
+				"pandoc",
+				"Pandoc: Render Markdown to temp HTML and View"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac  ",
+				"Package Control: List Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark",
+				"Markmon launch"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 506.0
+	},
+	"console":
+	{
+		"height": 265.0,
+		"history":
+		[
+			"import server.py",
+			"import server",
+			"4+4",
+			"import server",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content"
+	],
+	"file_history":
+	[
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/apple-watch-6-months-later-not-that-great.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/on-not-writing.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/its-time-to-move-on.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/cost-of-a-new-new-user.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/why-i-decided-to-move-away-from-evernot.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/on-collection-and-vision.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/when-2-weeks-are-faster-than-2-hours.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/post - ekko Player for iOS.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/post - focus - not only steve jobs.md",
+		"/Users/ygilad/dev/prodissues-pelican/prodissues-test/content/on-kpis-and-building-blocks.md",
+		"/Users/ygilad/Desktop/test.html",
+		"/Users/ygilad/Downloads/prodissues.wordpress.2017-10-29-2.xml",
+		"/Users/ygilad/Desktop/blog_test",
+		"/Users/ygilad/dev/blog_bck/prodissues_heroku/source/stylesheets/base/_variables.scss",
+		"/Users/ygilad/dev/blog_bck/prodissues_heroku/source/stylesheets/base/_typography.scss",
+		"/Users/ygilad/dev/python-scripts/buggyAddingProgram.py",
+		"/Users/ygilad/Library/Application Support/FoldingText/user.less",
+		"/Users/ygilad/Documents/Repositories/morning-pages/.git/MERGE_MSG",
+		"/Users/ygilad/dev/weatr/src/.git/MERGE_MSG",
+		"/Users/ygilad/Dropbox/Notes/button - dashboard challange.md",
+		"/Users/ygilad/Desktop/working-directory/msn/sentiment.json",
+		"/Users/ygilad/Desktop/working-directory/msn/buyers.json",
+		"/Users/ygilad/Desktop/working-directory/msn/test-populate.json",
+		"/Users/ygilad/dev/kidsintown/events/static/events/sass/2-modules/event_form.scss",
+		"/Users/ygilad/dev/kidsintown/events/static/events/sass/2-modules/cards.scss",
+		"/Users/ygilad/Desktop/playground.html",
+		"/Users/ygilad/Dropbox/Notes/thank you letter doctors.md",
+		"/Users/ygilad/Dropbox/Notes/The product guy.md",
+		"/Users/ygilad/Dropbox/Notes/baby name.org",
+		"/Users/ygilad/Library/Application Support/Sublime Text 3/Packages/AdvancedNewFile/Default (OSX).sublime-keymap",
+		"/Users/ygilad/Library/Application Support/Sublime Text 3/Packages/BetterFindBuffer/Find Results.sublime-settings",
+		"/Users/ygilad/Library/Application Support/Sublime Text 3/Packages/BetterFindBuffer/BetterFindBuffer.sublime-settings",
+		"/Users/ygilad/Dropbox/Notes/test.md",
+		"/Users/ygilad/dev/weather-wear-bot/server.py",
+		"/Users/ygilad/dev/weather-wear-bot/static/json-mocks/new_set_variables.json",
+		"/Users/ygilad/dev/mongo-test/dlog.md",
+		"/Users/ygilad/dev/mongo-test/mongo-test.py",
+		"/Users/ygilad/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
+		"/Users/ygilad/dev/sphere/alexa-outbrain-news/dlog.org",
+		"/Users/ygilad/dev/sphere/alexa-outbrain-news/rest-client.org",
+		"/Users/ygilad/dev/alexa-clipboard/dev-log.org",
+		"/Users/ygilad/dev/alexa-clipboard/server.py",
+		"/Users/ygilad/dev/python-scripts/catsName.py",
+		"/Users/ygilad/dev/weather-wear-bot/.git/rebase-merge/git-rebase-todo",
+		"/Users/ygilad/dev/learnyounode/test.js",
+		"/Users/ygilad/dev/learnyounode/filter-module.js",
+		"/Users/ygilad/dev/weather-wear-bot/.git/MERGE_MSG",
+		"/Users/ygilad/dev/weather-wear-bot/server.pyc",
+		"/Users/ygilad/Dropbox/dev/prodissues/content/posts_drafts.org",
+		"/Users/ygilad/Library/Application Support/TaskPaper/theme.less",
+		"/Users/ygilad/Library/Application Support/TaskPaper/Themes/Dividers.taskpapertheme",
+		"/Users/ygilad/dev/omakase-mvp/src/mvp_landing/urls.py",
+		"/Users/ygilad/dev/omakase-mvp/src/.gitignore",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/email-confirmation.html",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/home.html",
+		"/Users/ygilad/dev/omakase-mvp/src/mvp_landing/settings/base.py",
+		"/Users/ygilad/dev/omakase-mvp/src/mvp_landing/views.py",
+		"/Users/ygilad/dev/omakase-mvp/src/joins/models.py",
+		"/Users/ygilad/Library/Application Support/Sublime Text 3/Packages/Anaconda/Default (OSX).sublime-keymap",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/css/cover.css",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/test.html",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/navbar.html",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/base.html",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/css/bootstrap-customizations.css",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/main.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/base/_typography.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/base/_base.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/.sass-cache/b075c6189d00a01e08b5c09282108d5e0dee0875/_font-face.scssc",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/bourbon/bourbon/library/_font-face.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/bourbon/_bourbon.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/bourbon_temp/library/_font-stacks.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/joins/views.py",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/scss/base/_variables.scss",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/css/main.css",
+		"/Users/ygilad/Downloads/fullPage.js-master/examples/test.html",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/fulljstest.html",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/example.js",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/example.css",
+		"/Users/ygilad/dev/omakase-mvp/src/.git/MERGE_MSG",
+		"/Users/ygilad/dev/omakase-mvp/src/static/static_dirs/js/main.js",
+		"/Users/ygilad/dev/omakase-mvp/src/templates/home.html~",
+		"/Users/ygilad/dev/omakase-mvp/src/mvp_landing/settings.py",
+		"/Users/ygilad/Desktop/gh-elad-2.html",
+		"/Users/ygilad/Desktop/gh-elad.html",
+		"/Users/ygilad/Desktop/seamless-old.html",
+		"/Users/ygilad/dev/elk/logstash-2.2.2/yelp-json.conf",
+		"/Users/ygilad/Downloads/chat.dta.tga",
+		"/Users/ygilad/Downloads/accounts.json",
+		"/Users/ygilad/dev/python-scripts/scrapEmails.py",
+		"/Users/ygilad/Desktop/seamless-email.html",
+		"/Users/ygilad/Downloads/LanguageTool-3.2/testrules.bat",
+		"/Users/ygilad/Downloads/Moderncv Banking/collection.sty",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-88056-62754859483049563",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-88027-7225994531115789888",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-88027-18739315351196442022",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-88003-10819133492098271982",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-87978-15747242261947702817",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-87928-10479242091246301787",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-85481-139435924395656381",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-85481-19584350791028661753",
+		"/var/folders/h_/vrc3gn4d0v14mt36n8t5f9sr0000gn/T/mutt-ygilad-501-84548-500250452518055920",
+		"/Users/ygilad/dev/prodissues/content/get-files-full-path.org",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/base/_typography.scss",
+		"/Users/ygilad/dev/prodissues/content/I_can_live_without_a_Mac.org",
+		"/Users/ygilad/dev/prodissues/content/pages/posts_drafts.org",
+		"/Users/ygilad/dev/prodissues/output/drafts/about-beauty-pageant-and-ux.html",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/color_schemes/_knot-just-nautical.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/base/_base.scss",
+		"/Users/ygilad/dev/prodissues/content/pages/emacs.org",
+		"/Users/ygilad/dev/prodissues/pelicanconf.py",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/partials/_layout.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/base/_lists.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/partials/_sidebar.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/base/_variables.scss",
+		"/Users/ygilad/dev/prodissues/output/drafts/index.html",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/color_schemes/_cote-azur.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/color_schemes/_keep-the-change.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/templates/sidebar.html",
+		"/Users/ygilad/dev/prodissues/publishconf.py",
+		"/Users/ygilad/dev/prodissues/output/index.html",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/partials/_header.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/templates/header.html",
+		"/Users/ygilad/dev/prodissues/output/theme/css/main.css",
+		"/Users/ygilad/dev/prodissues/themes/simple/static/scss/main.scss",
+		"/Users/ygilad/dev/prodissues/themes/simple/templates/article.html",
+		"/Users/ygilad/dev/prodissues/themes/simple/templates/base.html",
+		"/Users/ygilad/dev/prodissues/themes/simple/templates/disqus.html",
+		"/Users/ygilad/dev/prodissues/content/stitch-pdf-files.md"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"[1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "some-illustration-fun.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Title: Some Illustration Fun",
+							"git_gutter_is_enabled": false,
+							"markdonw_live_preview_last_run": 1519106324.15,
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "recape-of-the-last-couple-of-months.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10968,
+								10968
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Title: What I've Been Working On Lately? Recap",
+							"git_gutter_is_enabled": false,
+							"markdonw_live_preview_last_run": 1519108190.17,
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5172.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "have-we-met-before.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1064,
+								1064
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Title: Have We Met Before?",
+							"git_gutter_is_enabled": false,
+							"markdonw_live_preview_last_run": 1519109305.42,
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 367.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "aim-away-from-the-target.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"markdonw_live_preview_last_run": 1519106235.63,
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 90.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 144.0
+	},
+	"output.nodejs":
+	{
+		"height": 340.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "prodissues.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"than",
+				"thank you letter doctors.md"
+			],
+			[
+				"md",
+				"The product guy.md"
+			],
+			[
+				"thank",
+				"thank you letter doctors.md"
+			],
+			[
+				"yuval",
+				"sphere - email to yuval and team on cta.org"
+			],
+			[
+				"ser",
+				"src/server.py"
+			],
+			[
+				"se",
+				"server.py"
+			],
+			[
+				"",
+				"schema.sql"
+			],
+			[
+				"dl",
+				"dlog.org"
+			],
+			[
+				"na",
+				"templates/navbar.html"
+			],
+			[
+				"test",
+				"templates/test.html"
+			],
+			[
+				".i",
+				".gitignore"
+			],
+			[
+				"con",
+				"mvp_landing/settings/confirm.htm"
+			],
+			[
+				"ur",
+				"mvp_landing/urls.py"
+			],
+			[
+				"ba",
+				"mvp_landing/settings/base.py"
+			],
+			[
+				"bas",
+				"mvp_landing/settings/base.py"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"vie",
+				"joins/views.py"
+			],
+			[
+				"mode",
+				"joins/models.py"
+			],
+			[
+				"view",
+				"joins/views.py"
+			],
+			[
+				"main",
+				"static/static_dirs/scss/main.scss"
+			],
+			[
+				"face",
+				"static/static_dirs/scss/bourbon/bourbon/library/_font-face.scss"
+			],
+			[
+				"bou",
+				"static/static_dirs/scss/bourbon/_bourbon.scss"
+			],
+			[
+				"base",
+				"static/static_dirs/scss/base/_base.scss"
+			],
+			[
+				"va",
+				"static/static_dirs/scss/base/_variables.scss"
+			],
+			[
+				"cover",
+				"static/static_dirs/css/cover.css"
+			],
+			[
+				"cove",
+				"static/static_dirs/css/cover.css"
+			],
+			[
+				"ho",
+				"templates/home.html"
+			],
+			[
+				"u",
+				"mvp_landing/urls.py"
+			],
+			[
+				"cus",
+				"static/static_dirs/css/bootstrap-customizations.css"
+			],
+			[
+				"views",
+				"src/joins/views.py"
+			],
+			[
+				"settin",
+				"src/mvp_landing/settings.py"
+			],
+			[
+				"ins",
+				"~/dev/omakase-mvp/src/mvp_landing/settings.py"
+			],
+			[
+				"pe",
+				"pelicanconf.py"
+			],
+			[
+				"pel",
+				"pelicanconf.py"
+			],
+			[
+				"side",
+				"themes/simple/templates/sidebar.html"
+			],
+			[
+				"hea",
+				"themes/simple/templates/header.html"
+			],
+			[
+				"art",
+				"themes/simple/templates/article.html"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"p",
+				"pelicanconf.py"
+			],
+			[
+				"org",
+				"content/swapping-buffers.org"
+			],
+			[
+				"wi",
+				"content/workflow for wip documents.md"
+			],
+			[
+				"wip",
+				"output/2015/09/a-recipe-to-work-in-progress-documents.html"
+			],
+			[
+				"pu",
+				"publishconf.py"
+			],
+			[
+				"a",
+				"output/drafts/a-recipe-to-work-in-progress-documents.html"
+			],
+			[
+				"work",
+				"content/workflow for wip documents.md"
+			],
+			[
+				"about",
+				"content/pages/about.md"
+			],
+			[
+				"just",
+				"content/just-do-it-but-start-with-a-small-step.md"
+			],
+			[
+				"co",
+				"content/on-collection-and-vision.md"
+			],
+			[
+				"colle",
+				"content/on-collection-and-vision.md"
+			],
+			[
+				"mak",
+				"Makefile"
+			],
+			[
+				"auto",
+				"content/automated-editing-using-python.md"
+			],
+			[
+				"abou",
+				"content/pages/about.md"
+			],
+			[
+				"typ",
+				"source/stylesheets/base/_typography.scss"
+			],
+			[
+				"pos",
+				"source/layouts/post.erb"
+			],
+			[
+				"var",
+				"source/stylesheets/base/_variables.scss"
+			],
+			[
+				"he",
+				"source/stylesheets/partials/_header.scss"
+			],
+			[
+				"tas",
+				"prodIssues.taskpaper"
+			],
+			[
+				"ty",
+				"source/stylesheets/base/_typography.scss"
+			],
+			[
+				"pla",
+				"source/stylesheets/color_schemes/playground.scss"
+			],
+			[
+				"po",
+				"source/layouts/post.erb"
+			],
+			[
+				"lay",
+				"source/stylesheets/partials/_layout.scss"
+			],
+			[
+				"ref",
+				"source/stylesheets/base/quote-and-ref.scss"
+			],
+			[
+				"pl",
+				"source/stylesheets/color_schemes/playground.scss"
+			],
+			[
+				"q",
+				"source/stylesheets/base/quote-and-ref.scss"
+			],
+			[
+				"qu",
+				"source/stylesheets/base/quote-and-ref.scss"
+			],
+			[
+				"gr",
+				"source/stylesheets/base/_grid-settings.scss"
+			],
+			[
+				"la",
+				"source/stylesheets/partials/_layout.scss"
+			],
+			[
+				"layou",
+				"source/layout.erb"
+			],
+			[
+				"gri",
+				"source/stylesheets/base/_grid-settings.scss"
+			],
+			[
+				"inde",
+				"source/index.html.erb"
+			],
+			[
+				"t",
+				"source/stylesheets/base/_typography.scss"
+			],
+			[
+				"l",
+				"source/stylesheets/partials/_layout.scss"
+			],
+			[
+				"css",
+				"source/stylesheets/all.css.scss"
+			],
+			[
+				"h",
+				"source/stylesheets/partials/_header.scss"
+			],
+			[
+				"ga",
+				"source/partials/_ga.erb"
+			],
+			[
+				"s",
+				"source/partials/_sidebar.erb"
+			],
+			[
+				"sid",
+				"source/stylesheets/partials/_sidebar.scss"
+			],
+			[
+				"ind",
+				"source/index.html.erb"
+			],
+			[
+				"in",
+				"source/index.html.erb"
+			],
+			[
+				"foo",
+				"source/stylesheets/partials/_footer.scss"
+			],
+			[
+				"si",
+				"source/stylesheets/partials/_sidebar.scss"
+			],
+			[
+				"foot",
+				"source/stylesheets/partials/_footer.scss"
+			],
+			[
+				"head",
+				"source/stylesheets/partials/_header.scss"
+			],
+			[
+				"vari",
+				"source/stylesheets/base/_variables.scss"
+			],
+			[
+				"fl",
+				"source/stylesheets/color_schemes/_flat-ui.scss"
+			],
+			[
+				"fla",
+				"source/stylesheets/color_schemes/_flat-ui.scss"
+			],
+			[
+				"des",
+				"source/stylesheets/partials/_desktop.scss"
+			],
+			[
+				"g",
+				"source/stylesheets/base/_grid-settings.scss"
+			],
+			[
+				"v",
+				"source/stylesheets/base/_variables.scss"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"de",
+				"lib/default.rb"
+			],
+			[
+				"ru",
+				"Rules"
+			],
+			[
+				"dai",
+				"planning-sphere-dailies.ft"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 334.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

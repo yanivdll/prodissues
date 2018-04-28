@@ -67,18 +67,18 @@ DEFAULT_PAGINATION = 10
 # Disable disable caching in Dev
 LOAD_CONTENT_CACHE = False
 
-JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
+# JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 
 # THEME = '../pelican-themes/aboutwilson'
-THEME = 'themes/simple'
+# THEME = 'themes/simple'
 ASSET_URL = '/static/'
 
 PLUGIN_PATHS = ['../pelican-plugins-fork']
-PLUGINS = ['assets', 'org_emacs_reader']
+# PLUGINS = ['assets', 'org_emacs_reader']
 
 # Org Reader plugin
-ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
-ORG_READER_EMACS_SETTINGS = "~/.emacs.d/lisp/pelicon-export.el"
+# ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
+# ORG_READER_EMACS_SETTINGS = "~/.emacs.d/lisp/pelicon-export.el"
 
 
 # TESTINGS::
