@@ -23,7 +23,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 
 ## disqus
-DISQUS_SITENAME = 'prodissues'
+# DISQUS_SITENAME = 'prodissues'
 
 ## ga
 GOOGLE_ANALYTICS = "UA-60771520-1"

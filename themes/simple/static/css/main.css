@@ -60,8 +60,8 @@ h4 {
 
 h5 {
   color: #3D709D;
-  font-size: 1em;
-  font-weight: 800;
+  font-size: 0.8em;
+  font-weight: 400;
   margin: 0 0 0.725em; }
 
 h1,
@@ -229,7 +229,7 @@ section {
       section aside {
         float: left;
         display: block;
-        margin-right: 8.71718%;
+        margin-right: 8.7171782496%;
         width: 100%;
         text-align: left; }
         section aside:last-child {
@@ -238,16 +238,16 @@ section {
       section aside {
         float: left;
         display: block;
-        margin-right: 4.17655%;
-        width: 21.86759%; }
+        margin-right: 4.176550451%;
+        width: 21.8675871617%; }
         section aside:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 52.5em) {
       section aside {
         float: left;
         display: block;
-        margin-right: 2.74614%;
-        width: 22.9404%; }
+        margin-right: 2.7461357194%;
+        width: 22.9403982104%; }
         section aside:last-child {
           margin-right: 0; } }
   section article {
@@ -256,7 +256,7 @@ section {
       section article {
         float: left;
         display: block;
-        margin-right: 8.71718%;
+        margin-right: 8.7171782496%;
         width: 100%; }
         section article:last-child {
           margin-right: 0; } }
@@ -264,24 +264,24 @@ section {
       section article {
         float: left;
         display: block;
-        margin-right: 4.17655%;
-        width: 73.95586%; }
+        margin-right: 4.176550451%;
+        width: 73.9558623872%; }
         section article:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 52.5em) {
       section article {
         float: left;
         display: block;
-        margin-right: 2.74614%;
-        width: 65.75129%; }
+        margin-right: 2.7461357194%;
+        width: 65.7512880935%; }
         section article:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 81.25em) {
       section article {
         float: left;
         display: block;
-        margin-right: 2.04556%;
-        width: 48.97722%; }
+        margin-right: 2.0455583375%;
+        width: 48.9772208312%; }
         section article:last-child {
           margin-right: 0; } }
 
@@ -292,8 +292,8 @@ li.post-summary {
 header {
   float: left;
   display: block;
-  margin-right: 2.74614%;
-  width: 65.75129%;
+  margin-right: 2.7461357194%;
+  width: 65.7512880935%;
   margin-right: 0;
   display: block;
   line-height: 30px;
