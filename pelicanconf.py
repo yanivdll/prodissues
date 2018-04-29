@@ -70,11 +70,11 @@ LOAD_CONTENT_CACHE = False
 # JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 
 # THEME = '../pelican-themes/aboutwilson'
-# THEME = 'themes/simple'
+THEME = 'themes/simple'
 ASSET_URL = '/static/'
 
-PLUGIN_PATHS = ['../pelican-plugins-fork']
-# PLUGINS = ['assets', 'org_emacs_reader']
+PLUGIN_PATHS = ['../../pelican-plugins']
+PLUGINS = ['assets']
 
 # Org Reader plugin
 # ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
@@ -83,7 +83,7 @@ PLUGIN_PATHS = ['../pelican-plugins-fork']
 
 # TESTINGS::
 # ## disqus
-# DISQUS_SITENAME = 'prodissues'
+DISQUS_SITENAME = 'prodissues'
 
 # ## Google Analytics
 #GOOGLE_ANALYTICS = "UA-60771520-1"
