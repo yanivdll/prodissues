@@ -3,6 +3,11 @@
   font-style: normal;
   font-weight: normal;
   src: url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.woff2") format("woff2"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.woff") format("woff"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.ttf") format("truetype"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.svg#cheltenham") format("svg"); }
+@font-face {
+  font-family: PTSansNarrowBold;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff2") format("woff2"), url("/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff") format("woff"), url("/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.ttf") format("truetype"), url("/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.svg#PTSansNarrowBold") format("svg"); }
 ul,
 ol {
   margin: 0; }
