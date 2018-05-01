@@ -22,4 +22,4 @@ In fact, this is one of the reasons I gave up on Pelican. It was too
 brittle. So now that I'm on WordPress, I'm free to configure Emacs
 however I want. Here's how my new font looks like:
 
-![](http://media.prodissues.com.s3.amazonaws.com/images/2016/02/emacs-input-font.png)
+![Input font in emacs](http://media.prodissues.com.s3.amazonaws.com/images/2016/02/emacs-input-font.png)

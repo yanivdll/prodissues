@@ -1,3 +1,8 @@
+@font-face {
+  font-family: cheltenham;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.eot?#iefix") format("embedded-opentype"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.woff2") format("woff2"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.woff") format("woff"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.ttf") format("truetype"), url("/theme/fonts/cheltenham/cheltenham-italic-700-webfont.svg#cheltenham") format("svg"); }
 ul,
 ol {
   margin: 0; }
@@ -31,7 +36,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: black;
-  font-family: PTSerif;
+  font-family: BentonModernRE, georgia, serif;
   font-size: 1.05em;
   line-height: 1.45; }
 
@@ -70,7 +75,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat, sans-serif;
+  font-family: cheltenham;
   line-height: 1.2; }
 
 p {
@@ -358,7 +363,7 @@ li.sidebar::after {
 
 a.sidebar {
   font-size: 1em;
-  font-family: Montserrat, sans-serif;
+  font-family: cheltenham;
   color: #3D709D; }
   a.sidebarhover {
     text-decoration: underline; }
@@ -368,21 +373,5 @@ a.sidebar {
       a.sidebar a:hover {
         border-bottom: none;
         text-decoration: none; } }
-
-@font-face {
-  font-family: PTSansNarrow;
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.woff2") format("woff2"), url("../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.woff") format("woff"), url("../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.ttf") format("truetype"), url("../fonts/ptsansnarrow_regular_macroman/PTN57F-webfont.svg#PTSansNarrow") format("svg"); }
-@font-face {
-  font-family: PTSansNarrowBold;
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff2") format("woff2"), url("../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.woff") format("woff"), url("../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.ttf") format("truetype"), url("../fonts/ptsansnarrow_bold_macroman/PTN77F-webfont.svg#PTSansNarrowBold") format("svg"); }
-@font-face {
-  font-family: PTSerif;
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/ptserif_regular_macroman/PTF55F-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptserif_regular_macroman/PTF55F-webfont.woff2") format("woff2"), url("../fonts/ptserif_regular_macroman/PTF55F-webfont.woff") format("woff"), url("../fonts/ptserif_regular_macroman/PTF55F-webfont.ttf") format("truetype"), url("../fonts/ptserif_regular_macroman/PTF55F-webfont.svg#PTSerif") format("svg"); }
 
 /*# sourceMappingURL=main.css.map */

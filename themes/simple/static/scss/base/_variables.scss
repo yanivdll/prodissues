@@ -6,9 +6,13 @@
 // $visual-grid-opacity: 0.05;
 
 // Typography
-$base-font-family: PTSerif; //Cochin; // PTSandsRegular;// GandhiSerif; //PTSerif;
+
+
+@include font-face(cheltenham, '/theme/fonts/cheltenham/cheltenham-italic-700-webfont', normal, normal);
+
+$base-font-family: BentonModernRE, georgia, serif; //Cochin; // PTSandsRegular;// GandhiSerif; //PTSerif;
 $base-title-font-family: PTSansNarrowBold;
-$base-heading-font-family: Montserrat, sans-serif;//$base-font-family;//ColabThi;
+$base-heading-font-family: cheltenham;
 
 // Font Sizes
 $base-font-size: 1.05em;

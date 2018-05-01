@@ -60,7 +60,7 @@ I found that I need to log what I'm doing, so I can backtrack if needed, and won
 And so I started to maintain a file called development log, or dlog. I keep it open as part of my workspace and include it in my git repository. Here's an example of how it looks like (the dlog is in the bottom right quadrant):
 
 
-![](http://media.prodissues.com/images/2016/11/Screen_Shot_2016-11-29_at_12.50.16.png)
+![dlog view in emacs](http://media.prodissues.com/images/2018/04/screen_shot_2016-11-29_at_12_50_16.png)
 
 I thought that might be something that other developers find helpful, and put it on a separate blog ([here](https://yanivgilad.wordpress.com)). I'm contemplating with the idea of opening this blog for others, with the assumption that if many developers log their process, it will serve as a new form of knowledge repository, stack-overflow extension, or companion to readme documentation.
 

@@ -35,7 +35,7 @@ If removing apps won’t get my phone to better behave, I’m going to do a hard
 
 I acted on step 1, and removed most of the apps I had on my phone. It looks slimmer, but will it also act that way? Here's the before and after of my home screen:
 
-![](http://media.prodissues.com/images/2017/10/composition_portrate_1.jpeg)
+![My lean iPhone](http://media.prodissues.com/images/2017/10/composition_portrate_1.jpeg)
 
 Feel free to make other suggestion in the comments. I’ll update this post with more findings, on performance, battery and next steps.
 
