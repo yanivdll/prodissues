@@ -10,6 +10,7 @@
 
 @include font-face(cheltenham, '/theme/fonts/cheltenham/cheltenham-italic-700-webfont', normal, normal);
 @include font-face(PTSansNarrowBold, '/theme/fonts/ptsansnarrow_bold_macroman/PTN77F-webfont', normal, normal);
+// @include font-face(BentonModernRE, '/theme/fonts/BentonModernRE/bentonmodernre-webfon', normal, normal);
 
 $base-font-family: BentonModernRE, georgia, serif; //Cochin; // PTSandsRegular;// GandhiSerif; //PTSerif;
 $base-title-font-family: PTSansNarrowBold;

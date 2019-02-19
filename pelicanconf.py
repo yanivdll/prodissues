@@ -53,8 +53,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 MENUITEMS = (('about', '/about/'),
 	('contact', '/about/#contact'),
 	('twitter','https://twitter.com/prodissues'),
-	('feed','/feeds/all.atom.xml'),
-	('drafts', '/drafts/'))
+	('feed','/feeds/all.atom.xml'))
 
 # Social widget
 SOCIAL = (('tweeter', 'http://twitter.com/prodissues'),)

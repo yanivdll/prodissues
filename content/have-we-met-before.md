@@ -4,9 +4,9 @@ Author: yaniv
 Category: 
 Tags: 
 Slug: have-we-met-before
-Status: published
+Status: draft
 
-My memory retention for names and faces is bad, to say the least. Too often, meeting a person, I'd have no idea if I met that person before. What's worst is my recollection of names. Eight out of ten times I'll have it completely wrong; and when I say wrong, I mean, I won't get even one syllable right.
+My memory for faces is bad. I can see someone whom I've met before, but I'll be sure it's the first time we meet. Even worse is my memory for names. It's not that I don't remember names, it just that the names I remember are, most of the times, completely wrong. 
 
 > me: "Oh, how's Elinor is doing" 
 > 
@@ -18,7 +18,7 @@ My memory retention for names and faces is bad, to say the least. Too often, mee
 > 
 > me: "Oh right…"
 
-The best I can do with names, is to log them as soon as I can. Yet, I'm rarely able to retrieve them in time.
+But like a blind person who compensate with good hearing, I too developed strategies to not make a fool of myself. At least not too often.
 
 As for faces, though, I came up with simple hack. When I'm not sure if I met that person before - always assume that I had. And so I'll say something like "I believe we met before…?"
 
