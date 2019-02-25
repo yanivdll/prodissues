@@ -68,12 +68,15 @@ LOAD_CONTENT_CACHE = False
 
 # JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension',]
 
-# THEME = '../pelican-themes/aboutwilson'
+# THEME = '../../pelican-themes/elegant-next'
 THEME = 'themes/simple'
 ASSET_URL = '/static/'
 
 PLUGIN_PATHS = ['../../pelican-plugins']
-PLUGINS = ['assets']
+PLUGINS = ['assets','tipue_search']
+
+# Tipue search plugin
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
 # Org Reader plugin
 # ORG_READER_EMACS_LOCATION = "/Applications/Emacs.app/Contents/MacOS/Emacs"
