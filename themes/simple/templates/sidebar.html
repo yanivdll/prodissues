@@ -1,6 +1,6 @@
  <nav>
     <ul class="sidebar">
-        <form class="navbar-search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form>
+        <li><form class="navbar-search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
         {% for title, link in MENUITEMS %}
         <li class="sidebar"><a href="{{ link }}" class="sidebar">{{ title }}</a></li>
         {% endfor %}

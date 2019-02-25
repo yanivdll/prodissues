@@ -7,7 +7,7 @@
 	{% assets filters="scss", output="css/main.%(version)s.css", "css/main.css", "css/pygments.css" %}
 	<link href="/{{ ASSET_URL }}" rel="stylesheet" type="text/css">
 	{% endassets %}
-
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" media="screen">
 	{% block head %}
 	<meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
 	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
@@ -20,7 +20,8 @@
 
 </head>
 <body>
-	
+	{% block script %} 
+	{% endblock script %}
 	<section>
 		{% include 'header.html' %}
 		<aside>
